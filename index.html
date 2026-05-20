@@ -9,7 +9,6 @@
 <meta property="og:title" content="Ashley Sara | Digital Growth & Search Experience Architect"/>
 <meta property="og:description" content="I turn websites into growth engines. SEO, Paid Media, UX, Accessibility & Brand Strategy — Cedar City, Utah."/>
 <meta property="og:type" content="website"/>
-<link rel="canonical" href="https://www.ashley-sara.com/"/>
 <title>Ashley Sara | Digital Growth & Search Experience Architect</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -26,53 +25,50 @@
   --sans:'DM Sans',sans-serif;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--ink);color:var(--parchment);line-height:1.6;overflow-x:hidden;position:relative}
-
-/* LACE BACKGROUND */
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle at 20% 30%, rgba(201,122,130,0.025) 1px, transparent 1px),radial-gradient(circle at 80% 70%, rgba(184,146,74,0.015) 1px, transparent 1px);background-size:100px 100px, 140px 140px;background-position:0 0, 50px 50px}
-
-main{position:relative;z-index:1}
-
+body{font-family:var(--sans);background:var(--ink);color:var(--parchment);line-height:1.6;overflow-x:hidden}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+/* LACE BACKGROUND */
+.lace-bg{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.028}
+.lace-bg svg{width:100%;height:100%}
+
 /* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #2a1e16;background:rgba(14,11,9,.97);position:sticky;top:0;z-index:200;gap:1rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #2a1e16;background:rgba(14,11,9,.97);position:sticky;top:0;z-index:200}
 .logo{font-family:var(--serif);font-size:1.1rem;letter-spacing:.06em;color:var(--parchment);white-space:nowrap;text-decoration:none}
 .logo em{color:var(--rose);font-style:italic}
-.nav-right{display:flex;align-items:center;gap:1.2rem;flex:1;justify-content:flex-end}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
 .nav-links-inline{display:flex;align-items:center;gap:2rem}
 .nav-links-inline a{text-decoration:none;color:var(--muted);font-size:12px;letter-spacing:.13em;text-transform:uppercase;transition:color .2s;white-space:nowrap}
 .nav-links-inline a:hover,.nav-links-inline a:focus{color:var(--parchment);outline:2px solid var(--rose);outline-offset:3px}
-.hire-btn-sm{background:transparent;color:var(--rose);border:1px solid var(--rose);padding:.42rem 1rem;font-family:var(--sans);font-size:11px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
-.hire-btn-sm:hover,.hire-btn-sm:focus{background:var(--rose);color:var(--ink);outline:none}
-.hamburger{background:none;border:1px solid #3d2e22;cursor:pointer;padding:.5rem .6rem;color:var(--parchment);display:none;flex-direction:column;gap:4px;border-radius:2px;transition:border-color .2s}
+.hire-btn-sm{background:transparent;color:var(--rose);border:1px solid var(--rose);padding:.42rem 1rem;font-family:var(--sans);font-size:11px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap}
+.hire-btn-sm:hover,.hire-btn-sm:focus{background:var(--rose);color:var(--ink)}
+.hamburger{background:none;border:1px solid #3d2e22;cursor:pointer;padding:.5rem .6rem;color:var(--parchment);display:flex;flex-direction:column;gap:4px;border-radius:2px;transition:border-color .2s}
 .hamburger:hover,.hamburger:focus{border-color:var(--rose);outline:none}
 .hamburger span{display:block;width:20px;height:1.5px;background:currentColor;transition:all .3s}
 .hamburger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-.nav-dropdown{display:none;flex-direction:column;background:rgba(14,11,9,.99);border-bottom:1px solid #2a1e16;position:absolute;top:58px;left:0;right:0;z-index:199;width:100vw}
+.nav-dropdown{display:none;flex-direction:column;background:rgba(14,11,9,.99);border-bottom:1px solid #2a1e16;position:sticky;top:57px;z-index:199}
 .nav-dropdown.open{display:flex}
 .nav-dropdown a{text-decoration:none;color:var(--muted);font-size:13px;letter-spacing:.13em;text-transform:uppercase;padding:1rem 2rem;border-bottom:1px solid #1a1210;transition:color .2s,background .2s}
-.nav-dropdown a:hover,.nav-dropdown a:focus{color:var(--parchment);background:rgba(201,122,130,.06);outline:none}
-.nav-dropdown .dd-hire{background:var(--rose);color:var(--ink);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:1rem 2rem;font-family:var(--sans);font-weight:500;border:none;cursor:pointer}
+.nav-dropdown a:hover{color:var(--parchment);background:rgba(201,122,130,.06)}
+.nav-dropdown .dd-hire{background:var(--rose);color:var(--ink);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:1rem 2rem;font-family:var(--sans);font-weight:500;border:none;cursor:pointer;text-align:left}
 .nav-dropdown .dd-hire:hover{opacity:.88}
 
-@media(min-width:860px){.nav-links-inline{display:flex !important}.hire-btn-sm{display:block !important}.hamburger{display:none !important}}
-@media(max-width:859px){.nav-links-inline{display:none !important}.hire-btn-sm{display:none !important}.hamburger{display:flex !important}}
+@media(min-width:860px){.nav-links-inline{display:flex}.hire-btn-sm{display:block}}
+@media(max-width:859px){.nav-links-inline{display:none}.hire-btn-sm{display:none}}
 
 /* HERO */
-.hero{padding:5rem 2.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;border-bottom:1px solid #2a1e16}
+.hero{padding:5rem 2.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;border-bottom:1px solid #2a1e16;position:relative;z-index:1}
 .hero-eyebrow{font-family:var(--italic);font-size:1rem;color:var(--rose);font-style:italic;letter-spacing:.04em;margin-bottom:1.2rem}
 .hero h1{font-family:var(--serif);font-size:clamp(3rem,5.5vw,5.2rem);line-height:1.0;font-weight:900;color:var(--parchment);margin-bottom:1.8rem}
 .hero h1 em{color:var(--rose);font-style:italic;display:block}
 .hero-body{font-family:var(--italic);font-style:italic;font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:440px;margin-bottom:2.5rem}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-fill{background:var(--rose);color:var(--ink);border:none;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-weight:500;border-radius:2px;transition:opacity .2s}
+.btn-fill{background:var(--rose);color:var(--ink);border:none;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:opacity .2s}
 .btn-fill:hover,.btn-fill:focus{opacity:.85;outline:2px solid var(--rose);outline-offset:2px}
-.btn-ghost{background:transparent;color:var(--parchment);border:1px solid #3d2e22;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s}
+.btn-ghost{background:transparent;color:var(--parchment);border:1px solid #3d2e22;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:border-color .2s}
 .btn-ghost:hover,.btn-ghost:focus{border-color:var(--muted);outline:2px solid var(--muted);outline-offset:2px}
-.hero-right{display:flex;flex-direction:column;gap:0}
 .quote-box{border:1px solid #2a1e16;padding:2.2rem;background:rgba(255,255,255,.02);position:relative}
 .quote-box::before{content:'\201C';font-family:var(--serif);font-size:6rem;color:var(--rose);opacity:.15;position:absolute;top:-1rem;left:1.2rem;line-height:1;pointer-events:none}
 .quote-text{font-family:var(--italic);font-size:1.1rem;font-style:italic;color:var(--dusty);line-height:1.65;margin-bottom:.5rem}
@@ -84,32 +80,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .stat-l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.25rem}
 
 /* STRIP */
-.strip{border-top:1px solid #2a1e16;border-bottom:1px solid #2a1e16;padding:.7rem 0;overflow:hidden;white-space:nowrap;background:var(--bourbon)}
+.strip{border-top:1px solid #2a1e16;border-bottom:1px solid #2a1e16;padding:.7rem 0;overflow:hidden;white-space:nowrap;background:var(--bourbon);position:relative;z-index:1}
 .strip-inner{display:inline-block;animation:scroll 22s linear infinite}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .strip-item{font-family:var(--italic);font-style:italic;font-size:.82rem;color:var(--dusty);letter-spacing:.07em;padding:0 2rem}
 .strip-dot{color:var(--rose)}
 
-/* PROBLEM SECTION */
-.problem-section{background:linear-gradient(135deg,rgba(122,62,24,.1) 0%,rgba(61,31,13,.1) 100%);padding:5rem 2.5rem;border-bottom:1px solid #1e1410}
-.problem-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.problem-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--parchment);line-height:1.2;margin-bottom:1.5rem}
-.problem-left h2 em{color:var(--rose);font-style:italic}
-.problem-copy{font-family:var(--italic);font-style:italic;font-size:1.01rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
-.problem-copy strong{color:var(--dusty);font-weight:500}
-.solution-list{list-style:none;margin-bottom:2rem}
-.solution-list li{padding:.75rem 0;padding-left:1.8rem;position:relative;font-size:13px;color:var(--dusty);line-height:1.7}
-.solution-list li::before{content:'✦';position:absolute;left:0;color:var(--rose);font-size:.9rem}
-.problem-cta{margin-top:2rem}
-.problem-right{background:rgba(255,255,255,.02);border:1px solid #2a1e16;padding:2rem;text-align:center}
-.problem-right h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--rose);margin-bottom:1.5rem;letter-spacing:.04em}
-.stats-highlight{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.stat-highlight{padding:1.2rem;border:1px solid #2a1e16;background:rgba(255,255,255,.01)}
-.stat-num{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.5rem}
-.stat-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-
 /* SECTIONS */
-.section{padding:5rem 2.5rem;border-bottom:1px solid #1e1410}
+.section{padding:5rem 2.5rem;border-bottom:1px solid #1e1410;position:relative;z-index:1}
 .sec-tag{font-family:var(--italic);font-style:italic;color:var(--rose);font-size:.9rem;letter-spacing:.04em;margin-bottom:.4rem}
 .sec-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;color:var(--parchment);line-height:1.1;margin-bottom:2.8rem}
 .sec-title em{font-style:italic;color:var(--rose)}
@@ -140,7 +118,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .work-m{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* TESTIMONIAL */
-.testimonial{padding:4.5rem 2.5rem;border-bottom:1px solid #1e1410;text-align:center}
+.testimonial{padding:4.5rem 2.5rem;border-bottom:1px solid #1e1410;text-align:center;position:relative;z-index:1}
 .t-quote{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,2rem);font-style:italic;color:var(--parchment);max-width:680px;margin:0 auto 1.5rem;line-height:1.45}
 .t-source{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .t-source span{color:var(--rose)}
@@ -152,8 +130,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .tag{background:transparent;border:1px solid #3d2e22;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .8rem;transition:all .2s;cursor:default}
 .tag:hover{border-color:var(--rose);color:var(--rose)}
 .cred-card{border:1px solid #2a1e16;padding:1.1rem;background:rgba(255,255,255,.02);margin-bottom:.8rem}
-.cred-role{font-family:var(--serif);font-size:.9rem;font-weight:700;color:var(--parchment);margin-bottom:.3rem}
-.cred-place{font-size:12px;color:var(--rose);letter-spacing:.06em;margin-bottom:.2rem}
+.cred-role{font-family:var(--serif);font-size:.88rem;font-weight:700;color:var(--parchment);margin-bottom:.25rem}
+.cred-place{font-size:12px;color:var(--rose);letter-spacing:.05em;margin-bottom:.15rem}
 .cred-date{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 
 /* CONTACT */
@@ -164,440 +142,311 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .field{display:flex;flex-direction:column;gap:.35rem}
 .field label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .field input,.field textarea{background:rgba(255,255,255,.03);border:none;border-bottom:1px solid #3d2e22;color:var(--parchment);padding:.65rem 0;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s;width:100%}
-.field input:focus,.field textarea:focus{border-bottom-color:var(--rose);outline:2px solid transparent}
-.field textarea{height:120px;resize:vertical}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--rose)}
+.field textarea{height:90px;resize:vertical}
 .field input::placeholder,.field textarea::placeholder{color:#4a3a2e}
 .form-status{margin:1rem 0;padding:.75rem;border-radius:4px;font-size:13px;display:none}
 .form-status.success{background:rgba(185,146,74,.2);color:var(--gold);border:1px solid var(--gold);display:block}
 .form-status.error{background:rgba(201,122,130,.2);color:var(--rose);border:1px solid var(--rose);display:block}
 
 /* FOOTER */
-footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid #1e1410}
+footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid #1e1410;position:relative;z-index:1}
 .footer-sig{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted)}
 .footer-sig span{color:var(--rose)}
 .footer-links{display:flex;gap:2rem}
 .footer-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-.footer-links a:hover,.footer-links a:focus{color:var(--rose);outline:2px solid var(--rose);outline-offset:3px}
+.footer-links a:hover,.footer-links a:focus{color:var(--rose)}
 
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .work-grid{grid-template-columns:repeat(2,1fr)}
-  .problem-content{grid-template-columns:1fr}
-}
-
-@media(max-width:768px){
-  nav{padding:1rem 1.5rem}
-  .hero{padding:3.5rem 1.5rem;grid-template-columns:1fr;gap:2rem}
+@media(max-width:700px){
+  .hero,.about-grid{grid-template-columns:1fr}
   .hero-right{display:none}
-  .work-grid{grid-template-columns:1fr}
+  .work-grid{grid-template-columns:1fr 1fr}
   .form-row{grid-template-columns:1fr}
   .form-row.full{grid-template-columns:1fr}
-  .section,.testimonial,.problem-section{padding:3.5rem 1.5rem}
-  .about-grid{grid-template-columns:1fr;gap:2.5rem}
-  .stats-highlight{grid-template-columns:1fr}
-  footer{flex-direction:column;text-align:center}
+  .section,.testimonial{padding:3rem 1.5rem}
+  .hero{padding:3rem 1.5rem}
 }
-
-@media(max-width:480px){
-  nav{padding:1rem}
-  .logo{font-size:.95rem}
-  .hero h1{font-size:2rem}
-  .sec-title{font-size:clamp(1.5rem,3vw,2rem)}
-  .stat-grid{grid-template-columns:1fr}
-}
+@media(max-width:480px){.work-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<main role="main">
+
+<!-- Lace background -->
+<div class="lace-bg" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="lace" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <polygon points="40,2 78,40 40,78 2,40" fill="none" stroke="#e8c4c8" stroke-width="0.6"/>
+      <polygon points="40,14 66,40 40,66 14,40" fill="none" stroke="#e8c4c8" stroke-width="0.4"/>
+      <circle cx="40" cy="40" r="2.5" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="2" cy="2" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="78" cy="2" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="2" cy="78" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="78" cy="78" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <line x1="40" y1="2" x2="40" y2="14" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="40" y1="66" x2="40" y2="78" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="2" y1="40" x2="14" y2="40" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="66" y1="40" x2="78" y2="40" stroke="#e8c4c8" stroke-width="0.4"/>
+      <circle cx="40" cy="8" r="1" fill="#e8c4c8"/>
+      <circle cx="40" cy="72" r="1" fill="#e8c4c8"/>
+      <circle cx="8" cy="40" r="1" fill="#e8c4c8"/>
+      <circle cx="72" cy="40" r="1" fill="#e8c4c8"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#lace)"/>
+</svg>
+</div>
 
 <!-- NAV -->
 <nav role="navigation" aria-label="Main navigation">
-<a href="#home" class="logo">Ashley <em>Sara</em></a>
-<div class="nav-right">
-<div class="nav-links-inline">
-<a href="#services" aria-label="Services section">Services</a>
-<a href="#work" aria-label="Work section">Work</a>
-<a href="#about" aria-label="About section">About</a>
-<a href="#contact" aria-label="Contact section">Contact</a>
-</div>
-<button class="hire-btn-sm" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
-<button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="navDropdown"><span></span><span></span><span></span></button>
-</div>
+  <a href="#" class="logo" aria-label="Ashley Sara home">Ashley <em>Sara</em></a>
+  <div class="nav-right">
+    <div class="nav-links-inline">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hire-btn-sm" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-dropdown" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
-
-<!-- MOBILE NAV DROPDOWN -->
-<div class="nav-dropdown" id="navDropdown">
-<a href="#services" onclick="closeMobileMenu()">Services</a>
-<a href="#work" onclick="closeMobileMenu()">Work</a>
-<a href="#about" onclick="closeMobileMenu()">About</a>
-<a href="#contact" onclick="closeMobileMenu()">Contact</a>
-<button class="dd-hire" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});closeMobileMenu()">Hire Me</button>
+<div id="nav-dropdown" class="nav-dropdown" role="menu">
+  <a href="#services" role="menuitem" onclick="closeNav()">Services</a>
+  <a href="#work" role="menuitem" onclick="closeNav()">Work</a>
+  <a href="#about" role="menuitem" onclick="closeNav()">About</a>
+  <a href="#contact" role="menuitem" onclick="closeNav()">Contact</a>
+  <button class="dd-hire" onclick="closeNav();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me &#8594;</button>
 </div>
 
 <!-- HERO -->
-<section class="hero" id="home" aria-labelledby="hero-heading">
-<div>
-<p class="hero-eyebrow">SEO · Paid Media · Social Management · UX · Brand Strategy</p>
-<h1 id="hero-heading">I turn websites into<br><em>growth engines.</em></h1>
-<p class="hero-body">Digital Growth & Search Experience Architect based in Cedar City, Utah. I design digital experiences that drive traffic, delight users, and deliver measurable results.</p>
-<div class="hero-btns">
-<a href="#work" class="btn-fill">See My Work</a>
-<a href="#" class="btn-ghost">Download Resume</a>
-</div>
-</div>
-<div class="hero-right" aria-hidden="true">
-<div class="quote-box">
-<p class="quote-text">"She doesn't just run campaigns — she builds the architecture that makes brands discoverable, accessible, and impossible to ignore."</p>
-<p class="quote-src">— Elevation Tech Client</p>
-<div class="ornament" role="presentation">✦ &nbsp; ✦ &nbsp; ✦</div>
-<div class="stat-grid">
-<div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years Experience</div></div>
-<div class="stat"><div class="stat-n">Top 1%</div><div class="stat-l">WCAG Global Rank</div></div>
-<div class="stat"><div class="stat-n">150%</div><div class="stat-l">Visibility Boost</div></div>
-<div class="stat"><div class="stat-n">80%</div><div class="stat-l">Booking Increase</div></div>
-</div>
-</div>
-</div>
+<section class="hero" aria-labelledby="hero-heading">
+  <div>
+    <p class="hero-eyebrow">SEO &middot; Paid Media &middot; UX &middot; Accessibility &middot; Brand Strategy</p>
+    <h1 id="hero-heading">I turn websites into<br><em>growth engines.</em></h1>
+    <p class="hero-body">Digital Growth &amp; Search Experience Architect based in Cedar City, Utah. I design digital experiences that drive traffic, delight users, and deliver measurable results &mdash; for higher education, small businesses, and everyone in between.</p>
+    <div class="hero-btns">
+      <button class="btn-fill" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See My Work</button>
+      <button class="btn-ghost">Download Resume</button>
+    </div>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="quote-box">
+      <p class="quote-text">&ldquo;She doesn&rsquo;t just run campaigns &mdash; she builds the architecture that makes brands discoverable, accessible, and impossible to ignore.&rdquo;</p>
+      <p class="quote-src">&mdash; Elevation Tech Client</p>
+      <div class="ornament">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years in Digital</div></div>
+        <div class="stat"><div class="stat-n">Top 1%</div><div class="stat-l">WCAG Globally</div></div>
+        <div class="stat"><div class="stat-n">150%</div><div class="stat-l">Visibility Boost</div></div>
+        <div class="stat"><div class="stat-n">80%</div><div class="stat-l">Booking Increase</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS STRIP -->
-<div class="strip" role="marquee" aria-label="Core skills">
-<div class="strip-inner" aria-hidden="true">
-<span class="strip-item">SEO Strategy</span><span class="strip-dot">✦</span>
-<span class="strip-item">Google Ads</span><span class="strip-dot">✦</span>
-<span class="strip-item">Meta Ads</span><span class="strip-dot">✦</span>
-<span class="strip-item">Social Media Management</span><span class="strip-dot">✦</span>
-<span class="strip-item">WCAG Accessibility</span><span class="strip-dot">✦</span>
-<span class="strip-item">UX Optimization</span><span class="strip-dot">✦</span>
-<span class="strip-item">Content Strategy</span><span class="strip-dot">✦</span>
-<span class="strip-item">Analytics & CRO</span><span class="strip-dot">✦</span>
-<span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">✦</span>
-<span class="strip-item">Brand Strategy</span><span class="strip-dot">✦</span>
-<span class="strip-item">SEO Strategy</span><span class="strip-dot">✦</span>
-<span class="strip-item">Google Ads</span><span class="strip-dot">✦</span>
-<span class="strip-item">Meta Ads</span><span class="strip-dot">✦</span>
-<span class="strip-item">Social Media Management</span><span class="strip-dot">✦</span>
-<span class="strip-item">WCAG Accessibility</span><span class="strip-dot">✦</span>
-<span class="strip-item">UX Optimization</span><span class="strip-dot">✦</span>
-<span class="strip-item">Content Strategy</span><span class="strip-dot">✦</span>
-<span class="strip-item">Analytics & CRO</span><span class="strip-dot">✦</span>
-<span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">✦</span>
-<span class="strip-item">Brand Strategy</span><span class="strip-dot">✦</span>
+<!-- STRIP -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner">
+    <span class="strip-item">SEO Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Google Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Meta Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">UX Optimization</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Content Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Brand Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Web Development</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">SEO Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Google Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Meta Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">UX Optimization</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Content Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Brand Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Web Development</span><span class="strip-dot">&#10022;</span>
+  </div>
 </div>
-</div>
-
-<!-- PROBLEM/SOLUTION SECTION -->
-<section class="problem-section" aria-labelledby="problem-heading">
-<div class="problem-content">
-<div class="problem-left">
-<h2 id="problem-heading">Your audience is <em>scattered.</em></h2>
-<p class="problem-copy">You have incredible products and services, but your marketing efforts feel fragmented. Social media isn't driving real leads. Your website traffic fluctuates. You're not seeing the ROI you deserve.</p>
-<p class="problem-copy"><strong>Here's what I solve:</strong></p>
-<ul class="solution-list">
-<li>Unified SEO strategy that brings qualified traffic consistently</li>
-<li>Social media that builds community and drives actual conversions</li>
-<li>Paid media campaigns optimized for ROI, not vanity metrics</li>
-<li>User experience that turns visitors into customers</li>
-<li>Data-driven insights that show exactly what's working</li>
-</ul>
-<div class="problem-cta">
-<a href="#contact" class="btn-fill">Let's Talk Strategy</a>
-</div>
-</div>
-<div class="problem-right">
-<h3>What Brands See After We Work Together</h3>
-<div class="stats-highlight">
-<div class="stat-highlight">
-<div class="stat-num">3x</div>
-<div class="stat-label">Organic Traffic Growth</div>
-</div>
-<div class="stat-highlight">
-<div class="stat-num">40%</div>
-<div class="stat-label">Higher Conversion Rate</div>
-</div>
-<div class="stat-highlight">
-<div class="stat-num">50K+</div>
-<div class="stat-label">Followers Engaged</div>
-</div>
-<div class="stat-highlight">
-<div class="stat-num">24h</div>
-<div class="stat-label">Response Time</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 <!-- SERVICES -->
 <section class="section" id="services" aria-labelledby="services-heading">
-<p class="sec-tag">What I Do</p>
-<h2 id="services-heading" class="sec-title">Full-funnel <em>expertise.</em></h2>
-<div class="services-grid" role="list">
-<article class="svc-card" role="listitem">
-<i class="ti ti-search svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Scattered Organic Visibility</p>
-<h3 class="svc-name">SEO & Search Strategy</h3>
-<p class="svc-desc">Technical SEO, keyword research, on-page optimization, and content strategy that improves rankings and drives qualified organic traffic.</p>
-<p class="svc-includes">✦ Keyword & competitor analysis · Technical audits · Content strategy</p>
-</article>
-<article class="svc-card" role="listitem">
-<i class="ti ti-speakerphone svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Low ROI On Ad Spend</p>
-<h3 class="svc-name">Paid Media Management</h3>
-<p class="svc-desc">Google Ads and Meta campaigns built for performance — from strategy and creative to tracking, A/B testing, and ROAS optimization.</p>
-<p class="svc-includes">✦ Campaign strategy · A/B testing · Budget optimization</p>
-</article>
-<article class="svc-card" role="listitem">
-<i class="ti ti-brand-instagram svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Audience Not Converting</p>
-<h3 class="svc-name">Social Media Management</h3>
-<p class="svc-desc">Strategic content calendars, community engagement, and audience growth. I build authentic connections that drive traffic and conversions.</p>
-<p class="svc-includes">✦ Content calendar · Community management · Growth strategy</p>
-</article>
-<article class="svc-card" role="listitem">
-<i class="ti ti-accessibility svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Poor User Experience</p>
-<h3 class="svc-name">Accessibility & UX (WCAG)</h3>
-<p class="svc-desc">ADA/WCAG-compliant digital experiences that serve all users — backed by SUU's top 1% global recognition for web accessibility.</p>
-<p class="svc-includes">✦ WCAG audits · Usability testing · Design optimization</p>
-</article>
-<article class="svc-card" role="listitem">
-<i class="ti ti-browser svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Website Needs Rebuild</p>
-<h3 class="svc-name">Web Design & Development</h3>
-<p class="svc-desc">Custom web builds optimized for performance, SEO, and conversion — end-to-end from architecture to launch.</p>
-<p class="svc-includes">✦ Design & development · Performance optimization · Launch support</p>
-</article>
-<article class="svc-card" role="listitem">
-<i class="ti ti-chart-bar svc-icon" aria-hidden="true"></i>
-<p class="svc-problem">Unknown Growth Drivers</p>
-<h3 class="svc-name">Analytics & CRO</h3>
-<p class="svc-desc">Data-driven insights from Google Analytics, performance dashboards, and conversion rate optimization to maximize ROI.</p>
-<p class="svc-includes">✦ Google Analytics setup · Conversion tracking · CRO</p>
-</article>
-</div>
+  <p class="sec-tag">How I Help</p>
+  <h2 id="services-heading" class="sec-title">Your biggest digital<br><em>problems, solved.</em></h2>
+  <div class="services-grid" role="list">
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-search svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">Nobody can find you online</p>
+      <h3 class="svc-name">SEO &amp; Search Strategy</h3>
+      <p class="svc-desc">I build search visibility that compounds over time &mdash; technical SEO, keyword strategy, and content architecture that earns rankings your competitors can&rsquo;t easily copy.</p>
+      <p class="svc-includes">Includes: keyword research &middot; on-page optimization &middot; technical audits &middot; local SEO</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-speakerphone svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">Your ads aren&rsquo;t converting</p>
+      <h3 class="svc-name">Paid Media That Performs</h3>
+      <p class="svc-desc">Google Ads and Meta campaigns engineered for ROI, not just clicks. I&rsquo;ve driven a 150% visibility boost and 80% booking increase &mdash; with data to back every decision.</p>
+      <p class="svc-includes">Includes: Google Ads &middot; Meta Ads &middot; A/B testing &middot; ROAS optimization &middot; social media advertising</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-accessibility svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">Your site excludes customers &amp; risks liability</p>
+      <h3 class="svc-name">Accessibility &amp; UX (WCAG/ADA)</h3>
+      <p class="svc-desc">I make your digital experience work for everyone &mdash; and help you avoid ADA compliance risk. My work contributed to SUU&rsquo;s top 1% global ranking for web accessibility.</p>
+      <p class="svc-includes">Includes: WCAG audits &middot; ADA compliance &middot; UX redesign &middot; inclusive design systems</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-browser svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">Your website isn&rsquo;t doing any work for you</p>
+      <h3 class="svc-name">Web Design &amp; Development</h3>
+      <p class="svc-desc">Custom websites built to rank, convert, and scale &mdash; not just look good. Every build is optimized for SEO, speed, accessibility, and the user journey from first click to conversion.</p>
+      <p class="svc-includes">Includes: custom web builds &middot; landing pages &middot; CMS management &middot; brand design</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-chart-bar svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">You&rsquo;re flying blind on what&rsquo;s working</p>
+      <h3 class="svc-name">Analytics &amp; Conversion Optimization</h3>
+      <p class="svc-desc">I turn your data into a competitive advantage &mdash; proper tracking setup, clear reporting, and changes that move the needle on revenue and growth.</p>
+      <p class="svc-includes">Includes: Google Analytics &middot; dashboards &middot; CRO &middot; performance reporting &middot; AI-powered insights</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <i class="ti ti-pencil svc-icon" aria-hidden="true"></i>
+      <p class="svc-problem">Your content isn&rsquo;t building trust or traffic</p>
+      <h3 class="svc-name">Content &amp; Brand Strategy</h3>
+      <p class="svc-desc">From email campaigns to social content to full brand identity &mdash; I create the strategy and assets that make your audience stop scrolling, start trusting, and ultimately buy.</p>
+      <p class="svc-includes">Includes: content strategy &middot; email marketing &middot; social media &middot; graphic design &middot; brand positioning</p>
+    </article>
+  </div>
 </section>
 
 <!-- WORK -->
 <section class="section" id="work" aria-labelledby="work-heading">
-<p class="sec-tag">Selected Work</p>
-<h2 id="work-heading" class="sec-title">Results that <em>speak.</em></h2>
-<div class="work-grid">
-<article class="work-card" tabindex="0" aria-label="Case study: SUU Graduate Programs SEO">
-<div class="work-thumb wt1">
-<div class="work-num" aria-hidden="true">01</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Higher Ed</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">SUU Graduate Programs SEO</h3>
-<p class="work-m">Organic growth · 2024–Present</p>
-</div>
-</article>
-<article class="work-card" tabindex="0" aria-label="Case study: Rising K Ranch paid media">
-<div class="work-thumb wt2">
-<div class="work-num" aria-hidden="true">02</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Paid Media</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">Rising K Ranch Growth</h3>
-<p class="work-m">150% visibility · 80% bookings ↑</p>
-</div>
-</article>
-<article class="work-card" tabindex="0" aria-label="Case study: Wild Horse Ranch branding">
-<div class="work-thumb wt3">
-<div class="work-num" aria-hidden="true">03</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Brand</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">Wild Horse Ranch Brand</h3>
-<p class="work-m">10-yr brand · National media coverage</p>
-</div>
-</article>
-<article class="work-card" tabindex="0" aria-label="Case study: Elevation Tech client SEO and web">
-<div class="work-thumb wt4">
-<div class="work-num" aria-hidden="true">04</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Agency</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">Elevation Tech Clients</h3>
-<p class="work-m">Full-funnel strategy · 2025–Present</p>
-</div>
-</article>
-<article class="work-card" tabindex="0" aria-label="Case study: SUU web accessibility initiative">
-<div class="work-thumb wt5">
-<div class="work-num" aria-hidden="true">05</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Accessibility</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">SUU Web Accessibility</h3>
-<p class="work-m">Top 1% globally · WCAG compliant</p>
-</div>
-</article>
-<article class="work-card" tabindex="0" aria-label="Case study: Ashley Sara Marketing freelance">
-<div class="work-thumb wt6">
-<div class="work-num" aria-hidden="true">06</div>
-<div>
-<div class="work-line" aria-hidden="true"></div>
-<div class="work-badge">Freelance</div>
-</div>
-</div>
-<div class="work-info">
-<h3 class="work-t">Ashley Sara Marketing</h3>
-<p class="work-m">SEO · UX · Content · Social</p>
-</div>
-</article>
-</div>
+  <p class="sec-tag">Selected Work</p>
+  <h2 id="work-heading" class="sec-title">Results that <em>speak.</em></h2>
+  <div class="work-grid">
+    <article class="work-card" tabindex="0" aria-label="Case study: SUU Graduate Programs SEO">
+      <div class="work-thumb wt1"><div class="work-num" aria-hidden="true">01</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Higher Ed</div></div></div>
+      <div class="work-info"><h3 class="work-t">SUU Graduate Programs SEO</h3><p class="work-m">Organic growth &middot; 2024&ndash;Present</p></div>
+    </article>
+    <article class="work-card" tabindex="0" aria-label="Case study: Rising K Ranch paid media">
+      <div class="work-thumb wt2"><div class="work-num" aria-hidden="true">02</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Paid Media</div></div></div>
+      <div class="work-info"><h3 class="work-t">Rising K Ranch Growth</h3><p class="work-m">150% visibility &middot; 80% bookings &uarr;</p></div>
+    </article>
+    <article class="work-card" tabindex="0" aria-label="Case study: Wild Horse Ranch branding">
+      <div class="work-thumb wt3"><div class="work-num" aria-hidden="true">03</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Brand</div></div></div>
+      <div class="work-info"><h3 class="work-t">Wild Horse Ranch Brand</h3><p class="work-m">10 yrs &middot; National media coverage</p></div>
+    </article>
+    <article class="work-card" tabindex="0" aria-label="Case study: Elevation Tech agency clients">
+      <div class="work-thumb wt4"><div class="work-num" aria-hidden="true">04</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Agency</div></div></div>
+      <div class="work-info"><h3 class="work-t">Elevation Tech Clients</h3><p class="work-m">Full-funnel strategy &middot; 2025&ndash;Present</p></div>
+    </article>
+    <article class="work-card" tabindex="0" aria-label="Case study: SUU web accessibility">
+      <div class="work-thumb wt5"><div class="work-num" aria-hidden="true">05</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Accessibility</div></div></div>
+      <div class="work-info"><h3 class="work-t">SUU Web Accessibility</h3><p class="work-m">Top 1% globally &middot; WCAG compliant</p></div>
+    </article>
+    <article class="work-card" tabindex="0" aria-label="Case study: Ashley Sara Marketing freelance">
+      <div class="work-thumb wt6"><div class="work-num" aria-hidden="true">06</div><div><div class="work-line" aria-hidden="true"></div><div class="work-badge">Freelance</div></div></div>
+      <div class="work-info"><h3 class="work-t">Ashley Sara Marketing</h3><p class="work-m">SEO &middot; UX &middot; Content &middot; Social</p></div>
+    </article>
+  </div>
 </section>
 
 <!-- TESTIMONIAL -->
 <div class="testimonial" aria-label="Client testimonial">
-<blockquote>
-<p class="t-quote">"Ashley transformed our online presence — she brought SUU's graduate programs from invisible to top-ranked while ensuring our site met the highest accessibility standards."</p>
-<footer class="t-source"><span>Southern Utah University</span> &nbsp;·&nbsp; Digital Marketing Team</footer>
-</blockquote>
+  <blockquote>
+    <p class="t-quote">&ldquo;Ashley transformed our online presence &mdash; she brought SUU&rsquo;s graduate programs from invisible to top-ranked while ensuring our site met the highest accessibility standards. She thinks in systems, not just campaigns.&rdquo;</p>
+    <footer class="t-source"><span>Southern Utah University</span> &nbsp;&middot;&nbsp; Digital Marketing Team</footer>
+  </blockquote>
 </div>
 
 <!-- ABOUT -->
 <section class="section" id="about" aria-labelledby="about-heading">
-<p class="sec-tag">About Me</p>
-<h2 id="about-heading" class="sec-title">Strategy with<br><em>a soul.</em></h2>
-<div class="about-grid">
-<div>
-<p class="about-p">I'm Ashley Sara — a Digital Growth & Search Experience Architect based in Cedar City, Utah. I hold a degree in Strategic Communications from Southern Utah University.</p>
-<p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate & Online programs. At Elevation Tech, I partner with small businesses to build full-funnel strategy and drive measurable growth. I also run Ashley Sara Marketing, my independent consulting practice.</p>
-<p class="about-p">I'm passionate about data-driven, user-first digital growth — and I leverage analytics, AI tools, and cross-functional collaboration to help brands stand out in a crowded marketplace.</p>
-<div class="tag-cloud" role="list" aria-label="Core skills">
-<span class="tag" role="listitem">SEO Strategy</span>
-<span class="tag" role="listitem">Social Media Management</span>
-<span class="tag" role="listitem">Google Ads</span>
-<span class="tag" role="listitem">Meta Ads</span>
-<span class="tag" role="listitem">WCAG / ADA</span>
-<span class="tag" role="listitem">UX Design</span>
-<span class="tag" role="listitem">Content Strategy</span>
-<span class="tag" role="listitem">Analytics</span>
-<span class="tag" role="listitem">CRO</span>
-<span class="tag" role="listitem">AI Marketing</span>
-<span class="tag" role="listitem">Community Management</span>
-<span class="tag" role="listitem">Brand Strategy</span>
-</div>
-</div>
-<div>
-<p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Current Roles</p>
-<div style="display:grid;grid-template-columns:1fr;gap:.8rem;margin-bottom:2rem">
-<div class="cred-card">
-<div class="cred-role">Owner · CMO</div>
-<div class="cred-place">Elevation Tech</div>
-<div class="cred-date">Mar 2025 – Present</div>
-</div>
-<div class="cred-card">
-<div class="cred-role">Digital Marketing Specialist</div>
-<div class="cred-place">Southern Utah University</div>
-<div class="cred-date">Feb 2025 – Present</div>
-</div>
-<div class="cred-card">
-<div class="cred-role">Owner · Founder</div>
-<div class="cred-place">Ashley Sara Marketing</div>
-<div class="cred-date">Jan 2024 – Present</div>
-</div>
-</div>
-<p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem">Education</p>
-<div class="cred-card">
-<div class="cred-role">B.S. Strategic Communications</div>
-<div class="cred-place">Southern Utah University</div>
-<div class="cred-date">Cedar City, Utah</div>
-</div>
-</div>
-</div>
+  <p class="sec-tag">About Me</p>
+  <h2 id="about-heading" class="sec-title">Strategy with<br><em>a soul.</em></h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-p">I&rsquo;m Ashley Sara &mdash; a Digital Growth &amp; Search Experience Architect based in Cedar City, Utah. With a degree in Strategic Communications from Southern Utah University and 6+ years in SEO, paid media, UX, and content strategy, I build digital experiences that don&rsquo;t just look good &mdash; they perform.</p>
+      <p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate &amp; Online programs. At Elevation Tech, I partner with small businesses on full-funnel digital strategy. Through Ashley Sara Marketing, I bring that same level of thinking to independent clients who want results, not fluff.</p>
+      <p class="about-p">I&rsquo;m passionate about data-driven, user-first growth &mdash; leveraging analytics, AI tools, and cross-functional collaboration to help brands stand out in a crowded landscape.</p>
+      <div class="tag-cloud" role="list" aria-label="Core skills">
+        <span class="tag" role="listitem">SEO Strategy</span>
+        <span class="tag" role="listitem">Google Ads</span>
+        <span class="tag" role="listitem">Meta Ads</span>
+        <span class="tag" role="listitem">WCAG / ADA</span>
+        <span class="tag" role="listitem">UX Design</span>
+        <span class="tag" role="listitem">Content Strategy</span>
+        <span class="tag" role="listitem">Analytics</span>
+        <span class="tag" role="listitem">CRO</span>
+        <span class="tag" role="listitem">AI Marketing</span>
+        <span class="tag" role="listitem">Web Dev</span>
+        <span class="tag" role="listitem">Brand Design</span>
+        <span class="tag" role="listitem">Email Marketing</span>
+        <span class="tag" role="listitem">Social Media</span>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Current Roles</p>
+      <div class="cred-card"><div class="cred-role">Owner &middot; CMO</div><div class="cred-place">Elevation Tech</div><div class="cred-date">Mar 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Digital Marketing Specialist</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Feb 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Owner &middot; Founder</div><div class="cred-place">Ashley Sara Marketing</div><div class="cred-date">Jan 2024 &ndash; Present</div></div>
+      <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:.8rem 0">Education</p>
+      <div class="cred-card"><div class="cred-role">B.S. Strategic Communications</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Cedar City, Utah</div></div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact" style="border-bottom:none" aria-labelledby="contact-heading">
-<p class="sec-tag">Get In Touch</p>
-<h2 id="contact-heading" class="sec-title">Let's build<br><em>something real.</em></h2>
-<div class="contact-inner">
-<p class="contact-p">Open to freelance projects, consulting retainers, and full-time conversations. I'm based in Cedar City, Utah and work remotely. I reply within 24 hours.</p>
-<form id="contact-form" aria-label="Contact form" name="contact">
-<div class="form-row">
-<div class="field">
-<label for="name">Your Name</label>
-<input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true"/>
-</div>
-<div class="field">
-<label for="email">Email Address</label>
-<input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required aria-required="true"/>
-</div>
-</div>
-<div class="form-row">
-<div class="field">
-<label for="phone">Phone (Optional)</label>
-<input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel"/>
-</div>
-<div class="field">
-<label for="subject">Subject</label>
-<input type="text" id="subject" name="subject" placeholder="What's this about?" required aria-required="true"/>
-</div>
-</div>
-<div class="form-row full">
-<div class="field">
-<label for="message">Tell Me About Your Project</label>
-<textarea id="message" name="message" placeholder="What are you building? What's the goal?" required aria-required="true"></textarea>
-</div>
-</div>
-<div class="form-status" id="form-status"></div>
-<button type="submit" class="btn-fill">Send Message</button>
-</form>
-</div>
+  <p class="sec-tag">Get In Touch</p>
+  <h2 id="contact-heading" class="sec-title">Let&rsquo;s build<br><em>something real.</em></h2>
+  <div class="contact-inner">
+    <p class="contact-p">Open to freelance projects, consulting retainers, and full-time conversations. Based in Cedar City, Utah &mdash; working remotely. I reply within 24 hours.</p>
+    <form id="contact-form" aria-label="Contact Ashley Sara">
+      <div class="form-row">
+        <div class="field"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true"/></div>
+        <div class="field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required aria-required="true"/></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="phone">Phone (Optional)</label><input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel"/></div>
+        <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="What's this about?" required aria-required="true"/></div>
+      </div>
+      <div class="form-row full">
+        <div class="field"><label for="message">Tell Me About Your Project</label><textarea id="message" name="message" placeholder="What problem are you trying to solve?" required aria-required="true"></textarea></div>
+      </div>
+      <div class="form-status" id="form-status"></div>
+      <button type="submit" class="btn-fill">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-<div class="footer-sig">Ashley <span>Sara</span> · Cedar City, Utah · 2026</div>
-<nav class="footer-links" aria-label="Social links">
-<a href="https://linkedin.com/in/ashley-sara" target="_blank" rel="noopener noreferrer" aria-label="Ashley Sara on LinkedIn">LinkedIn</a>
-<a href="https://instagram.com/ashley.sara" target="_blank" rel="noopener noreferrer" aria-label="Ashley Sara on Instagram">Instagram</a>
-<a href="mailto:hello@ashley-sara.com" aria-label="Email Ashley Sara">Email</a>
-</nav>
+  <div class="footer-sig">Ashley <span>Sara</span> &middot; Cedar City, Utah &middot; 2026</div>
+  <nav class="footer-links" aria-label="Social and contact links">
+    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Ashley Sara on LinkedIn">LinkedIn</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Ashley Sara on Instagram">Instagram</a>
+    <a href="mailto:hello@ashleysara.com" aria-label="Email Ashley Sara">Email</a>
+  </nav>
 </footer>
 
-</main>
-
 <script>
-// Mobile Menu
-const hamburger = document.getElementById('hamburger');
-const navDropdown = document.getElementById('navDropdown');
-
-hamburger.addEventListener('click', () => {
-  navDropdown.classList.toggle('open');
-  hamburger.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', hamburger.classList.contains('open'));
-});
-
-function closeMobileMenu() {
-  navDropdown.classList.remove('open');
-  hamburger.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
+function toggleNav(){
+  const menu=document.getElementById('nav-dropdown');
+  const btn=document.getElementById('hamburger');
+  const isOpen=menu.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  btn.setAttribute('aria-expanded',String(isOpen));
 }
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('nav') && navDropdown.classList.contains('open')) {
-    closeMobileMenu();
-  }
-});
+function closeNav(){
+  document.getElementById('nav-dropdown').classList.remove('open');
+  const btn=document.getElementById('hamburger');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded','false');
+}
 
 // Contact Form
 const contactForm = document.getElementById('contact-form');
@@ -646,7 +495,19 @@ if (contactForm) {
     }
   });
 }
-</script>
 
+// Close menu on outside click
+document.addEventListener('click',function(e){
+  const nav=document.getElementById('nav-dropdown');
+  const btn=document.getElementById('hamburger');
+  if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target)){
+    closeNav();
+  }
+});
+// Close menu on Escape
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') closeNav();
+});
+</script>
 </body>
 </html>
