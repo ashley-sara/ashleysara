@@ -66,6 +66,30 @@
       background: var(--ink);
       color: var(--parchment);
       line-height: 1.6;
+      position: relative;
+    }
+    
+    /* Lace overlay background */
+    .site::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(201, 122, 130, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 60% 70%, rgba(201, 122, 130, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(201, 122, 130, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 40% 90%, rgba(201, 122, 130, 0.02) 1px, transparent 1px);
+      background-size: 400px 400px, 500px 500px, 600px 600px, 700px 700px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .site > * {
+      position: relative;
+      z-index: 2;
     }
     
     .sr-only {
@@ -100,6 +124,7 @@
       color: var(--parchment);
       text-decoration: none;
       cursor: pointer;
+      flex-shrink: 0;
     }
     
     .logo em {
@@ -110,6 +135,9 @@
     .nav-links {
       display: flex;
       gap: 2.5rem;
+      flex: 1;
+      justify-content: center;
+      margin: 0 2rem;
     }
     
     .nav-links a {
@@ -119,6 +147,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
     
     .nav-links a:hover,
@@ -139,6 +168,7 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.2s;
+      flex-shrink: 0;
     }
     
     .hire-btn:hover,
@@ -147,6 +177,61 @@
       color: var(--ink);
       outline: 2px solid var(--rose);
       outline-offset: 2px;
+    }
+    
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--parchment);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:focus {
+      outline: 2px solid var(--rose);
+      outline-offset: 2px;
+    }
+    
+    /* Mobile Navigation Menu */
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(14, 11, 9, 0.98);
+      border-bottom: 1px solid #2a1e16;
+      flex-direction: column;
+      gap: 0;
+      z-index: 99;
+    }
+    
+    .mobile-nav.active {
+      display: flex;
+    }
+    
+    .mobile-nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2.5rem;
+      border-bottom: 1px solid #2a1e16;
+      transition: color 0.2s;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      color: var(--parchment);
+      background: rgba(201, 122, 130, 0.1);
+      outline: none;
     }
     
     /* Hero Section */
@@ -382,6 +467,118 @@
       color: var(--rose);
     }
     
+    /* Problem Section */
+    .problem-section {
+      background: linear-gradient(135deg, rgba(122, 62, 24, 0.1) 0%, rgba(61, 31, 13, 0.1) 100%);
+      padding: 5rem 2.5rem;
+      border-bottom: 1px solid #1e1410;
+    }
+    
+    .problem-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .problem-left h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--parchment);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    
+    .problem-left h2 em {
+      color: var(--rose);
+      font-style: italic;
+    }
+    
+    .problem-copy {
+      font-family: var(--italic);
+      font-style: italic;
+      font-size: 1.01rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    
+    .problem-copy strong {
+      color: var(--dusty);
+      font-weight: 500;
+    }
+    
+    .solution-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .solution-list li {
+      padding: 0.75rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 13px;
+      color: var(--dusty);
+      line-height: 1.7;
+    }
+    
+    .solution-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.9rem;
+    }
+    
+    .problem-cta {
+      margin-top: 2rem;
+    }
+    
+    .problem-right {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid #2a1e16;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .problem-right h3 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--rose);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+    
+    .stats-highlight {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .stat-highlight {
+      padding: 1.2rem;
+      border: 1px solid #2a1e16;
+      background: rgba(255, 255, 255, 0.01);
+    }
+    
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    
     /* Services Grid */
     .services-grid {
       display: grid;
@@ -420,94 +617,6 @@
       line-height: 1.7;
     }
     
-    /* Social Media Section */
-    .social-showcase {
-      padding: 0;
-      border-bottom: 1px solid #1e1410;
-    }
-    
-    .social-content {
-      padding: 5rem 2.5rem;
-      background: linear-gradient(135deg, rgba(61, 31, 13, 0.3) 0%, rgba(122, 62, 24, 0.2) 100%);
-    }
-    
-    .social-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    
-    .social-copy h3 {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--rose);
-      margin-bottom: 1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    
-    .social-copy p {
-      font-family: var(--italic);
-      font-style: italic;
-      font-size: 1.01rem;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    
-    .social-list {
-      list-style: none;
-      margin-bottom: 2rem;
-    }
-    
-    .social-list li {
-      padding: 0.75rem 0;
-      padding-left: 1.8rem;
-      position: relative;
-      font-size: 13px;
-      color: var(--dusty);
-      line-height: 1.6;
-    }
-    
-    .social-list li::before {
-      content: "✦";
-      position: absolute;
-      left: 0;
-      color: var(--rose);
-      font-size: 0.8rem;
-    }
-    
-    .social-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    
-    .social-stat {
-      border: 1px solid #2a1e16;
-      padding: 1.2rem;
-      background: rgba(255, 255, 255, 0.02);
-      text-align: center;
-    }
-    
-    .social-stat-num {
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    
-    .social-stat-label {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    
     /* Work Grid */
     .work-grid {
       display: grid;
@@ -540,7 +649,6 @@
     .wt4 { background: #100a14; }
     .wt5 { background: #0a0e14; }
     .wt6 { background: #100e08; }
-    .wt7 { background: #0f1410; }
     
     .work-num {
       font-family: var(--serif);
@@ -828,15 +936,28 @@
         grid-template-columns: repeat(2, 1fr);
       }
       
-      .social-grid {
+      .problem-content {
         grid-template-columns: 1fr;
       }
     }
     
-    @media (max-width: 680px) {
-      .hero,
-      .about-grid {
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem 1.5rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        padding: 3.5rem 1.5rem;
         grid-template-columns: 1fr;
+        gap: 2rem;
       }
       
       .hero-right {
@@ -851,17 +972,40 @@
         grid-template-columns: 1fr;
       }
       
-      nav {
-        padding: 1rem 1.5rem;
-      }
-      
       .section,
       .testimonial,
-      .social-content {
+      .problem-section {
         padding: 3.5rem 1.5rem;
       }
       
-      .social-stats {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      
+      .stats-highlight {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 1rem;
+      }
+      
+      .logo {
+        font-size: 0.95rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .sec-title {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+      }
+      
+      .stat-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -876,13 +1020,23 @@
       <a href="#home" class="logo" aria-label="Ashley Sara home">Ashley <em>Sara</em></a>
       <div class="nav-links">
         <a href="#services" aria-label="Services section">Services</a>
-        <a href="#social" aria-label="Social Media section">Social Media</a>
         <a href="#work" aria-label="Work section">Work</a>
         <a href="#about" aria-label="About section">About</a>
         <a href="#contact" aria-label="Contact section">Contact</a>
       </div>
+      <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+        <i class="ti ti-menu-2"></i>
+      </button>
       <button class="hire-btn" aria-label="Hire Ashley Sara" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Hire Me</button>
     </nav>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services" onclick="closeMobileMenu()" aria-label="Services section">Services</a>
+      <a href="#work" onclick="closeMobileMenu()" aria-label="Work section">Work</a>
+      <a href="#about" onclick="closeMobileMenu()" aria-label="About section">About</a>
+      <a href="#contact" onclick="closeMobileMenu()" aria-label="Contact section">Contact</a>
+    </div>
     
     <!-- Hero Section -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
@@ -936,6 +1090,48 @@
       </div>
     </div>
     
+    <!-- Problem/Solution Section -->
+    <section class="problem-section" aria-labelledby="problem-heading">
+      <div class="problem-content">
+        <div class="problem-left">
+          <h2 id="problem-heading">Your audience is <em>scattered.</em></h2>
+          <p class="problem-copy">You have incredible products and services, but your marketing efforts feel fragmented. Social media isn't driving real leads. Your website traffic fluctuates. You're not sure where potential customers are finding you — or why they're not converting.</p>
+          <p class="problem-copy"><strong>Here's what I solve:</strong></p>
+          <ul class="solution-list">
+            <li>Unified SEO strategy that brings qualified traffic consistently</li>
+            <li>Social media that builds community and drives actual conversions</li>
+            <li>Paid media campaigns optimized for ROI, not vanity metrics</li>
+            <li>User experience that turns visitors into customers</li>
+            <li>Data-driven insights that show exactly what's working</li>
+          </ul>
+          <div class="problem-cta">
+            <button class="btn-fill" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Talk Strategy</button>
+          </div>
+        </div>
+        <div class="problem-right">
+          <h3>What Brands See After We Work Together</h3>
+          <div class="stats-highlight">
+            <div class="stat-highlight">
+              <div class="stat-num">3x</div>
+              <div class="stat-label">Organic Traffic Growth</div>
+            </div>
+            <div class="stat-highlight">
+              <div class="stat-num">40%</div>
+              <div class="stat-label">Higher Conversion Rate</div>
+            </div>
+            <div class="stat-highlight">
+              <div class="stat-num">50K+</div>
+              <div class="stat-label">Followers Engaged</div>
+            </div>
+            <div class="stat-highlight">
+              <div class="stat-num">24h</div>
+              <div class="stat-label">Response Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Services Section -->
     <section class="section" id="services" aria-labelledby="services-heading">
       <p class="sec-tag">What I Do</p>
@@ -971,55 +1167,6 @@
           <h3 class="svc-name">Analytics &amp; CRO</h3>
           <p class="svc-desc">Data-driven insights from Google Analytics, performance dashboards, and conversion rate optimization to maximize ROI.</p>
         </article>
-      </div>
-    </section>
-    
-    <!-- Social Media Management Section -->
-    <section class="social-showcase" id="social" aria-labelledby="social-heading">
-      <div class="social-content">
-        <div class="social-grid">
-          <div>
-            <h2 id="social-heading" class="sec-title">Social Media<br><em>that converts.</em></h2>
-            <p class="social-copy" style="font-family: var(--italic); font-style: italic; font-size: 1.01rem; color: var(--muted); line-height: 1.8; margin-top: 1.5rem;">
-              I don't just post — I build community and drive revenue through strategic social media management. From content strategy and calendar planning to community engagement and paid social amplification, I help brands build authentic connections that lead to measurable business results.
-            </p>
-            <p class="social-copy" style="font-family: var(--italic); font-style: italic; font-size: 1.01rem; color: var(--muted); line-height: 1.8;">
-              Every post is intentional, every caption is crafted, and every campaign is tracked. Let's build something that works.
-            </p>
-            
-            <h3 style="font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--rose); margin-bottom: 1rem; letter-spacing: 0.04em; text-transform: uppercase;">My Social Expertise:</h3>
-            <ul class="social-list">
-              <li><strong>Content Strategy &amp; Planning</strong> — Audience research, content pillars, and editorial calendars</li>
-              <li><strong>Community Management</strong> — Engagement, response strategies, and community building</li>
-              <li><strong>Paid Social Campaigns</strong> — Meta Ads (Facebook/Instagram), LinkedIn, and TikTok advertising</li>
-              <li><strong>Influencer Partnerships</strong> — Identifying and managing creator collaborations</li>
-              <li><strong>Analytics &amp; Reporting</strong> — Monthly reports, engagement tracking, and ROI measurement</li>
-              <li><strong>Reels &amp; Video Content</strong> — Short-form video strategy and production guidance</li>
-              <li><strong>Brand Voice Development</strong> — Authentic tone and messaging across all platforms</li>
-            </ul>
-          </div>
-          
-          <div>
-            <div class="social-stats">
-              <div class="social-stat">
-                <div class="social-stat-num">50K+</div>
-                <div class="social-stat-label">Followers Managed</div>
-              </div>
-              <div class="social-stat">
-                <div class="social-stat-num">300%</div>
-                <div class="social-stat-label">Avg Engagement Growth</div>
-              </div>
-              <div class="social-stat">
-                <div class="social-stat-num">8+</div>
-                <div class="social-stat-label">Platforms Managed</div>
-              </div>
-              <div class="social-stat">
-                <div class="social-stat-num">$2M+</div>
-                <div class="social-stat-label">Ad Spend Managed</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     
@@ -1212,6 +1359,28 @@
   </div>
   
   <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+    
+    function closeMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.remove('active');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.querySelector('nav');
+      const mobileNav = document.getElementById('mobileNav');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!nav.contains(e.target) && mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+    
     // Handle contact form submission
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
