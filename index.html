@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ashley Sara — Digital Growth and Search Experience Architect. SEO, paid media, UX, and brand strategy to drive measurable results.">
-  <meta name="keywords" content="SEO, digital marketing, UX design, paid media, brand strategy, marketing consultant">
+  <meta name="description" content="Ashley Sara — Digital Growth and Search Experience Architect. SEO, paid media, UX, social media management, and brand strategy to drive measurable results.">
+  <meta name="keywords" content="SEO, digital marketing, social media management, UX design, paid media, brand strategy, marketing consultant">
   <meta name="author" content="Ashley Sara">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   
@@ -420,6 +420,94 @@
       line-height: 1.7;
     }
     
+    /* Social Media Section */
+    .social-showcase {
+      padding: 0;
+      border-bottom: 1px solid #1e1410;
+    }
+    
+    .social-content {
+      padding: 5rem 2.5rem;
+      background: linear-gradient(135deg, rgba(61, 31, 13, 0.3) 0%, rgba(122, 62, 24, 0.2) 100%);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    
+    .social-copy h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--rose);
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    
+    .social-copy p {
+      font-family: var(--italic);
+      font-style: italic;
+      font-size: 1.01rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .social-list li {
+      padding: 0.75rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 13px;
+      color: var(--dusty);
+      line-height: 1.6;
+    }
+    
+    .social-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.8rem;
+    }
+    
+    .social-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .social-stat {
+      border: 1px solid #2a1e16;
+      padding: 1.2rem;
+      background: rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+    
+    .social-stat-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .social-stat-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    
     /* Work Grid */
     .work-grid {
       display: grid;
@@ -452,6 +540,7 @@
     .wt4 { background: #100a14; }
     .wt5 { background: #0a0e14; }
     .wt6 { background: #100e08; }
+    .wt7 { background: #0f1410; }
     
     .work-num {
       font-family: var(--serif);
@@ -738,6 +827,10 @@
       .work-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
     }
     
     @media (max-width: 680px) {
@@ -763,8 +856,13 @@
       }
       
       .section,
-      .testimonial {
+      .testimonial,
+      .social-content {
         padding: 3.5rem 1.5rem;
+      }
+      
+      .social-stats {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -778,6 +876,7 @@
       <a href="#home" class="logo" aria-label="Ashley Sara home">Ashley <em>Sara</em></a>
       <div class="nav-links">
         <a href="#services" aria-label="Services section">Services</a>
+        <a href="#social" aria-label="Social Media section">Social Media</a>
         <a href="#work" aria-label="Work section">Work</a>
         <a href="#about" aria-label="About section">About</a>
         <a href="#contact" aria-label="Contact section">Contact</a>
@@ -788,7 +887,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
       <div>
-        <p class="hero-eyebrow">SEO · Paid Media · UX · Brand Strategy</p>
+        <p class="hero-eyebrow">SEO · Paid Media · Social Management · UX · Brand Strategy</p>
         <h2 id="hero-heading">I turn websites into<br><em>growth engines.</em></h2>
         <p class="hero-body">Digital Growth &amp; Search Experience Architect based in Cedar City, Utah. I design digital experiences that drive traffic, delight users, and deliver measurable results.</p>
         <div class="hero-btns">
@@ -817,23 +916,23 @@
         <span class="strip-item">SEO Strategy</span><span class="strip-dot">✦</span>
         <span class="strip-item">Google Ads</span><span class="strip-dot">✦</span>
         <span class="strip-item">Meta Ads</span><span class="strip-dot">✦</span>
+        <span class="strip-item">Social Media Management</span><span class="strip-dot">✦</span>
         <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">✦</span>
         <span class="strip-item">UX Optimization</span><span class="strip-dot">✦</span>
         <span class="strip-item">Content Strategy</span><span class="strip-dot">✦</span>
         <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">✦</span>
         <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">✦</span>
         <span class="strip-item">Brand Strategy</span><span class="strip-dot">✦</span>
-        <span class="strip-item">Web Development</span><span class="strip-dot">✦</span>
         <span class="strip-item">SEO Strategy</span><span class="strip-dot">✦</span>
         <span class="strip-item">Google Ads</span><span class="strip-dot">✦</span>
         <span class="strip-item">Meta Ads</span><span class="strip-dot">✦</span>
+        <span class="strip-item">Social Media Management</span><span class="strip-dot">✦</span>
         <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">✦</span>
         <span class="strip-item">UX Optimization</span><span class="strip-dot">✦</span>
         <span class="strip-item">Content Strategy</span><span class="strip-dot">✦</span>
         <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">✦</span>
         <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">✦</span>
         <span class="strip-item">Brand Strategy</span><span class="strip-dot">✦</span>
-        <span class="strip-item">Web Development</span><span class="strip-dot">✦</span>
       </div>
     </div>
     
@@ -853,6 +952,11 @@
           <p class="svc-desc">Google Ads and Meta campaigns built for performance — from strategy and creative to tracking, A/B testing, and ROAS optimization.</p>
         </article>
         <article class="svc-card" role="listitem">
+          <i class="ti ti-brand-instagram svc-icon" aria-hidden="true"></i>
+          <h3 class="svc-name">Social Media Management</h3>
+          <p class="svc-desc">Strategic content calendars, community engagement, and audience growth. I build authentic connections that drive traffic and conversions.</p>
+        </article>
+        <article class="svc-card" role="listitem">
           <i class="ti ti-accessibility svc-icon" aria-hidden="true"></i>
           <h3 class="svc-name">Accessibility &amp; UX (WCAG)</h3>
           <p class="svc-desc">ADA/WCAG-compliant digital experiences that serve all users — backed by SUU's top 1% global recognition for web accessibility.</p>
@@ -867,11 +971,55 @@
           <h3 class="svc-name">Analytics &amp; CRO</h3>
           <p class="svc-desc">Data-driven insights from Google Analytics, performance dashboards, and conversion rate optimization to maximize ROI.</p>
         </article>
-        <article class="svc-card" role="listitem">
-          <i class="ti ti-paint svc-icon" aria-hidden="true"></i>
-          <h3 class="svc-name">Brand &amp; Content Strategy</h3>
-          <p class="svc-desc">Brand positioning, social media content, email marketing, and creative assets that build community and convert audiences.</p>
-        </article>
+      </div>
+    </section>
+    
+    <!-- Social Media Management Section -->
+    <section class="social-showcase" id="social" aria-labelledby="social-heading">
+      <div class="social-content">
+        <div class="social-grid">
+          <div>
+            <h2 id="social-heading" class="sec-title">Social Media<br><em>that converts.</em></h2>
+            <p class="social-copy" style="font-family: var(--italic); font-style: italic; font-size: 1.01rem; color: var(--muted); line-height: 1.8; margin-top: 1.5rem;">
+              I don't just post — I build community and drive revenue through strategic social media management. From content strategy and calendar planning to community engagement and paid social amplification, I help brands build authentic connections that lead to measurable business results.
+            </p>
+            <p class="social-copy" style="font-family: var(--italic); font-style: italic; font-size: 1.01rem; color: var(--muted); line-height: 1.8;">
+              Every post is intentional, every caption is crafted, and every campaign is tracked. Let's build something that works.
+            </p>
+            
+            <h3 style="font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--rose); margin-bottom: 1rem; letter-spacing: 0.04em; text-transform: uppercase;">My Social Expertise:</h3>
+            <ul class="social-list">
+              <li><strong>Content Strategy &amp; Planning</strong> — Audience research, content pillars, and editorial calendars</li>
+              <li><strong>Community Management</strong> — Engagement, response strategies, and community building</li>
+              <li><strong>Paid Social Campaigns</strong> — Meta Ads (Facebook/Instagram), LinkedIn, and TikTok advertising</li>
+              <li><strong>Influencer Partnerships</strong> — Identifying and managing creator collaborations</li>
+              <li><strong>Analytics &amp; Reporting</strong> — Monthly reports, engagement tracking, and ROI measurement</li>
+              <li><strong>Reels &amp; Video Content</strong> — Short-form video strategy and production guidance</li>
+              <li><strong>Brand Voice Development</strong> — Authentic tone and messaging across all platforms</li>
+            </ul>
+          </div>
+          
+          <div>
+            <div class="social-stats">
+              <div class="social-stat">
+                <div class="social-stat-num">50K+</div>
+                <div class="social-stat-label">Followers Managed</div>
+              </div>
+              <div class="social-stat">
+                <div class="social-stat-num">300%</div>
+                <div class="social-stat-label">Avg Engagement Growth</div>
+              </div>
+              <div class="social-stat">
+                <div class="social-stat-num">8+</div>
+                <div class="social-stat-label">Platforms Managed</div>
+              </div>
+              <div class="social-stat">
+                <div class="social-stat-num">$2M+</div>
+                <div class="social-stat-label">Ad Spend Managed</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -976,10 +1124,11 @@
       <div class="about-grid">
         <div>
           <p class="about-p">I'm Ashley Sara — a Digital Growth &amp; Search Experience Architect based in Cedar City, Utah. I hold a degree in Strategic Communications from Southern Utah University.</p>
-          <p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate &amp; Online programs. At Elevation Tech, I partner with small businesses to build full-funnel strategy and drive growth.</p>
+          <p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate &amp; Online programs. At Elevation Tech, I partner with small businesses to build full-funnel strategy and drive growth. I also manage social media for brands across multiple industries.</p>
           <p class="about-p">I'm passionate about data-driven, user-first digital growth — and I leverage analytics, AI tools, and cross-functional collaboration to help brands stand out in a crowded market.</p>
           <div class="tag-cloud" role="list" aria-label="Core skills">
             <span class="tag" role="listitem">SEO Strategy</span>
+            <span class="tag" role="listitem">Social Media Management</span>
             <span class="tag" role="listitem">Google Ads</span>
             <span class="tag" role="listitem">Meta Ads</span>
             <span class="tag" role="listitem">WCAG / ADA</span>
@@ -988,9 +1137,8 @@
             <span class="tag" role="listitem">Analytics</span>
             <span class="tag" role="listitem">CRO</span>
             <span class="tag" role="listitem">AI Marketing</span>
-            <span class="tag" role="listitem">Web Dev</span>
-            <span class="tag" role="listitem">Brand Design</span>
-            <span class="tag" role="listitem">Email Marketing</span>
+            <span class="tag" role="listitem">Community Management</span>
+            <span class="tag" role="listitem">Brand Strategy</span>
           </div>
         </div>
         <div>
