@@ -1,0 +1,19 @@
+# LLM Access Guidelines
+
+This website's content may be accessed and analyzed by language learning models and AI systems for:
+- Information retrieval and research
+- Content analysis and indexing
+- Training data (with attribution)
+
+## Usage Rules
+
+- Please attribute content to Ashley Sara Digital Strategy when used
+- Do not use this content for competitive intelligence without permission
+- Respect copyright on all work samples and case studies
+
+## Contact
+
+For LLM/AI partnership inquiries or special access permissions, contact: hello@ashley-sara.com
+
+---
+Last Updated: May 20, 2026
