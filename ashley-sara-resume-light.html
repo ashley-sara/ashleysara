@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashley Sara Fekay — Resume (Light)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f0ece5;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #2a1f14;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .page {
+    background: #faf8f5;
+    width: 850px;
+    min-height: 1100px;
+    box-shadow: 0 4px 32px rgba(60,30,0,0.1);
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 2.25rem 2.75rem 1.5rem;
+    border-bottom: 1px solid #e0d4c4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    background: #faf8f5;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #1a1008;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  h1 em {
+    color: #b8622a;
+    font-style: italic;
+  }
+
+  .title-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a7a5a;
+    margin-top: 0.4rem;
+  }
+
+  .contact {
+    text-align: right;
+    font-size: 11.5px;
+    color: #9a7a5a;
+    line-height: 2;
+    flex-shrink: 0;
+  }
+
+  .contact a { color: #b8622a; text-decoration: none; }
+
+  /* ── Accent bar ── */
+  .accent-bar {
+    background: #b8622a;
+    padding: 0.55rem 2.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #faf8f5;
+  }
+
+  /* ── Body grid ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+  }
+
+  .main {
+    padding: 1.75rem 2.25rem;
+    border-right: 1px solid #e8ddd0;
+    background: #faf8f5;
+  }
+
+  .side {
+    padding: 1.75rem 1.5rem;
+    background: #f2ede6;
+  }
+
+  /* ── Section label ── */
+  .sec-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #b8622a;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .sec-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e0d4c4;
+  }
+
+  .section { margin-bottom: 1.6rem; }
+
+  /* ── Summary ── */
+  .summary {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #5a4030;
+    border-left: 2px solid #b8622a;
+    padding-left: 0.9rem;
+  }
+
+  /* ── Job entries ── */
+  .job { margin-bottom: 1.3rem; padding-bottom: 1.3rem; border-bottom: 1px solid #e8ddd0; }
+  .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .job-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .job-title { font-size: 13px; font-weight: 600; color: #1a1008; }
+  .job-date { font-size: 10px; color: #9a7a5a; white-space: nowrap; flex-shrink: 0; }
+  .job-company { font-size: 11px; color: #b8622a; font-weight: 500; letter-spacing: 0.04em; margin: 1px 0 5px; }
+
+  ul.bullets { list-style: none; padding-left: 1rem; }
+  ul.bullets li {
+    font-size: 11.5px;
+    color: #5a4a3a;
+    line-height: 1.65;
+    margin-bottom: 2px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '—';
+    position: absolute;
+    left: -1rem;
+    color: #b8622a;
+    font-size: 9px;
+    top: 3px;
+  }
+
+  /* ── Side stats ── */
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 1.5rem; }
+  .stat-box {
+    background: #e8ddd0;
+    border: 1px solid #d4c4b0;
+    border-radius: 3px;
+    padding: 6px 8px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #b8622a;
+    display: block;
+    line-height: 1.1;
+  }
+  .stat-lbl {
+    font-size: 8.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #8a6a4a;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── Skills ── */
+  .skill-group { margin-bottom: 0.9rem; }
+  .skill-group-lbl {
+    font-size: 9px;
+    font-weight: 600;
+    color: #8a6a4a;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag {
+    font-size: 10px;
+    padding: 2px 7px;
+    background: #e8ddd0;
+    color: #4a3020;
+    border: 1px solid #d4c4b0;
+    border-radius: 2px;
+  }
+
+  /* ── Certs ── */
+  .cert { font-size: 11px; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.55rem; padding-bottom: 0.55rem; border-bottom: 1px solid #e0d4c4; }
+  .cert:last-child { border-bottom: none; }
+  .cert-src { font-size: 9.5px; color: #b8622a; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* ── Education ── */
+  .edu { margin-bottom: 0.7rem; }
+  .edu-deg { font-size: 11.5px; font-weight: 600; color: #1a1008; }
+  .edu-honor { color: #b8622a; font-size: 10px; font-style: italic; font-weight: 400; }
+  .edu-school { font-size: 10px; color: #b8622a; font-weight: 500; letter-spacing: 0.04em; margin-top: 1px; }
+
+  /* ── Footer ── */
+  .footer {
+    background: #f2ede6;
+    padding: 0.65rem 2.75rem;
+    font-size: 9px;
+    color: #a08060;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 1px solid #e0d4c4;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: #faf8f5; padding: 0; }
+    .page { width: 100%; box-shadow: none; }
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div>
+      <h1>Ashley <em>Sara</em> Fekay</h1>
+      <p class="title-tag">Digital Growth &amp; Search Experience Architect</p>
+    </div>
+    <div class="contact">
+      Elko, Nevada<br>
+      (208) 404-5991<br>
+      <a href="mailto:connect@ashley-sara.com">connect@ashley-sara.com</a><br>
+      <a href="https://ashley-sara.com">ashley-sara.com</a><br>
+      <a href="https://linkedin.com/in/ashley-fekay">linkedin.com/in/ashley-fekay</a>
+    </div>
+  </div>
+
+  <div class="accent-bar">
+    <span>SEO Strategy</span>
+    <span>Google Ads</span>
+    <span>Meta Ads</span>
+    <span>WCAG Accessibility</span>
+    <span>UX Optimization</span>
+    <span>Analytics &amp; CRO</span>
+    <span>AI-Powered Marketing</span>
+    <span>Brand Strategy</span>
+  </div>
+
+  <div class="body">
+    <div class="main">
+
+      <div class="section">
+        <div class="sec-label">Profile</div>
+        <p class="summary">8+ years driving organic visibility, paid search performance, and user experience for higher education and small business. I turn data into strategy and websites into growth engines — contributing to SUU's Top 1% global ranking for web accessibility along the way.</p>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Experience</div>
+
+        <div class="job">
+          <div class="job-row">
+            <span class="job-title">Digital Marketing Specialist</span>
+            <span class="job-date">Feb 2025 – Present</span>
+          </div>
+          <p class="job-company">Southern Utah University</p>
+          <ul class="bullets">
+            <li>Lead SEO strategy for Graduate &amp; Online programs — keyword research, technical audits, on-page optimization</li>
+            <li>Oversee social media management, email marketing, and SMS messaging for Graduate &amp; Online programs</li>
+            <li>Manage CMS content in Cascade ensuring WCAG/ADA compliance, internal linking, and metadata accuracy</li>
+            <li>Plan and execute Google Ads campaigns driving qualified leads and landing page engagement</li>
+            <li>Own data and analytics reporting across GA4, Search Console, Siteimprove, and Microsoft Clarity; translate findings into actionable growth strategy</li>
+            <li>Contributed to SUU's Top 1% global ranking for web accessibility</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-row">
+            <span class="job-title">Founder · CMO &amp; SEO Strategist</span>
+            <span class="job-date">Jan 2025 – Present</span>
+          </div>
+          <p class="job-company">Elevation Tech — AI Automation Agency</p>
+          <ul class="bullets">
+            <li>Provide SEO, web optimization, and full-funnel digital strategy for small business clients</li>
+            <li>Implement UTM tracking, schema markup, and metadata best practices to improve search visibility</li>
+            <li>Develop organic + paid strategies aligned with client goals to increase traffic, engagement, and conversions</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-row">
+            <span class="job-title">Web Content Editor</span>
+            <span class="job-date">May 2024 – Feb 2025</span>
+          </div>
+          <p class="job-company">Southern Utah University</p>
+          <ul class="bullets">
+            <li>Developed learner-centered web content with academic departments; aligned with branding and accessibility</li>
+            <li>Conducted keyword research to improve discoverability across academic web pages</li>
+            <li>Monitored behavior and content performance via GA4, providing actionable recommendations</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-row">
+            <span class="job-title">Digital Marketing Manager · Social Media Manager</span>
+            <span class="job-date">Jun 2023 – Jun 2024</span>
+          </div>
+          <p class="job-company">Rising K Ranch</p>
+          <ul class="bullets">
+            <li>Managed Google Ads and Meta campaigns — content, messaging, and landing pages optimized from performance data</li>
+            <li>Drove 80% increase in direct bookings through improved engagement and conversion pathways</li>
+            <li>Achieved 150% visibility boost through continuous A/B testing and ROAS optimization</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div><!-- /main -->
+
+    <div class="side">
+
+      <div class="section">
+        <div class="sec-label">Impact</div>
+        <div class="stat-grid">
+          <div class="stat-box"><span class="stat-num">Top 1%</span><span class="stat-lbl">WCAG Global</span></div>
+          <div class="stat-box"><span class="stat-num">80%</span><span class="stat-lbl">Bookings Up</span></div>
+          <div class="stat-box"><span class="stat-num">150%</span><span class="stat-lbl">Visibility Boost</span></div>
+          <div class="stat-box"><span class="stat-num">8+</span><span class="stat-lbl">Yrs Digital</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Skills</div>
+        <div class="skill-group">
+          <p class="skill-group-lbl">Search &amp; SEO</p>
+          <div class="tags">
+            <span class="tag">Technical SEO</span><span class="tag">Keyword Research</span>
+            <span class="tag">SEMrush</span><span class="tag">Ahrefs</span><span class="tag">Search Console</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-lbl">Paid Media</p>
+          <div class="tags">
+            <span class="tag">Google Ads</span><span class="tag">Meta Ads</span>
+            <span class="tag">A/B Testing</span><span class="tag">ROAS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-lbl">Analytics</p>
+          <div class="tags">
+            <span class="tag">GA4</span><span class="tag">Tag Manager</span>
+            <span class="tag">Siteimprove</span><span class="tag">MS Clarity</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-lbl">UX &amp; Accessibility</p>
+          <div class="tags">
+            <span class="tag">WCAG / ADA</span><span class="tag">UX/UI Design</span>
+            <span class="tag">CRO</span><span class="tag">CMS (Cascade)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-lbl">Content &amp; Strategy</p>
+          <div class="tags">
+            <span class="tag">AI Marketing</span><span class="tag">Brand Strategy</span>
+            <span class="tag">Email Marketing</span><span class="tag">Content Audits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Education</div>
+        <div class="edu">
+          <p class="edu-deg">B.S. Strategic Communication <span class="edu-honor">Magna Cum Laude</span></p>
+          <p class="edu-school">Southern Utah University · Dec 2025</p>
+        </div>
+        <div class="edu">
+          <p class="edu-deg">A.S. General Studies</p>
+          <p class="edu-school">Southern Utah University · Apr 2025</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Certifications</div>
+        <div class="cert">Content Marketing for SEO &amp; AI Search<br><span class="cert-src">SEMrush · 2026</span></div>
+        <div class="cert">Google AI Essentials<br><span class="cert-src">Coursera · 2025</span></div>
+        <div class="cert">Frontier Platform Manager<br><span class="cert-src">Siteimprove · 2025</span></div>
+        <div class="cert">Google Ads Search / Display / Creative<br><span class="cert-src">Google Skillshop · 2025</span></div>
+        <div class="cert">AI Powered Performance Ads<br><span class="cert-src">Google Skillshop · 2025</span></div>
+        <div class="cert">Foundations of UX/UI Design<br><span class="cert-src">Coursera · 2024</span></div>
+        <div class="cert">CSX Cybersecurity Fundamentals (CSXF)<br><span class="cert-src">ISACA · 2023</span></div>
+      </div>
+
+    </div><!-- /side -->
+  </div><!-- /body -->
+
+  <div class="footer">
+    Full experience &amp; portfolio at ashley-sara.com · linkedin.com/in/ashley-fekay · References available upon request
+  </div>
+
+</div>
+</body>
+</html>
