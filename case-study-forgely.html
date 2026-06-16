@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgely Case Study | Ashley Sara</title>
+  <meta name="description" content="How Ashley Sara drove tens of thousands in reach and a measurable spike in traffic and sales for Forgely through paid social advertising and growth strategy."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://ashley-sara.com/case-study-forgely.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --ink: #0e0b09;
+      --parchment: #f0ebe3;
+      --bourbon: #3d1f0d;
+      --rose: #c97a82;
+      --dusty: #e8c4c8;
+      --gold: #b8924a;
+      --muted: #9a8878;
+      --serif: 'Playfair Display', Georgia, serif;
+      --italic: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--ink);
+      color: var(--parchment);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--rose); text-decoration: none; }
+    a:hover { opacity: .8; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      border-bottom: 1px solid #2a1e16;
+      position: sticky;
+      top: 0;
+      background: var(--ink);
+      z-index: 100;
+    }
+    .logo { font-family: var(--serif); font-size: 1.1rem; letter-spacing: .06em; color: var(--parchment); }
+    .logo em { color: var(--rose); font-style: italic; }
+    .back-link { font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); border: 1px solid #3d2e22; padding: .42rem 1rem; transition: border-color .2s; }
+    .back-link:hover { border-color: var(--rose); color: var(--rose); opacity: 1; }
+
+    /* HERO */
+    .cs-hero {
+      padding: 5rem 2.5rem 4rem;
+      max-width: 860px;
+      margin: 0 auto;
+      border-bottom: 1px solid #2a1e16;
+    }
+    .cs-eyebrow {
+      font-family: var(--italic);
+      font-style: italic;
+      color: var(--rose);
+      font-size: .95rem;
+      letter-spacing: .04em;
+      margin-bottom: 1rem;
+    }
+    .cs-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--parchment);
+      margin-bottom: 1.5rem;
+    }
+    .cs-title em { color: var(--rose); font-style: italic; }
+    .cs-subtitle {
+      font-family: var(--italic);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* META ROW */
+    .cs-meta {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid #2a1e16;
+    }
+    .cs-meta-item { }
+    .cs-meta-label { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+    .cs-meta-val { font-family: var(--serif); font-size: .95rem; color: var(--parchment); }
+
+    /* STATS */
+    .cs-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #2a1e16;
+      border: 1px solid #2a1e16;
+      margin: 3rem 0;
+    }
+    .cs-stat {
+      background: var(--ink);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .cs-stat-n {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+    .cs-stat-l {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* BODY CONTENT */
+    .cs-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2.5rem 6rem;
+    }
+
+    .cs-section { margin-bottom: 4rem; }
+    .cs-section-tag {
+      font-family: var(--italic);
+      font-style: italic;
+      color: var(--rose);
+      font-size: .9rem;
+      letter-spacing: .04em;
+      margin-bottom: .4rem;
+    }
+    .cs-section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--parchment);
+      line-height: 1.15;
+      margin-bottom: 1.4rem;
+    }
+    .cs-section-title em { color: var(--rose); font-style: italic; }
+    .cs-p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+
+    /* TACTICS GRID */
+    .tactics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .tactic-card {
+      border: 1px solid #2a1e16;
+      padding: 1.4rem;
+      background: rgba(255,255,255,.02);
+      transition: border-color .2s;
+    }
+    .tactic-card:hover { border-color: var(--rose); }
+    .tactic-num {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: .5rem;
+      opacity: .8;
+    }
+    .tactic-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: .5rem;
+    }
+    .tactic-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* RESULTS */
+    .results-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    .results-list li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid #2a1e16;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .results-list li:last-child { border-bottom: none; }
+    .result-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--rose);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    /* QUOTE */
+    .cs-quote {
+      border-left: 2px solid var(--rose);
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      background: rgba(201,122,130,.04);
+      position: relative;
+    }
+    .cs-quote::before {
+      content: '\201C';
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--rose);
+      opacity: .15;
+      position: absolute;
+      top: -.5rem;
+      left: 1rem;
+      line-height: 1;
+    }
+    .cs-quote-text {
+      font-family: var(--italic);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--dusty);
+      line-height: 1.7;
+      margin-bottom: .8rem;
+    }
+    .cs-quote-attr {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* PLACEHOLDER VISUAL */
+    .cs-visual-placeholder {
+      border: 1px dashed #3d2e22;
+      background: rgba(255,255,255,.01);
+      border-radius: 2px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .08em;
+      font-family: var(--italic);
+      font-style: italic;
+    }
+
+    /* CTA */
+    .cs-cta {
+      border-top: 1px solid #2a1e16;
+      padding-top: 3rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .cs-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: .8rem;
+    }
+    .cs-cta-title em { color: var(--rose); font-style: italic; }
+    .cs-cta-sub {
+      font-family: var(--italic);
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    .btn-fill {
+      background: var(--rose);
+      color: var(--ink);
+      border: none;
+      padding: .85rem 2.2rem;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity .2s;
+    }
+    .btn-fill:hover { opacity: .85; color: var(--ink); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #2a1e16;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .08em;
+    }
+
+    /* MOBILE */
+    @media(max-width: 700px) {
+      .cs-hero { padding: 3rem 1.5rem 2.5rem; }
+      .cs-body { padding: 0 1.5rem 4rem; }
+      .cs-stats { grid-template-columns: 1fr; }
+      .tactics-grid { grid-template-columns: 1fr; }
+      nav { padding: 1rem 1.5rem; }
+      .cs-meta { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://ashley-sara.com" class="logo">Ashley <em>Sara</em></a>
+  <a href="https://ashley-sara.com/#work" class="back-link">← Back to Work</a>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <img src="forgely-logo.png" alt="Forgely 3D logo" style="height:52px; width:auto; margin-bottom:1.8rem; display:block; border-radius:4px;"/>
+  <p class="cs-eyebrow">Case Study · Paid Social · SEO Research · Growth Strategy</p>
+  <h1 class="cs-title">Putting Forgely's filament<br><em>in front of the right buyers.</em></h1>
+  <p class="cs-subtitle">Forgely makes 100% American-manufactured 3D printing filament to tight tolerances. They had a great product and a brand-new digital storefront — but no one knew they existed yet. I built and ran their paid social engine — and provided the data research and strategic intelligence that fueled their SEO growth too.</p>
+  <div class="cs-meta">
+    <div class="cs-meta-item">
+      <p class="cs-meta-label">Client</p>
+      <p class="cs-meta-val">Forgely · Roy, Utah</p>
+    </div>
+    <div class="cs-meta-item">
+      <p class="cs-meta-label">Industry</p>
+      <p class="cs-meta-val">American Manufacturing · E-commerce</p>
+    </div>
+    <div class="cs-meta-item">
+      <p class="cs-meta-label">Services</p>
+      <p class="cs-meta-val">Paid Social · SEO Research · Growth Strategy</p>
+    </div>
+    <div class="cs-meta-item">
+      <p class="cs-meta-label">Duration</p>
+      <p class="cs-meta-val">6 Months · 2025–2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="cs-body">
+
+  <!-- STATS -->
+  <div class="cs-stats">
+    <div class="cs-stat">
+      <p class="cs-stat-n">75,482</p>
+      <p class="cs-stat-l">Total paid reach</p>
+    </div>
+    <div class="cs-stat">
+      <p class="cs-stat-n">5.22%</p>
+      <p class="cs-stat-l">CTR — 6× industry avg</p>
+    </div>
+    <div class="cs-stat">
+      <p class="cs-stat-n">$0.13</p>
+      <p class="cs-stat-l">CPC — vs $0.50–1.50 avg</p>
+    </div>
+    <div class="cs-stat">
+      <p class="cs-stat-n">+100%</p>
+      <p class="cs-stat-l">Organic traffic growth</p>
+    </div>
+    <div class="cs-stat">
+      <p class="cs-stat-n">+2,317%</p>
+      <p class="cs-stat-l">Organic keyword growth</p>
+    </div>
+    <div class="cs-stat">
+      <p class="cs-stat-n">+1,165%</p>
+      <p class="cs-stat-l">Backlink growth</p>
+    </div>
+  </div>
+
+  <!-- THE CHALLENGE -->
+  <div class="cs-section">
+    <p class="cs-section-tag">The Challenge</p>
+    <h2 class="cs-section-title">A precision product with<br><em>zero awareness.</em></h2>
+    <p class="cs-p">Forgely walked away from the crowded toy printing market to do one thing exceptionally well: manufacture tight-tolerance filament entirely in the USA. The product was ready. The new storefront — built to handle everything from hobbyist single spools to wholesale print farm accounts — was live. But in a market dominated by cheap overseas brands, awareness was zero.</p>
+    <p class="cs-p">The goal was two-pronged: put Forgely's filament in front of the right people through paid social, and provide the data research and strategic intelligence the web team needed to build out their organic presence from scratch.</p>
+  </div>
+
+  <!-- APPROACH -->
+  <div class="cs-section">
+    <p class="cs-section-tag">The Approach</p>
+    <h2 class="cs-section-title">Paid social built for<br><em>a niche audience.</em></h2>
+    <p class="cs-p">3D printing is a passionate, tight-knit community. Generic ads don't work here — the audience can smell inauthenticity immediately. I built a Facebook and Instagram paid advertising strategy rooted in product specificity and American manufacturing pride, targeting makers who care about what goes into their machines.</p>
+
+    <div class="tactics-grid">
+      <div class="tactic-card">
+        <p class="tactic-num">01 · Strategy</p>
+        <p class="tactic-title">Dual-brand product advertising</p>
+        <p class="tactic-desc">Ran separate paid campaigns for both ERYONE and Forgely-branded filament lines, allowing precise audience segmentation between budget-conscious hobbyists and premium print farm buyers.</p>
+      </div>
+      <div class="tactic-card">
+        <p class="tactic-num">02 · Targeting</p>
+        <p class="tactic-title">Niche audience precision</p>
+        <p class="tactic-desc">Built custom audiences around 3D printing communities, maker culture, and filament-specific interests on Facebook and Instagram — putting ads directly in front of people already in the ecosystem.</p>
+      </div>
+      <div class="tactic-card">
+        <p class="tactic-num">03 · Creative</p>
+        <p class="tactic-title">Team creative direction</p>
+        <p class="tactic-desc">Collaborated closely with Bill and Tyler on ad creative and team messaging — developing ideas that energized their internal team and translated directly into sales-driving content.</p>
+      </div>
+      <div class="tactic-card">
+        <p class="tactic-num">04 · Optimization</p>
+        <p class="tactic-title">Continuous performance tuning</p>
+        <p class="tactic-desc">Monitored campaign performance over 6 months, iterating on audiences, creative, and spend allocation to push reach higher and tighten cost efficiency as data accumulated.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO RESEARCH SECTION -->
+  <div class="cs-section">
+    <p class="cs-section-tag">The Research</p>
+    <h2 class="cs-section-title">The data behind<br><em>the organic growth.</em></h2>
+    <p class="cs-p">Beyond paid social, I provided the web team with the competitive research, keyword data, and strategic direction that powered Forgely 3D's SEO growth. This included identifying the right keyword targets for a niche manufacturing audience, analyzing competitor gaps, and translating that intelligence into actionable recommendations.</p>
+    <p class="cs-p">The results speak for themselves: organic keywords grew by over 2,316%, backlinks by 1,164%, and organic traffic doubled — all from a standing start. That's what happens when paid strategy and organic research work from the same intelligence.</p>
+  </div>
+
+  <!-- VISUAL PLACEHOLDER -->
+  <div class="cs-visual-placeholder">
+    📊 Add your Meta Ads screenshot here — replace this div with an &lt;img&gt; tag pointing to your uploaded screenshot
+  </div>
+
+  <!-- RESULTS -->
+  <div class="cs-section">
+    <p class="cs-section-tag">The Results</p>
+    <h2 class="cs-section-title">75,482 reached.<br><em>At $0.13 a click.</em></h2>
+    <p class="cs-p">Over six months, paid social transformed Forgely from unknown to discoverable. On a lean $725.82 budget, the campaigns outperformed industry benchmarks across every key metric.</p>
+    <ul class="results-list">
+      <li><span class="result-dot"></span><span>Reached <strong style="color:var(--parchment)">75,482 people</strong> and generated <strong style="color:var(--parchment)">104,928 impressions</strong> on a $725.82 budget</span></li>
+      <li><span class="result-dot"></span><span><strong style="color:var(--parchment)">5.22% CTR</strong> — nearly 6× the industry average of 0.9%</span></li>
+      <li><span class="result-dot"></span><span><strong style="color:var(--parchment)">$0.13 cost per click</strong> — vs. the $0.50–$1.50 industry benchmark</span></li>
+      <li><span class="result-dot"></span><span><strong style="color:var(--parchment)">40,298 page engagements</strong> driving direct traffic and brand awareness for both ERYONE and Forgely filament lines</span></li>
+      <li><span class="result-dot"></span><span>Measurable <strong style="color:var(--parchment)">spike in site traffic and filament sales</strong> directly correlated with campaign activity</span></li>
+      <li><span class="result-dot"></span><span>Built a repeatable paid social system across Facebook, Instagram, and Audience Network the team could sustain and scale</span></li>
+      <li><span class="result-dot"></span><span>SEO research contributed to <strong style="color:var(--parchment)">290 organic keywords</strong> and <strong style="color:var(--parchment)">215 backlinks</strong> — growth of +2,317% and +1,165% respectively</span></li>
+      <li><span class="result-dot"></span><span><strong style="color:var(--parchment)">+100% organic traffic growth</strong> on forgely3d.com driven by strategic keyword and competitor research</span></li>
+    </ul>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="cs-quote">
+    <p class="cs-quote-text">Ashley comes up with ideas that energize our team and drafts creatives that actually generate sales.</p>
+    <p class="cs-quote-attr">— Bill &amp; Tyler · Owners, Forgely</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cs-cta">
+    <p class="cs-cta-title">Ready to put your product<br><em>in front of the right people?</em></p>
+    <p class="cs-cta-sub">Let's build a paid social strategy that actually moves the needle.</p>
+    <a href="https://ashley-sara.com/#contact" class="btn-fill">Work With Me →</a>
+  </div>
+
+</div>
+
+<footer>
+  Ashley Sara · Elko, Nevada · <a href="https://ashley-sara.com" style="color:var(--muted)">ashley-sara.com</a>
+</footer>
+
+</body>
+</html>
