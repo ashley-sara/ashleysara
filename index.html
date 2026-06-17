@@ -1111,7 +1111,9 @@ async function handleSubmit(e){
   });
 
   // Mobile/touch fallback: scroll depth + time delay (exit-intent doesn't work on touch)
-  var isTouch='ontouchstart' in window || navigator.maxTouchPoints>0;
+  var isTouchCapable=('ontouchstart' in window || navigator.maxTouchPoints>0);
+  var isSmallScreen=window.innerWidth<=900;
+  var isTouch=isTouchCapable && isSmallScreen;
   if(isTouch){
     var scrollTriggered=false;
     window.addEventListener('scroll',function(){
