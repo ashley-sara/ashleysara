@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ashley Sara — Digital Growth & Search Experience Architect. SEO, Paid Media, UX, WCAG Accessibility, and Brand Strategy based in Elko, Nevada."/>
+<meta name="author" content="Ashley Sara"/>
+<meta property="og:title" content="Ashley Sara | Digital Growth & Search Experience Architect"/>
+<meta property="og:description" content="I turn websites into growth engines. SEO, Paid Media, UX, Accessibility & Brand Strategy — Elko, Nevada."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ashley-sara.com/"/>
+<meta property="og:image" content="https://ashley-sara.com/headshot.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Ashley Sara | Digital Growth &amp; Search Experience Architect"/>
+<meta name="twitter:description" content="I turn websites into growth engines. SEO, Paid Media, UX, Accessibility &amp; Brand Strategy — Elko, Nevada."/>
+<meta name="twitter:image" content="https://ashley-sara.com/headshot.jpg"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ashley-sara.com/"/>
+<title>Ashley Sara | Digital Growth & Search Experience Architect</title>
+
+<!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your real ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','GA_MEASUREMENT_ID');
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Person",
+      "name":"Ashley Sara",
+      "jobTitle":"Digital Growth & Search Experience Architect",
+      "url":"https://ashley-sara.com",
+      "sameAs":["https://www.linkedin.com/in/ashley-fekay/"],
+      "address":{"@type":"PostalAddress","addressLocality":"Elko","addressRegion":"NV","addressCountry":"US"},
+      "knowsAbout":["SEO","Paid Media","Google Ads","Meta Ads","WCAG Accessibility","UX Design","Content Strategy","Web Development","Brand Strategy"]
+    },
+    {
+      "@type":"LocalBusiness",
+      "name":"Ashley Sara Marketing",
+      "url":"https://ashley-sara.com",
+      "description":"Digital Growth & Search Experience Architect offering SEO, paid media, UX, accessibility, and brand strategy services.",
+      "address":{"@type":"PostalAddress","addressLocality":"Elko","addressRegion":"NV","addressCountry":"US"},
+      "founder":{"@type":"Person","name":"Ashley Sara"},
+      "foundingDate":"2024",
+      "areaServed":"United States",
+      "serviceType":["SEO","Paid Media","Web Design","Brand Strategy","Content Strategy","Accessibility Consulting"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0e0b09;--parchment:#f0ebe3;--bourbon:#3d1f0d;
+  --rose:#c97a82;--dusty:#e8c4c8;--gold:#b8924a;
+  --muted:#b3a290;
+  --serif:'Playfair Display',Georgia,serif;
+  --italic:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--parchment);line-height:1.6;overflow-x:hidden}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+img{max-width:100%;height:auto}
+
+/* LACE */
+.lace-bg{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.028}
+.lace-bg svg{width:100%;height:100%}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;border-bottom:1px solid #2a1e16;background:rgba(14,11,9,.97);position:sticky;top:0;z-index:200}
+.logo{font-family:var(--serif);font-size:1.1rem;letter-spacing:.06em;color:var(--parchment);white-space:nowrap;text-decoration:none}
+.logo em{color:var(--rose);font-style:italic}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
+.nav-links-inline{display:flex;align-items:center;gap:1.8rem}
+.nav-links-inline a{text-decoration:none;color:var(--muted);font-size:12px;letter-spacing:.13em;text-transform:uppercase;transition:color .2s;white-space:nowrap}
+.nav-links-inline a:hover,.nav-links-inline a:focus{color:var(--parchment);outline:2px solid var(--rose);outline-offset:3px}
+.hire-btn-sm{background:transparent;color:var(--rose);border:1px solid var(--rose);padding:.42rem 1rem;font-family:var(--sans);font-size:11px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap}
+.hire-btn-sm:hover,.hire-btn-sm:focus{background:var(--rose);color:var(--ink)}
+.hamburger{background:none;border:1px solid #3d2e22;cursor:pointer;padding:.5rem .6rem;color:var(--parchment);display:flex;flex-direction:column;gap:4px;border-radius:2px;transition:border-color .2s}
+.hamburger:hover,.hamburger:focus{border-color:var(--rose);outline:none}
+.hamburger span{display:block;width:20px;height:1.5px;background:currentColor;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+.nav-dropdown{display:none;flex-direction:column;background:rgba(14,11,9,.99);border-bottom:1px solid #2a1e16;position:sticky;top:57px;z-index:199}
+.nav-dropdown.open{display:flex}
+.nav-dropdown a{text-decoration:none;color:var(--muted);font-size:13px;letter-spacing:.13em;text-transform:uppercase;padding:1rem 2rem;border-bottom:1px solid #1a1210;transition:color .2s,background .2s}
+.nav-dropdown a:hover{color:var(--parchment);background:rgba(201,122,130,.06)}
+.nav-dropdown .dd-hire{background:var(--rose);color:var(--ink);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:1rem 2rem;font-family:var(--sans);font-weight:500;border:none;cursor:pointer;text-align:left}
+@media(min-width:900px){.nav-links-inline{display:flex}.hire-btn-sm{display:block}}
+@media(max-width:899px){.nav-links-inline{display:none}.hire-btn-sm{display:none}}
+
+/* HERO */
+.hero{padding:5rem 2.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;border-bottom:1px solid #2a1e16;position:relative;z-index:1}
+.hero-eyebrow{font-family:var(--italic);font-size:1rem;color:var(--rose);font-style:italic;letter-spacing:.04em;margin-bottom:1.2rem}
+.hero h1{font-family:var(--serif);font-size:clamp(3rem,5.5vw,5.2rem);line-height:1.0;font-weight:900;color:var(--parchment);margin-bottom:1.8rem}
+.hero h1 em{color:var(--rose);font-style:italic;display:block}
+.hero-body{font-family:var(--italic);font-style:italic;font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:440px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-fill{background:var(--rose);color:var(--ink);border:none;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:opacity .2s}
+.btn-fill:hover,.btn-fill:focus{opacity:.85;outline:2px solid var(--rose);outline-offset:2px}
+.btn-ghost{background:transparent;color:var(--parchment);border:1px solid #3d2e22;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:border-color .2s;text-decoration:none;display:inline-block}
+.btn-ghost:hover,.btn-ghost:focus{border-color:var(--muted);outline:2px solid var(--muted);outline-offset:2px}
+
+/* HERO RIGHT — headshot + quote */
+.hero-right{display:flex;flex-direction:column;gap:1.5rem}
+.headshot-wrap{position:relative;width:100%}
+.headshot-img{width:220px;height:260px;object-fit:cover;object-position:top center;display:block;border:1px solid #2a1e16;margin:0 auto}
+
+.quote-box{border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);position:relative}
+.quote-box::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:-.8rem;left:1rem;line-height:1;pointer-events:none}
+.quote-text{font-family:var(--italic);font-size:1rem;font-style:italic;color:var(--dusty);line-height:1.65;margin-bottom:.5rem}
+.quote-src{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ornament{text-align:center;color:var(--rose);letter-spacing:.4em;font-size:.65rem;margin:1rem 0}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.stat{border-top:1px solid #2a1e16;padding-top:.8rem}
+.stat-n{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+
+/* STRIP */
+.strip{border-top:1px solid #2a1e16;border-bottom:1px solid #2a1e16;padding:.7rem 0;overflow:hidden;white-space:nowrap;background:var(--bourbon);position:relative;z-index:1}
+.strip-inner{display:inline-block;animation:scroll 22s linear infinite}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.strip-item{font-family:var(--italic);font-style:italic;font-size:.82rem;color:var(--dusty);letter-spacing:.07em;padding:0 2rem}
+.strip-dot{color:var(--rose)}
+
+/* SECTIONS */
+.section{padding:5rem 2.5rem;border-bottom:1px solid #1e1410;position:relative;z-index:1}
+.sec-tag{font-family:var(--italic);font-style:italic;color:var(--rose);font-size:.9rem;letter-spacing:.04em;margin-bottom:.4rem}
+.sec-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;color:var(--parchment);line-height:1.1;margin-bottom:2.8rem}
+.sec-title em{font-style:italic;color:var(--rose)}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.svc-card{border:1px solid #2a1e16;padding:1.6rem;background:rgba(255,255,255,.02);transition:border-color .2s}
+.svc-card:hover{border-color:var(--rose)}
+.svc-problem{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:.4rem;opacity:.85}
+.svc-name{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--parchment);margin-bottom:.5rem}
+.svc-desc{font-size:13px;color:var(--muted);line-height:1.7}
+.svc-includes{font-size:11px;color:var(--muted);margin-top:.8rem;opacity:.7}
+
+/* FLIP CARDS */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.flip-card{height:280px;cursor:pointer;perspective:1000px}
+.flip-card:focus{outline:2px solid var(--rose);outline-offset:4px;border-radius:2px}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.flip-card.flipped .flip-inner,.flip-card:hover .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-front{display:flex;align-items:flex-end;padding:1.2rem;position:relative;overflow:hidden}
+.ff1{background:linear-gradient(160deg,#1a0c06,#3d1a0f)}
+.ff2{background:linear-gradient(160deg,#120d1c,#2e1a3d)}
+.ff3{background:linear-gradient(160deg,#0a100e,#1a2e1a)}
+.ff4{background:linear-gradient(160deg,#100a14,#2a1a30)}
+.ff5{background:linear-gradient(160deg,#0a0e14,#1a2030)}
+.ff6{background:linear-gradient(160deg,#100e08,#2e2a10)}
+.flip-num{font-family:var(--serif);font-size:5rem;font-weight:900;position:absolute;top:.3rem;right:.8rem;opacity:.1;color:var(--parchment);line-height:1}
+.flip-line{width:32px;height:2px;background:var(--rose);margin-bottom:.6rem}
+.flip-badge{background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500}
+.flip-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--parchment);margin-top:.5rem}
+.flip-sub{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,235,227,.5);margin-top:.2rem}
+.flip-hint{position:absolute;top:.8rem;right:.8rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,122,130,.6)}
+
+.flip-back{background:#1a1008;border:1px solid #3d2e22;transform:rotateY(180deg);padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+.back-badge{background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500;align-self:flex-start;margin-bottom:.6rem}
+.back-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--parchment);margin-bottom:.8rem}
+.back-results{display:flex;flex-direction:column;gap:.5rem;flex:1}
+.result-row{display:flex;align-items:center;gap:.6rem;font-size:12px;color:var(--muted);line-height:1.4}
+.result-row i{color:var(--rose);font-size:14px;flex-shrink:0}
+.result-stat{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gold)}
+
+/* PRICING */
+.pricing-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.ptab{background:transparent;border:1px solid #3d2e22;color:var(--muted);padding:.5rem 1.3rem;font-family:var(--sans);font-size:12px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.ptab.active,.ptab:hover{border-color:var(--rose);color:var(--rose)}
+.pricing-panel{display:none}
+.pricing-panel.active{display:block}
+.packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.pkg-card{border:1px solid #2a1e16;padding:2rem;background:rgba(255,255,255,.02);position:relative;transition:border-color .3s}
+.pkg-card:hover{border-color:var(--rose)}
+.pkg-card.featured{border-color:var(--rose)}
+.pkg-featured-label{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .9rem;font-weight:500;white-space:nowrap}
+.pkg-name{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--parchment);margin-bottom:.3rem}
+.pkg-tagline{font-family:var(--italic);font-style:italic;font-size:.9rem;color:var(--muted);margin-bottom:1.2rem}
+.pkg-price{font-family:var(--serif);font-size:2.4rem;font-weight:900;color:var(--gold);line-height:1}
+.pkg-period{font-size:12px;color:var(--muted);letter-spacing:.1em;margin-bottom:1.4rem}
+.pkg-features{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.6rem}
+.pkg-features li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:.5rem;line-height:1.5}
+.pkg-features li i{color:var(--rose);font-size:14px;margin-top:2px;flex-shrink:0}
+.pkg-btn{width:100%;background:transparent;color:var(--rose);border:1px solid var(--rose);padding:.65rem;font-family:var(--sans);font-size:12px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.pkg-btn:hover{background:var(--rose);color:var(--ink)}
+.pkg-card.featured .pkg-btn{background:var(--rose);color:var(--ink)}
+.pkg-card.featured .pkg-btn:hover{opacity:.85}
+.alacarte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.ala-card{border:1px solid #2a1e16;padding:1.3rem;background:rgba(255,255,255,.02);display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:border-color .2s}
+.ala-card:hover{border-color:var(--rose)}
+.ala-name{font-family:var(--serif);font-size:.9rem;font-weight:700;color:var(--parchment)}
+.ala-desc{font-size:12px;color:var(--muted);margin-top:.2rem}
+.ala-price{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gold);white-space:nowrap}
+.pricing-note{font-family:var(--italic);font-style:italic;font-size:.9rem;color:var(--muted);margin-top:1.5rem;opacity:.8}
+
+/* TESTIMONIALS */
+.testi-slider{position:relative;overflow:hidden}
+.testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.testi-slide{min-width:100%;padding:0 .5rem}
+.testi-card{border:1px solid #2a1e16;padding:2.5rem;background:rgba(255,255,255,.02);position:relative}
+.testi-card::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:-.5rem;left:1.5rem;line-height:1;pointer-events:none}
+.testi-quote{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;color:var(--parchment);line-height:1.55;margin-bottom:1.5rem;max-width:700px}
+.testi-author{display:flex;align-items:center;gap:1rem}
+.testi-avatar{width:44px;height:44px;background:var(--bourbon);border:1px solid var(--rose);border-radius:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1rem;color:var(--rose);font-weight:700;flex-shrink:0}
+.testi-name{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--parchment)}
+.testi-role{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.testi-controls{display:flex;align-items:center;gap:1rem;margin-top:1.5rem}
+.testi-btn{background:none;border:1px solid #3d2e22;color:var(--muted);width:36px;height:36px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;font-size:16px}
+.testi-btn:hover{border-color:var(--rose);color:var(--rose)}
+.testi-dots{display:flex;gap:.5rem}
+.testi-dot{width:6px;height:6px;background:#3d2e22;border:none;cursor:pointer;transition:background .2s;padding:0}
+.testi-dot.active{background:var(--rose)}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.blog-card{border:1px solid #2a1e16;background:rgba(255,255,255,.02);transition:border-color .2s;text-decoration:none;display:block}
+.blog-card:hover{border-color:var(--rose)}
+.blog-thumb{height:160px;display:flex;align-items:flex-end;padding:1rem;position:relative}
+.bt1{background:linear-gradient(160deg,#1a0c06,#4a2010)}
+.bt2{background:linear-gradient(160deg,#050d10,#0d2a30)}
+.bt3{background:linear-gradient(160deg,#0a0810,#1e1030)}
+.blog-cat{background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500}
+.blog-body{padding:1.3rem}
+.blog-date{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.blog-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--parchment);line-height:1.4;margin-bottom:.5rem}
+.blog-excerpt{font-size:13px;color:var(--muted);line-height:1.7}
+.blog-read{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-top:.8rem;display:inline-block}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:4.5rem;align-items:start}
+.about-p{font-family:var(--italic);font-style:italic;font-size:1.02rem;color:var(--muted);line-height:1.9;margin-bottom:1.2rem}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+.tag{background:transparent;border:1px solid #3d2e22;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .8rem;transition:all .2s}
+.tag:hover{border-color:var(--rose);color:var(--rose)}
+.cred-card{border:1px solid #2a1e16;padding:1.1rem;background:rgba(255,255,255,.02);margin-bottom:.8rem}
+.cred-role{font-family:var(--serif);font-size:.88rem;font-weight:700;color:var(--parchment);margin-bottom:.25rem}
+.cred-place{font-size:12px;color:var(--rose);margin-bottom:.15rem}
+.cred-date{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+/* CONTACT */
+.contact-inner{max-width:560px}
+.contact-p{font-family:var(--italic);font-style:italic;font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea{background:rgba(255,255,255,.03);border:none;border-bottom:1px solid #3d2e22;color:var(--parchment);padding:.65rem 0;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s;width:100%}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--rose)}
+.field textarea{height:90px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#4a3a2e}
+
+footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid #1e1410;position:relative;z-index:1}
+.footer-sig{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted)}
+.footer-sig span{color:var(--rose)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--rose)}
+
+@media(max-width:700px){
+  .hero,.about-grid{grid-template-columns:1fr}
+  .hero-right{display:flex}
+  .work-grid{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .section{padding:3rem 1.5rem}
+  .hero{padding:3rem 1.5rem}
+  .packages-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .cs-grid{grid-template-columns:1fr!important;gap:.8rem!important}
+}
+@media(max-width:500px){.work-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="lace-bg" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="lace" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <polygon points="40,2 78,40 40,78 2,40" fill="none" stroke="#e8c4c8" stroke-width="0.6"/>
+      <polygon points="40,14 66,40 40,66 14,40" fill="none" stroke="#e8c4c8" stroke-width="0.4"/>
+      <circle cx="40" cy="40" r="2.5" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="2" cy="2" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="78" cy="2" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="2" cy="78" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <circle cx="78" cy="78" r="2" fill="none" stroke="#e8c4c8" stroke-width="0.5"/>
+      <line x1="40" y1="2" x2="40" y2="14" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="40" y1="66" x2="40" y2="78" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="2" y1="40" x2="14" y2="40" stroke="#e8c4c8" stroke-width="0.4"/>
+      <line x1="66" y1="40" x2="78" y2="40" stroke="#e8c4c8" stroke-width="0.4"/>
+      <circle cx="40" cy="8" r="1" fill="#e8c4c8"/>
+      <circle cx="40" cy="72" r="1" fill="#e8c4c8"/>
+      <circle cx="8" cy="40" r="1" fill="#e8c4c8"/>
+      <circle cx="72" cy="40" r="1" fill="#e8c4c8"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#lace)"/>
+</svg>
+</div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#" class="logo">Ashley <em>Sara</em></a>
+  <div class="nav-right">
+    <div class="nav-links-inline">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hire-btn-sm" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-dropdown" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="nav-dropdown" class="nav-dropdown" role="menu">
+  <a href="#services" onclick="closeNav()">Services</a>
+  <a href="#work" onclick="closeNav()">Work</a>
+  <a href="#case-studies" onclick="closeNav()">Case Studies</a>
+  <a href="#pricing" onclick="closeNav()">Pricing</a>
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#blog" onclick="closeNav()">Blog</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  <button class="dd-hire" onclick="closeNav();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me &#8594;</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div>
+    <p class="hero-eyebrow">SEO &middot; Paid Media &middot; UX &middot; Accessibility &middot; Brand Strategy</p>
+    <h1 id="hero-heading">I turn websites into<br><em>growth engines.</em></h1>
+    <p class="hero-body">Digital Growth &amp; Search Experience Architect based in Elko, Nevada. I design digital experiences that drive traffic, delight users, and deliver measurable results &mdash; for higher education, small businesses, and everyone in between.</p>
+    <div class="hero-btns">
+      <button class="btn-fill" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See My Work</button>
+      <a href="Resume.pdf" class="btn-ghost" download>Download Resume</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Portrait card -->
+    <div class="headshot-card">
+      <img src="headshot.jpg" alt="Ashley Sara, Digital Growth and Search Experience Architect based in Elko, Nevada" class="headshot-img" width="600" height="320"/>
+      <div class="headshot-overlay">
+        <div class="headshot-name">Ashley Sara</div>
+        <div class="headshot-title">Digital Growth &amp; Search Experience Architect</div>
+      </div>
+    </div>
+    <!-- Stats bar -->
+    <div class="stat-grid" aria-label="Key results">
+      <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years in Digital</div></div>
+      <div class="stat"><div class="stat-n">Top 1%</div><div class="stat-l">WCAG Global</div></div>
+      <div class="stat"><div class="stat-n">150%</div><div class="stat-l">Visibility Boost</div></div>
+      <div class="stat"><div class="stat-n">80%</div><div class="stat-l">Bookings Up</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner">
+    <span class="strip-item">SEO Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Google Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Meta Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">UX Optimization</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Content Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Brand Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Web Development</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">SEO Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Google Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Meta Ads</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">WCAG Accessibility</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">UX Optimization</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Content Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Analytics &amp; CRO</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">AI-Powered Marketing</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Brand Strategy</span><span class="strip-dot">&#10022;</span>
+    <span class="strip-item">Web Development</span><span class="strip-dot">&#10022;</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services" aria-labelledby="services-heading">
+  <p class="sec-tag">How I Help</p>
+  <h2 id="services-heading" class="sec-title">Your biggest digital<br><em>problems, solved.</em></h2>
+  <div class="services-grid" role="list">
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">Nobody can find you online</p>
+      <h3 class="svc-name">SEO &amp; Search Strategy</h3>
+      <p class="svc-desc">Technical SEO, keyword strategy, and content architecture that earns rankings your competitors can&rsquo;t easily copy.</p>
+      <p class="svc-includes">Includes: keyword research &middot; on-page optimization &middot; technical audits &middot; local SEO</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">Your ads aren&rsquo;t converting</p>
+      <h3 class="svc-name">Paid Media That Performs</h3>
+      <p class="svc-desc">Google Ads and Meta campaigns engineered for ROI. I&rsquo;ve driven a 150% visibility boost and 80% booking increase &mdash; with data to back every decision.</p>
+      <p class="svc-includes">Includes: Google Ads &middot; Meta Ads &middot; A/B testing &middot; ROAS optimization &middot; social media advertising</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">Your site excludes customers &amp; risks liability</p>
+      <h3 class="svc-name">Accessibility &amp; UX (WCAG/ADA)</h3>
+      <p class="svc-desc">I make your digital experience work for everyone. My work contributed to SUU&rsquo;s top 1% global ranking for web accessibility.</p>
+      <p class="svc-includes">Includes: WCAG audits &middot; ADA compliance &middot; UX redesign &middot; inclusive design systems</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">Your website isn&rsquo;t doing any work for you</p>
+      <h3 class="svc-name">Web Design &amp; Development</h3>
+      <p class="svc-desc">Custom websites built to rank, convert, and scale &mdash; optimized for SEO, speed, accessibility, and the user journey from first click to conversion.</p>
+      <p class="svc-includes">Includes: custom web builds &middot; landing pages &middot; CMS management &middot; brand design</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">You&rsquo;re flying blind on what&rsquo;s working</p>
+      <h3 class="svc-name">Analytics &amp; Conversion Optimization</h3>
+      <p class="svc-desc">I turn your data into a competitive advantage &mdash; proper tracking setup, clear reporting, and changes that actually move revenue.</p>
+      <p class="svc-includes">Includes: Google Analytics &middot; dashboards &middot; CRO &middot; performance reporting &middot; AI-powered insights</p>
+    </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">Your content isn&rsquo;t building trust or traffic</p>
+      <h3 class="svc-name">Content &amp; Brand Strategy</h3>
+      <p class="svc-desc">From email campaigns to social content to full brand identity &mdash; I create the strategy and assets that make your audience stop scrolling and start buying.</p>
+      <p class="svc-includes">Includes: content strategy &middot; email marketing &middot; social media &middot; graphic design &middot; brand positioning</p>
+    </article>
+  </div>
+</section>
+
+<!-- WORK — FLIP CARDS -->
+<section class="section" id="work" aria-labelledby="work-heading">
+  <p class="sec-tag">Selected Work</p>
+  <h2 id="work-heading" class="sec-title">Results that <em>speak.</em></h2>
+  <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;opacity:.7">Hover or tap a card to see results</p>
+  <div class="work-grid" role="list">
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU Graduate Programs SEO case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff1" aria-hidden="true">
+          <span class="flip-num">01</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Higher Ed</div><div class="flip-title">SUU Graduate Programs SEO</div><div class="flip-sub">Organic Growth &middot; 2024&ndash;Present</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Higher Ed</div>
+            <div class="back-title">SUU Graduate Programs SEO</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-trending-up"></i><span>Significant increase in organic search traffic to graduate program pages</span></div>
+            <div class="result-row"><i class="ti ti-award"></i><span><span class="result-stat">Top 1%</span> globally for web accessibility — WCAG compliant</span></div>
+            <div class="result-row"><i class="ti ti-target"></i><span>Improved keyword rankings for high-intent enrollment queries</span></div>
+            <div class="result-row"><i class="ti ti-users"></i><span>Contributed to exceeding enrollment targets</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Rising K Ranch paid media case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff2" aria-hidden="true">
+          <span class="flip-num">02</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Paid Media</div><div class="flip-title">Rising K Ranch Growth</div><div class="flip-sub">Google Ads &middot; Meta &middot; 2023&ndash;2024</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Paid Media</div>
+            <div class="back-title">Rising K Ranch Growth</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-eye"></i><span><span class="result-stat">150%</span> boost in online visibility</span></div>
+            <div class="result-row"><i class="ti ti-calendar-check"></i><span><span class="result-stat">80%</span> increase in direct bookings</span></div>
+            <div class="result-row"><i class="ti ti-chart-line"></i><span>Continuous ROAS improvement through A/B testing</span></div>
+            <div class="result-row"><i class="ti ti-ad"></i><span>High-converting ad creatives &amp; landing pages built</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Wild Horse Ranch brand case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff3" aria-hidden="true">
+          <span class="flip-num">03</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Brand</div><div class="flip-title">Wild Horse Ranch Brand</div><div class="flip-sub">10-Year Brand &middot; 2016&ndash;Present</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Brand</div>
+            <div class="back-title">Wild Horse Ranch Brand</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-tv"></i><span>Featured on <strong>The Cowboy Channel</strong> &amp; national industry press</span></div>
+            <div class="result-row"><i class="ti ti-star"></i><span>Consistent <span class="result-stat">5-star</span> customer service record</span></div>
+            <div class="result-row"><i class="ti ti-users"></i><span>Scaled to 15+ staff with strong brand &amp; community presence</span></div>
+            <div class="result-row"><i class="ti ti-horse"></i><span>Increased wild horse &amp; burro adoption rates through targeted campaigns</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Elevation Tech clients case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff4" aria-hidden="true">
+          <span class="flip-num">04</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Agency</div><div class="flip-title">Elevation Tech Clients</div><div class="flip-sub">Full-Funnel Strategy &middot; 2025&ndash;Present</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Agency</div>
+            <div class="back-title">Elevation Tech Clients</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-rocket"></i><span>End-to-end digital strategy for small business clients</span></div>
+            <div class="result-row"><i class="ti ti-search"></i><span>Custom SEO + web builds driving measurable organic growth</span></div>
+            <div class="result-row"><i class="ti ti-currency-dollar"></i><span>Full-funnel campaigns from organic search to paid conversion</span></div>
+            <div class="result-row"><i class="ti ti-chart-bar"></i><span>Regular performance reports with data-driven recommendations</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU web accessibility case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff5" aria-hidden="true">
+          <span class="flip-num">05</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Accessibility</div><div class="flip-title">SUU Web Accessibility</div><div class="flip-sub">WCAG Compliance &middot; 2024&ndash;Present</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Accessibility</div>
+            <div class="back-title">SUU Web Accessibility</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-award"></i><span><span class="result-stat">Top 1%</span> globally for web accessibility</span></div>
+            <div class="result-row"><i class="ti ti-accessible"></i><span>Full WCAG 2.1 AA compliance across all department pages</span></div>
+            <div class="result-row"><i class="ti ti-file-check"></i><span>Federal, state &amp; university accessibility standards met</span></div>
+            <div class="result-row"><i class="ti ti-users"></i><span>Inclusive, user-centric digital experiences for all students</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Ashley Sara Marketing freelance case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front ff6" aria-hidden="true">
+          <span class="flip-num">06</span>
+          <span class="flip-hint">tap to flip</span>
+          <div><div class="flip-line"></div><div class="flip-badge">Freelance</div><div class="flip-title">Ashley Sara Marketing</div><div class="flip-sub">SEO &middot; UX &middot; Content &middot; Social</div></div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="back-badge">Freelance</div>
+            <div class="back-title">Ashley Sara Marketing</div>
+          </div>
+          <div class="back-results">
+            <div class="result-row"><i class="ti ti-device-desktop"></i><span>SEO-optimized web builds for diverse small business clients</span></div>
+            <div class="result-row"><i class="ti ti-social"></i><span>Social media strategy &amp; content driving community growth</span></div>
+            <div class="result-row"><i class="ti ti-mail"></i><span>Email marketing campaigns with measurable open &amp; click rates</span></div>
+            <div class="result-row"><i class="ti ti-brush"></i><span>On-brand graphic design &amp; creative assets for digital channels</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing" aria-labelledby="pricing-heading">
+  <p class="sec-tag">Investment</p>
+  <h2 id="pricing-heading" class="sec-title">Transparent<br><em>pricing.</em></h2>
+  <div class="pricing-tabs" role="tablist">
+    <button class="ptab active" role="tab" aria-selected="true" onclick="showPricing('packages',this)">Packages</button>
+    <button class="ptab" role="tab" aria-selected="false" onclick="showPricing('alacarte',this)">&Agrave; La Carte</button>
+  </div>
+
+  <div id="panel-packages" class="pricing-panel active" role="tabpanel">
+    <div class="packages-grid">
+      <div class="pkg-card">
+        <h3 class="pkg-name">Starter</h3>
+        <p class="pkg-tagline">Get found &amp; get going</p>
+        <div class="pkg-price">$750</div>
+        <div class="pkg-period">/ month &middot; 3-month minimum</div>
+        <ul class="pkg-features">
+          <li><i class="ti ti-check"></i>SEO audit &amp; on-page optimization (up to 10 pages)</li>
+          <li><i class="ti ti-check"></i>Monthly keyword research &amp; content recommendations</li>
+          <li><i class="ti ti-check"></i>Google Analytics setup &amp; monthly report</li>
+          <li><i class="ti ti-check"></i>1 social media platform management</li>
+          <li><i class="ti ti-check"></i>Email support</li>
+        </ul>
+        <button class="pkg-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+
+      <div class="pkg-card featured">
+        <div class="pkg-featured-label">Most Popular</div>
+        <h3 class="pkg-name">Growth</h3>
+        <p class="pkg-tagline">Full-funnel momentum</p>
+        <div class="pkg-price">$1,800</div>
+        <div class="pkg-period">/ month &middot; 3-month minimum</div>
+        <ul class="pkg-features">
+          <li><i class="ti ti-check"></i>Everything in Starter</li>
+          <li><i class="ti ti-check"></i>Google Ads or Meta Ads management (up to $3k ad spend)</li>
+          <li><i class="ti ti-check"></i>Full technical SEO &amp; schema markup</li>
+          <li><i class="ti ti-check"></i>2 blog posts or content pieces per month</li>
+          <li><i class="ti ti-check"></i>2 social media platforms managed</li>
+          <li><i class="ti ti-check"></i>Bi-weekly strategy calls</li>
+          <li><i class="ti ti-check"></i>CRO recommendations</li>
+        </ul>
+        <button class="pkg-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+
+      <div class="pkg-card">
+        <h3 class="pkg-name">Premium</h3>
+        <p class="pkg-tagline">Full-service growth partner</p>
+        <div class="pkg-price">$3,500</div>
+        <div class="pkg-period">/ month &middot; 3-month minimum</div>
+        <ul class="pkg-features">
+          <li><i class="ti ti-check"></i>Everything in Growth</li>
+          <li><i class="ti ti-check"></i>Google Ads + Meta Ads management (up to $10k ad spend)</li>
+          <li><i class="ti ti-check"></i>Custom web page design &amp; development (1/month)</li>
+          <li><i class="ti ti-check"></i>4 content pieces + full content calendar</li>
+          <li><i class="ti ti-check"></i>Email marketing (2 campaigns/month)</li>
+          <li><i class="ti ti-check"></i>Full brand strategy &amp; asset creation</li>
+          <li><i class="ti ti-check"></i>Weekly calls &amp; priority support</li>
+          <li><i class="ti ti-check"></i>WCAG accessibility audit &amp; remediation</li>
+        </ul>
+        <button class="pkg-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+    </div>
+    <p class="pricing-note">All packages include a free 30-minute discovery call. Custom scopes available &mdash; let&rsquo;s talk.</p>
+  </div>
+
+  <div id="panel-alacarte" class="pricing-panel" role="tabpanel">
+    <div class="alacarte-grid">
+      <div class="ala-card"><div><div class="ala-name">SEO Audit</div><div class="ala-desc">Full technical + on-page audit with action plan</div></div><div class="ala-price">$400</div></div>
+      <div class="ala-card"><div><div class="ala-name">Website Build</div><div class="ala-desc">Custom 1-page site, SEO + WCAG ready</div></div><div class="ala-price">from $1,200</div></div>
+      <div class="ala-card"><div><div class="ala-name">Google Ads Setup</div><div class="ala-desc">Campaign build, targeting &amp; tracking</div></div><div class="ala-price">$600</div></div>
+      <div class="ala-card"><div><div class="ala-name">Meta Ads Setup</div><div class="ala-desc">Ad creative, audience &amp; pixel setup</div></div><div class="ala-price">$500</div></div>
+      <div class="ala-card"><div><div class="ala-name">WCAG Accessibility Audit</div><div class="ala-desc">Full compliance report &amp; fix recommendations</div></div><div class="ala-price">$350</div></div>
+      <div class="ala-card"><div><div class="ala-name">Content Strategy</div><div class="ala-desc">Keyword map, content calendar &amp; briefs</div></div><div class="ala-price">$500</div></div>
+      <div class="ala-card"><div><div class="ala-name">Blog Post</div><div class="ala-desc">SEO-optimized, 1,000&ndash;1,500 words</div></div><div class="ala-price">$200</div></div>
+      <div class="ala-card"><div><div class="ala-name">Email Campaign</div><div class="ala-desc">Copy, design &amp; send setup</div></div><div class="ala-price">$250</div></div>
+      <div class="ala-card"><div><div class="ala-name">Brand Identity</div><div class="ala-desc">Logo, color palette, typography &amp; brand guide</div></div><div class="ala-price">from $800</div></div>
+      <div class="ala-card"><div><div class="ala-name">Analytics Setup</div><div class="ala-desc">GA4, Search Console &amp; dashboard</div></div><div class="ala-price">$300</div></div>
+      <div class="ala-card"><div><div class="ala-name">Social Media Audit</div><div class="ala-desc">Profile review, strategy &amp; content plan</div></div><div class="ala-price">$250</div></div>
+      <div class="ala-card"><div><div class="ala-name">Strategy Session</div><div class="ala-desc">60-min deep-dive consultation + notes</div></div><div class="ala-price">$150</div></div>
+    </div>
+    <p class="pricing-note">Bundle 3+ services and save 15%. All prices in USD. &mdash; <a href="#contact" style="color:var(--rose)">Request a custom quote</a></p>
+  </div>
+</section>
+
+
+<!-- CASE STUDIES -->
+<section class="section" id="case-studies" aria-labelledby="cs-heading">
+  <p class="sec-tag">Deep Dives</p>
+  <h2 id="cs-heading" class="sec-title">The work, <em>unpacked.</em></h2>
+  <p style="font-family:var(--italic);font-style:italic;font-size:1rem;color:var(--muted);max-width:520px;margin-bottom:2.8rem;line-height:1.8;">Numbers tell part of the story. Case studies tell the rest — the strategy, the decisions, and why it worked.</p>
+  <div class="cs-grid">
+
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+      <div>
+        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Paid Social · SEO Research · Growth Strategy</p>
+        <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">Forgely 3D</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1.2rem;">75,482 reached. $0.13 CPC. +2,317% organic keyword growth. How paid social and strategic research put an American filament brand on the map.</p>
+        <div style="display:flex;gap:1.5rem;margin-bottom:1.4rem;flex-wrap:wrap;">
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">75,482</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Reached</p></div>
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">5.22%</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">CTR</p></div>
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">+2,317%</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Keywords</p></div>
+        </div>
+      </div>
+      <a href="case-study-forgely.html" style="display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:.5rem 1.2rem;transition:all .2s;text-decoration:none;align-self:flex-start;" onmouseover="this.style.background='var(--rose)';this.style.color='var(--ink)'" onmouseout="this.style.background='transparent';this.style.color='var(--rose)'">Read Case Study →</a>
+    </div>
+
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+      <div>
+        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Organic Social · Paid Meta · Graphic Design</p>
+        <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">Rising K Ranch</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1.2rem;">150% visibility boost. 80% increase in direct bookings. A year of organic social and paid Meta campaigns for a Cedar City, Utah horseback riding experience.</p>
+        <div style="display:flex;gap:1.5rem;margin-bottom:1.4rem;flex-wrap:wrap;">
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">150%</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Visibility</p></div>
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">80%</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Bookings</p></div>
+        </div>
+      </div>
+      <a href="case-study-rising-k.html" style="display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:.5rem 1.2rem;transition:all .2s;text-decoration:none;align-self:flex-start;" onmouseover="this.style.background='var(--rose)';this.style.color='var(--ink)'" onmouseout="this.style.background='transparent';this.style.color='var(--rose)'">Read Case Study →</a>
+    </div>
+
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+      <div>
+        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Web Design · Local SEO · Social Media · Graphic Design</p>
+        <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">La Bottega</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1.2rem;">Two years of full-service digital marketing for a Palm Desert Italian coffee shop — web design, SEO, social, and graphic design that grew catering bookings, in-store traffic, and online visibility.</p>
+        <div style="display:flex;gap:1.5rem;margin-bottom:1.4rem;flex-wrap:wrap;">
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">↑ Catering</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Bookings</p></div>
+          <div><p style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1;">2 Years</p><p style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.2rem;">Full Retainer</p></div>
+        </div>
+      </div>
+      <a href="case-study-la-bottega.html" style="display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:.5rem 1.2rem;transition:all .2s;text-decoration:none;align-self:flex-start;" onmouseover="this.style.background='var(--rose)';this.style.color='var(--ink)'" onmouseout="this.style.background='transparent';this.style.color='var(--rose)'">Read Case Study →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials" aria-labelledby="testi-heading">
+  <p class="sec-tag">Kind Words</p>
+  <h2 id="testi-heading" class="sec-title">What clients<br><em>say.</em></h2>
+  <div class="testi-slider" aria-live="polite">
+    <div class="testi-track" id="testi-track">
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <blockquote>
+            <p class="testi-quote">&ldquo;Ashley comes up with ideas that energize our team and drafts creatives that actually generate sales.&rdquo;</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">B</div>
+              <div>
+                <div class="testi-name">Bill &amp; Tyler</div>
+                <div class="testi-role">Owners &middot; Forgely</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <blockquote>
+            <p class="testi-quote">&ldquo;Ashley took our coffee shop from invisible to booked out. Our catering inquiries, in-store traffic, and online visibility all went up &mdash; she just gets how to move the needle.&rdquo;</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">C</div>
+              <div>
+                <div class="testi-name">Cindy K.</div>
+                <div class="testi-role">La Bottega &middot; Palm Desert, CA</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <blockquote>
+            <p class="testi-quote">&ldquo;Ashley is brilliant and took so much off my plate. With her in my corner, I know my online presence is handled.&rdquo;</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">K</div>
+              <div>
+                <div class="testi-name">Keri</div>
+                <div class="testi-role">Owner &middot; Charlee&rsquo;s Bar &middot; Elko, NV</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+    <div class="testi-controls">
+      <button class="testi-btn" onclick="slideTesti(-1)" aria-label="Previous testimonial">&#8592;</button>
+      <div class="testi-dots" role="tablist" aria-label="Testimonial navigation">
+        <button class="testi-dot active" onclick="goTesti(0)" aria-label="Testimonial 1"></button>
+        <button class="testi-dot" onclick="goTesti(1)" aria-label="Testimonial 2"></button>
+        <button class="testi-dot" onclick="goTesti(2)" aria-label="Testimonial 3"></button>
+      </div>
+      <button class="testi-btn" onclick="slideTesti(1)" aria-label="Next testimonial">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section" id="blog" aria-labelledby="blog-heading">
+  <p class="sec-tag">Insights</p>
+  <h2 id="blog-heading" class="sec-title">From the<br><em>field.</em></h2>
+  <div class="blog-grid">
+    <a class="blog-card" href="blog-wcag-compliance-cost.html" aria-label="Blog post: What WCAG Compliance Actually Costs Small Businesses">
+      <div class="blog-thumb bt1"><div class="blog-cat">Accessibility</div></div>
+      <div class="blog-body">
+        <div class="blog-date">June 2026 &middot; 8 min read</div>
+        <h3 class="blog-title">What WCAG Compliance Actually Costs Small Businesses (And What It Costs Not To)</h3>
+        <p class="blog-excerpt">ADA lawsuits targeting small business websites are rising. Here&rsquo;s what you need to know before it becomes your problem.</p>
+        <span class="blog-read">Read More &#8594;</span>
+      </div>
+    </a>
+    <a class="blog-card" href="blog-google-ads-not-converting.html" aria-label="Blog post: Why Your Google Ads Aren't Converting">
+      <div class="blog-thumb bt2"><div class="blog-cat">Paid Media</div></div>
+      <div class="blog-body">
+        <div class="blog-date">June 2026 &middot; 7 min read</div>
+        <h3 class="blog-title">Why Your Google Ads Aren&rsquo;t Converting (It&rsquo;s Probably Not the Ad)</h3>
+        <p class="blog-excerpt">Most paid media problems start long before someone clicks the ad. A landing page audit checklist for better ROAS.</p>
+        <span class="blog-read">Read More &#8594;</span>
+      </div>
+    </a>
+    <a class="blog-card" href="blog-higher-ed-seo-strategy.html" aria-label="Blog post: The SEO Strategy That Helped SUU Rank">
+      <div class="blog-thumb bt3"><div class="blog-cat">SEO</div></div>
+      <div class="blog-body">
+        <div class="blog-date">June 2026 &middot; 7 min read</div>
+        <h3 class="blog-title">The SEO Strategy Behind a Top-Ranked University Graduate Program</h3>
+        <p class="blog-excerpt">How we combined technical SEO, content strategy, and accessibility to drive qualified enrollment traffic at scale.</p>
+        <span class="blog-read">Read More &#8594;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about" aria-labelledby="about-heading">
+  <p class="sec-tag">About Me</p>
+  <h2 id="about-heading" class="sec-title">Strategy with<br><em>a soul.</em></h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-p">I&rsquo;m Ashley Sara &mdash; a Digital Growth &amp; Search Experience Architect based in Elko, Nevada. With a degree in Strategic Communications from Southern Utah University and 6+ years building digital experiences that perform, I bridge the gap between data and creativity.</p>
+      <p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate &amp; Online programs. At Elevation Tech, I partner with small businesses on full-funnel digital strategy. Through Ashley Sara Marketing, I bring that same thinking to independent clients who want results, not fluff.</p>
+      <p class="about-p">I&rsquo;m passionate about data-driven, user-first growth &mdash; leveraging analytics, AI tools, and cross-functional collaboration to help brands stand out in a crowded landscape.</p>
+      <div class="tag-cloud" role="list" aria-label="Core skills">
+        <span class="tag" role="listitem">SEO Strategy</span>
+        <span class="tag" role="listitem">Google Ads</span>
+        <span class="tag" role="listitem">Meta Ads</span>
+        <span class="tag" role="listitem">WCAG / ADA</span>
+        <span class="tag" role="listitem">UX Design</span>
+        <span class="tag" role="listitem">Content Strategy</span>
+        <span class="tag" role="listitem">Analytics</span>
+        <span class="tag" role="listitem">CRO</span>
+        <span class="tag" role="listitem">AI Marketing</span>
+        <span class="tag" role="listitem">Web Dev</span>
+        <span class="tag" role="listitem">Brand Design</span>
+        <span class="tag" role="listitem">Email Marketing</span>
+        <span class="tag" role="listitem">Social Media</span>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Current Roles</p>
+      <div class="cred-card"><div class="cred-role">Owner &middot; CMO</div><div class="cred-place">Elevation Tech</div><div class="cred-date">Mar 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Digital Marketing Specialist</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Feb 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Owner &middot; Founder</div><div class="cred-place">Ashley Sara Marketing</div><div class="cred-date">Jan 2024 &ndash; Present</div></div>
+      <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:.8rem 0">Education</p>
+      <div class="cred-card"><div class="cred-role">B.S. Strategic Communications</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Cedar City, Utah</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="border-bottom:none" aria-labelledby="contact-heading">
+  <p class="sec-tag">Get In Touch</p>
+  <h2 id="contact-heading" class="sec-title">Let&rsquo;s build<br><em>something real.</em></h2>
+  <div class="contact-inner">
+    <p class="contact-p">Open to freelance projects, consulting retainers, and full-time conversations. Based in Elko, Nevada &mdash; working remotely. I reply within 24 hours.</p>
+    <form aria-label="Contact Ashley Sara" onsubmit="handleSubmit(event)" action="https://formspree.io/f/mdajewld" method="POST">
+      <div class="form-row">
+        <div class="field"><label for="c-name">Your Name</label><input type="text" id="c-name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true"/></div>
+        <div class="field"><label for="c-email">Email Address</label><input type="email" id="c-email" name="email" placeholder="jane@company.com" autocomplete="email" required aria-required="true"/></div>
+      </div>
+      <div style="margin-bottom:1rem">
+        <div class="field"><label for="c-budget">Budget Range</label>
+          <select id="c-budget" name="budget" style="background:rgba(255,255,255,.03);border:none;border-bottom:1px solid #3d2e22;color:var(--parchment);padding:.65rem 0;font-family:var(--sans);font-size:14px;outline:none;width:100%;appearance:none">
+            <option value="" style="background:#1a1008">Select a range...</option>
+            <option value="under-500" style="background:#1a1008">Under $500</option>
+            <option value="500-1500" style="background:#1a1008">$500 &ndash; $1,500</option>
+            <option value="1500-3500" style="background:#1a1008">$1,500 &ndash; $3,500</option>
+            <option value="3500-plus" style="background:#1a1008">$3,500+</option>
+            <option value="not-sure" style="background:#1a1008">Not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-bottom:1.5rem"><div class="field"><label for="c-msg">Tell Me About Your Project</label><textarea id="c-msg" name="message" placeholder="What problem are you trying to solve?"></textarea></div></div>
+      <button type="submit" class="btn-fill">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-sig">Ashley <span>Sara</span> &middot; Elko, Nevada &middot; &copy; 2024&ndash;2026</div>
+  <nav class="footer-links" aria-label="Social and contact links">
+    <a href="https://www.linkedin.com/in/ashley-fekay/" target="_blank" rel="noopener noreferrer" aria-label="Ashley Sara on LinkedIn">LinkedIn</a>
+    <a href="mailto:ashleysfekay@gmail.com" aria-label="Email Ashley Sara">Email</a>
+  </nav>
+</footer>
+
+<script>
+// NAV
+function toggleNav(){
+  const menu=document.getElementById('nav-dropdown');
+  const btn=document.getElementById('hamburger');
+  const isOpen=menu.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  btn.setAttribute('aria-expanded',String(isOpen));
+}
+function closeNav(){
+  document.getElementById('nav-dropdown').classList.remove('open');
+  const btn=document.getElementById('hamburger');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded','false');
+}
+document.addEventListener('click',function(e){
+  const nav=document.getElementById('nav-dropdown');
+  const btn=document.getElementById('hamburger');
+  if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target)) closeNav();
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+
+// PRICING TABS
+function showPricing(panel,btn){
+  document.querySelectorAll('.pricing-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  document.getElementById('panel-'+panel).classList.add('active');
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+}
+
+// TESTIMONIALS
+let testiIdx=0;
+const totalTesti=3;
+function updateTesti(){
+  document.getElementById('testi-track').style.transform='translateX(-'+testiIdx*100+'%)';
+  document.querySelectorAll('.testi-dot').forEach((d,i)=>d.classList.toggle('active',i===testiIdx));
+}
+function slideTesti(dir){
+  testiIdx=(testiIdx+dir+totalTesti)%totalTesti;
+  updateTesti();
+}
+function goTesti(i){testiIdx=i;updateTesti();}
+// Auto-advance
+setInterval(()=>slideTesti(1),6000);
+
+// CONTACT FORM
+async function handleSubmit(e){
+  e.preventDefault();
+  const form=e.target;
+  const btn=form.querySelector('button[type="submit"]');
+  btn.textContent='Sending...';
+  btn.disabled=true;
+  try{
+    const res=await fetch('https://formspree.io/f/mdajewld',{
+      method:'POST',
+      body:new FormData(form),
+      headers:{Accept:'application/json'}
+    });
+    if(res.ok){
+      btn.textContent='Message Sent!';
+      btn.style.opacity='.7';
+      form.reset();
+    } else {
+      btn.textContent='Something went wrong \u2014 email me directly.';
+      btn.disabled=false;
+    }
+  } catch(err){
+    btn.textContent='Something went wrong \u2014 email me directly.';
+    btn.disabled=false;
+  }
+}
+</script>
+</body>
+</html>
