@@ -509,6 +509,12 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
       <p class="svc-desc">From email campaigns to social content to full brand identity &mdash; I create the strategy and assets that make your audience stop scrolling and start buying.</p>
       <p class="svc-includes">Includes: content strategy &middot; email marketing &middot; social media &middot; graphic design &middot; brand positioning</p>
     </article>
+    <article class="svc-card" role="listitem">
+      <p class="svc-problem">You&rsquo;re doing manually what a system could do for you</p>
+      <h3 class="svc-name">AI Automations</h3>
+      <p class="svc-desc">I build AI-powered workflows that eliminate repetitive tasks, speed up content production, and turn your marketing stack into a system that runs while you sleep.</p>
+      <p class="svc-includes">Includes: workflow automation &middot; AI content pipelines &middot; chatbot builds &middot; CRM integrations &middot; prompt engineering</p>
+    </article>
   </div>
 </section>
 
@@ -913,6 +919,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
         <span class="tag" role="listitem">Analytics</span>
         <span class="tag" role="listitem">CRO</span>
         <span class="tag" role="listitem">AI Marketing</span>
+        <span class="tag" role="listitem">AI Automations</span>
         <span class="tag" role="listitem">Web Dev</span>
         <span class="tag" role="listitem">Brand Design</span>
         <span class="tag" role="listitem">Email Marketing</span>
@@ -1162,3 +1169,290 @@ async function handleSubmit(e){
 </script>
 </body>
 </html>
+<!-- ============================================================
+     ASHLEY SARA — AI CHAT WIDGET
+     Replace YOUR_WORKER_URL with your Cloudflare Worker URL
+     ============================================================ -->
+<div id="as-chat-wrapper" aria-label="Chat with Ashley's assistant" role="complementary">
+
+  <!-- Floating toggle button -->
+  <button id="as-chat-toggle" aria-expanded="false" aria-controls="as-chat-panel" aria-label="Open chat assistant">
+    <svg id="as-icon-chat" class="as-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <svg id="as-icon-close" class="as-btn-icon" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+
+  <!-- Chat panel -->
+  <div id="as-chat-panel" role="dialog" aria-modal="false" aria-label="Ashley's Growth Assistant" aria-hidden="true">
+    <div class="as-chat-header">
+      <div>
+        <p class="as-chat-name">Ashley&rsquo;s Assistant</p>
+        <p class="as-chat-status"><span class="as-status-dot"></span>Online now</p>
+      </div>
+      <button class="as-chat-close-btn" onclick="asChatClose()" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="as-chat-messages" class="as-chat-messages" aria-live="polite" aria-atomic="false">
+      <div class="as-msg as-msg-ai">
+        <p>Hey there! I&rsquo;m Ashley&rsquo;s Growth Assistant. Whether you&rsquo;re trying to get found on Google, fix your ads, or just need a clearer picture of what&rsquo;s holding your site back &mdash; I&rsquo;m here to help. What&rsquo;s going on with your business?</p>
+      </div>
+    </div>
+
+    <div class="as-chat-input-row">
+      <label for="as-chat-input" class="sr-only">Type your message</label>
+      <input
+        type="text"
+        id="as-chat-input"
+        class="as-chat-input"
+        placeholder="Ask me anything..."
+        autocomplete="off"
+        maxlength="500"
+        aria-label="Type your message"
+      />
+      <button id="as-chat-send" class="as-chat-send" aria-label="Send message" onclick="asChatSend()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ── Chat widget variables ── */
+#as-chat-wrapper{
+  --c-ink:#0e0b09;--c-bourbon:#3d1f0d;--c-rose:#c97a82;
+  --c-parchment:#f0ebe3;--c-muted:#b3a290;--c-gold:#b8924a;
+  --c-dark:#1a1310;--c-border:#2a1e16;
+  --c-serif:'Playfair Display',Georgia,serif;
+  --c-sans:'DM Sans',sans-serif;
+  position:fixed;bottom:24px;right:24px;z-index:9000;
+  font-family:var(--c-sans);
+}
+
+/* Toggle button */
+#as-chat-toggle{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--c-rose);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(201,122,130,.4);
+  transition:transform .2s,box-shadow .2s;
+  color:var(--c-ink);
+}
+#as-chat-toggle:hover{transform:scale(1.07);box-shadow:0 6px 24px rgba(201,122,130,.55)}
+#as-chat-toggle:focus-visible{outline:2px solid var(--c-gold);outline-offset:3px}
+.as-btn-icon{width:22px;height:22px;pointer-events:none}
+
+/* Panel */
+#as-chat-panel{
+  position:absolute;bottom:72px;right:0;
+  width:340px;max-height:520px;
+  background:var(--c-ink);border:1px solid var(--c-rose);
+  display:none;flex-direction:column;
+  box-shadow:0 8px 40px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+#as-chat-panel.as-open{display:flex}
+
+/* Header */
+.as-chat-header{
+  background:var(--c-bourbon);
+  padding:1rem 1.1rem;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--c-border);flex-shrink:0;
+}
+.as-chat-name{
+  font-family:var(--c-serif);font-size:.95rem;font-weight:700;
+  color:var(--c-parchment);margin:0 0 .15rem;
+}
+.as-chat-status{
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--c-muted);margin:0;display:flex;align-items:center;gap:.4rem;
+}
+.as-status-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#6dbf7e;display:inline-block;flex-shrink:0;
+}
+.as-chat-close-btn{
+  background:none;border:none;color:var(--c-muted);cursor:pointer;
+  padding:.4rem;display:flex;align-items:center;justify-content:center;
+  min-width:32px;min-height:32px;transition:color .2s;
+}
+.as-chat-close-btn:hover{color:var(--c-rose)}
+.as-chat-close-btn svg{width:16px;height:16px}
+
+/* Messages */
+.as-chat-messages{
+  flex:1;overflow-y:auto;padding:1.1rem;
+  display:flex;flex-direction:column;gap:.8rem;
+  scrollbar-width:thin;scrollbar-color:var(--c-border) transparent;
+}
+.as-msg{max-width:88%;display:flex;flex-direction:column}
+.as-msg p{
+  margin:0;font-size:13.5px;line-height:1.6;
+  padding:.7rem .9rem;
+}
+.as-msg-ai{align-self:flex-start}
+.as-msg-ai p{
+  background:var(--c-dark);color:var(--c-parchment);
+  border:1px solid var(--c-border);border-radius:0 10px 10px 10px;
+}
+.as-msg-user{align-self:flex-end}
+.as-msg-user p{
+  background:var(--c-rose);color:var(--c-ink);
+  border-radius:10px 10px 0 10px;font-weight:500;
+}
+.as-msg-typing p{
+  background:var(--c-dark);border:1px solid var(--c-border);
+  border-radius:0 10px 10px 10px;color:var(--c-muted);
+  font-style:italic;font-size:12px;
+}
+
+/* Input row */
+.as-chat-input-row{
+  display:flex;gap:.5rem;padding:.85rem 1rem;
+  border-top:1px solid var(--c-border);flex-shrink:0;
+  background:var(--c-ink);
+}
+.as-chat-input{
+  flex:1;background:rgba(255,255,255,.04);border:none;
+  border-bottom:1px solid var(--c-border);
+  color:var(--c-parchment);font-family:var(--c-sans);font-size:14px;
+  padding:.55rem .3rem;outline:none;transition:border-color .2s;
+  min-width:0;
+}
+.as-chat-input:focus{border-bottom-color:var(--c-rose)}
+.as-chat-input::placeholder{color:#968471}
+.as-chat-send{
+  background:var(--c-rose);border:none;cursor:pointer;
+  color:var(--c-ink);min-width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:opacity .2s;align-self:flex-end;
+}
+.as-chat-send:hover{opacity:.85}
+.as-chat-send:disabled{opacity:.4;cursor:not-allowed}
+.as-chat-send svg{width:15px;height:15px}
+.as-chat-send:focus-visible{outline:2px solid var(--c-gold);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Mobile */
+@media(max-width:420px){
+  #as-chat-wrapper{bottom:16px;right:16px}
+  #as-chat-panel{width:calc(100vw - 32px);bottom:68px}
+}
+@media(prefers-reduced-motion:reduce){
+  #as-chat-toggle{transition:none}
+}
+</style>
+
+<script>
+(function(){
+  // ⚠️ Replace this with your actual Cloudflare Worker URL after deploying
+  var WORKER_URL = 'https://weathered-darkness-4552.ashleysmustangs.workers.dev';
+
+  var messages = [];
+  var panel = document.getElementById('as-chat-panel');
+  var toggle = document.getElementById('as-chat-toggle');
+  var iconChat = document.getElementById('as-icon-chat');
+  var iconClose = document.getElementById('as-icon-close');
+  var input = document.getElementById('as-chat-input');
+  var send = document.getElementById('as-chat-send');
+  var log = document.getElementById('as-chat-messages');
+  var isOpen = false;
+
+  // Toggle panel open/closed
+  toggle.addEventListener('click', function(){
+    isOpen ? asChatClose() : asChatOpen();
+  });
+
+  window.asChatOpen = function(){
+    isOpen = true;
+    panel.classList.add('as-open');
+    panel.setAttribute('aria-hidden','false');
+    toggle.setAttribute('aria-expanded','true');
+    iconChat.style.display = 'none';
+    iconClose.style.display = 'block';
+    setTimeout(function(){ input.focus(); }, 50);
+  };
+
+  window.asChatClose = function(){
+    isOpen = false;
+    panel.classList.remove('as-open');
+    panel.setAttribute('aria-hidden','true');
+    toggle.setAttribute('aria-expanded','false');
+    iconChat.style.display = 'block';
+    iconClose.style.display = 'none';
+    toggle.focus();
+  };
+
+  // Send on Enter key
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); asChatSend(); }
+  });
+
+  window.asChatSend = async function(){
+    var text = input.value.trim();
+    if(!text || send.disabled) return;
+
+    // Add user message to UI
+    addMessage('user', text);
+    messages.push({ role:'user', content:text });
+    input.value = '';
+    send.disabled = true;
+
+    // Show typing indicator
+    var typing = addTyping();
+
+    try {
+      var res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ messages: messages })
+      });
+
+      var data = await res.json();
+      typing.remove();
+
+      if(data.text){
+        addMessage('ai', data.text);
+        messages.push({ role:'assistant', content:data.text });
+      } else {
+        addMessage('ai', data.error || 'Something went wrong. Please try again.');
+      }
+    } catch(err){
+      typing.remove();
+      addMessage('ai', 'Having trouble connecting right now. Try reaching Ashley directly at connect@ashley-sara.com.');
+    }
+
+    send.disabled = false;
+    input.focus();
+  };
+
+  function addMessage(role, text){
+    var wrap = document.createElement('div');
+    wrap.className = 'as-msg as-msg-' + role;
+    var p = document.createElement('p');
+    p.textContent = text;
+    wrap.appendChild(p);
+    log.appendChild(wrap);
+    log.scrollTop = log.scrollHeight;
+    return wrap;
+  }
+
+  function addTyping(){
+    var wrap = document.createElement('div');
+    wrap.className = 'as-msg as-msg-ai as-msg-typing';
+    var p = document.createElement('p');
+    p.textContent = 'Thinking...';
+    wrap.appendChild(p);
+    log.appendChild(wrap);
+    log.scrollTop = log.scrollHeight;
+    return wrap;
+  }
+})();
+</script>
