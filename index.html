@@ -125,7 +125,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .headshot-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--parchment);letter-spacing:.02em}
 .headshot-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
 
-.quote-box{border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);position:relative}
+.quote-box{border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.04);position:relative;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
 .quote-box::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:-.8rem;left:1rem;line-height:1;pointer-events:none}
 .quote-text{font-family:var(--italic);font-size:1rem;font-style:italic;color:var(--dusty);line-height:1.65;margin-bottom:.5rem}
 .quote-src{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -150,9 +150,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.services-grid > :last-child:nth-child(3n+1){grid-column:2}
 .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.svc-card{border:1px solid #2a1e16;padding:1.6rem;background:rgba(255,255,255,.02);transition:border-color .2s}
-.svc-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
+.svc-card{border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.04);transition:border-color .25s,transform .25s,box-shadow .25s;width:100%;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.svc-card:hover{border-color:var(--rose);border-top-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.45)}
 .svc-problem{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:.4rem;opacity:.85}
 .svc-name{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--parchment);margin-bottom:.5rem}
 .svc-desc{font-size:13px;color:var(--muted);line-height:1.7}
@@ -160,12 +161,12 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 
 /* FLIP CARDS */
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.flip-card{height:280px;cursor:pointer;perspective:1000px}
+.flip-card{height:280px;cursor:pointer;perspective:1000px;border-radius:14px}
 .flip-card:focus{outline:2px solid var(--rose);outline-offset:4px;border-radius:2px}
 .flip-inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
 .flip-card.flipped .flip-inner,.flip-card:hover .flip-inner{transform:rotateY(180deg)}
 .flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.flip-front{display:flex;align-items:flex-end;padding:1.2rem;position:relative;overflow:hidden}
+.flip-front{display:flex;align-items:flex-end;padding:1.2rem;position:relative;overflow:hidden;border-radius:14px}
 .ff1{background:linear-gradient(160deg,#1a0c06,#3d1a0f)}
 .ff2{background:linear-gradient(160deg,#120d1c,#2e1a3d)}
 .ff3{background:linear-gradient(160deg,#0a100e,#1a2e1a)}
@@ -179,7 +180,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .flip-sub{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,235,227,.7);margin-top:.2rem}
 .flip-hint{position:absolute;top:.8rem;right:.8rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dusty)}
 
-.flip-back{background:#1a1008;border:1px solid #3d2e22;transform:rotateY(180deg);padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+.flip-back{background:#1a1008;border:1px solid #3d2e22;transform:rotateY(180deg);padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;border-radius:14px}
 .back-badge{background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500;align-self:flex-start;margin-bottom:.6rem}
 .back-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--parchment);margin-bottom:.8rem}
 .back-results{display:flex;flex-direction:column;gap:.5rem;flex:1}
@@ -194,8 +195,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .pricing-panel{display:none}
 .pricing-panel.active{display:block}
 .packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
-.pkg-card{border:1px solid #2a1e16;padding:2rem;background:rgba(255,255,255,.02);position:relative;transition:border-color .3s}
-.pkg-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
+.pkg-card{border:1px solid #2a1e16;padding:2rem;background:rgba(255,255,255,.04);position:relative;transition:border-color .25s,transform .25s,box-shadow .25s;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.pkg-card:hover{border-color:var(--rose);border-top-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.45)}
 .pkg-card.featured{border-color:var(--rose)}
 .pkg-featured-label{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .9rem;font-weight:500;white-space:nowrap}
 .pkg-name{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--parchment);margin-bottom:.3rem}
@@ -210,7 +211,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .pkg-card.featured .pkg-btn{background:var(--rose);color:var(--ink)}
 .pkg-card.featured .pkg-btn:hover{opacity:.85}
 .alacarte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.ala-card{border:1px solid #2a1e16;padding:1.3rem;background:rgba(255,255,255,.02);display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:border-color .2s}
+.ala-card{border:1px solid #2a1e16;padding:1.3rem;background:rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:border-color .25s,box-shadow .25s;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
 .ala-card:hover{border-color:var(--rose)}
 .ala-name{font-family:var(--serif);font-size:.9rem;font-weight:700;color:var(--parchment)}
 .ala-desc{font-size:12px;color:var(--muted);margin-top:.2rem}
@@ -221,7 +222,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .testi-slider{position:relative;overflow:hidden;max-width:760px;margin:0 auto}
 .testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
 .testi-slide{min-width:100%;padding:0 .5rem}
-.testi-card{border:1px solid #2a1e16;padding:2.5rem;background:rgba(255,255,255,.02);position:relative}
+.testi-card{border:1px solid #2a1e16;padding:2.5rem;background:rgba(255,255,255,.04);position:relative;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
 .testi-card::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:-.5rem;left:1.5rem;line-height:1;pointer-events:none}
 .testi-quote{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;color:var(--parchment);line-height:1.55;margin-bottom:1.5rem;max-width:700px}
 .testi-author{display:flex;align-items:center;gap:1rem}
@@ -238,8 +239,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.blog-card{border:1px solid #2a1e16;background:rgba(255,255,255,.02);transition:border-color .2s;text-decoration:none;display:block}
-.blog-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
+.blog-card{border:1px solid #2a1e16;background:rgba(255,255,255,.04);transition:border-color .25s,transform .25s,box-shadow .25s;text-decoration:none;display:block;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3);overflow:hidden}
+.blog-card:hover{border-color:var(--rose);border-top-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.45)}
 .blog-thumb{height:160px;display:flex;align-items:flex-end;padding:1rem;position:relative}
 .bt1{background:linear-gradient(160deg,#1a0c06,#4a2010)}
 .bt2{background:linear-gradient(160deg,#050d10,#0d2a30)}
@@ -261,7 +262,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
 .tag{background:transparent;border:1px solid #3d2e22;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .8rem;transition:all .2s}
 .tag:hover{border-color:var(--rose);color:var(--rose)}
-.cred-card{border:1px solid #2a1e16;padding:.7rem .9rem;background:rgba(255,255,255,.02);margin-bottom:.5rem;max-width:300px}
+.cred-card{border:1px solid #2a1e16;padding:.7rem .9rem;background:rgba(255,255,255,.04);margin-bottom:.5rem;max-width:300px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2)}
 .cred-role{font-family:var(--serif);font-size:.8rem;font-weight:700;color:var(--parchment);margin-bottom:.15rem}
 .cred-place{font-size:11px;color:var(--rose);margin-bottom:.1rem}
 .cred-date{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
@@ -752,7 +753,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
   <p style="font-family:var(--italic);font-style:italic;font-size:1rem;color:var(--muted);max-width:520px;margin-bottom:2.8rem;line-height:1.8;">Numbers tell part of the story. Case studies tell the rest — the strategy, the decisions, and why it worked.</p>
   <div class="cs-grid">
 
-    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.04);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .25s,transform .25s,box-shadow .25s;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3);" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
       <div>
         <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Paid Social · SEO Research · Growth Strategy</p>
         <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">Forgely 3D</p>
@@ -766,7 +767,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
       <a href="case-study-forgely.html" style="display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:.5rem 1.2rem;transition:all .2s;text-decoration:none;align-self:flex-start;" onmouseover="this.style.background='var(--rose)';this.style.color='var(--ink)'" onmouseout="this.style.background='transparent';this.style.color='var(--rose)'">Read Case Study →</a>
     </div>
 
-    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.04);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .25s,transform .25s,box-shadow .25s;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3);" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
       <div>
         <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Organic Social · Paid Meta · Graphic Design</p>
         <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">Rising K Ranch</p>
@@ -779,7 +780,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
       <a href="case-study-rising-k.html" style="display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--rose);border:1px solid var(--rose);padding:.5rem 1.2rem;transition:all .2s;text-decoration:none;align-self:flex-start;" onmouseover="this.style.background='var(--rose)';this.style.color='var(--ink)'" onmouseout="this.style.background='transparent';this.style.color='var(--rose)'">Read Case Study →</a>
     </div>
 
-    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
+    <div style="border:1px solid #2a1e16;padding:1.8rem;background:rgba(255,255,255,.04);display:flex;flex-direction:column;justify-content:space-between;transition:border-color .25s,transform .25s,box-shadow .25s;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.3);" onmouseover="this.style.borderColor='var(--rose)'" onmouseout="this.style.borderColor='#2a1e16'">
       <div>
         <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem;opacity:.85;">Web Design · Local SEO · Social Media · Graphic Design</p>
         <p style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin-bottom:.6rem;">La Bottega</p>
@@ -1119,14 +1120,14 @@ async function handleSubmit(e){
 
   // Mobile/touch fallback: scroll depth + time delay (exit-intent doesn't work on touch)
   var isTouchCapable=('ontouchstart' in window || navigator.maxTouchPoints>0);
-  var isSmallScreen=window.innerWidth<=900;
+  var isSmallScreen=window.innerWidth<=768;
   var isTouch=isTouchCapable && isSmallScreen;
   if(isTouch){
     var scrollTriggered=false;
     window.addEventListener('scroll',function(){
       if(hasShown()||scrollTriggered)return;
       var scrolled=(window.scrollY+window.innerHeight)/document.body.scrollHeight;
-      if(scrolled>0.6){
+      if(scrolled>0.8){
         scrollTriggered=true;
         setTimeout(openLeadModal,1200);
       }
@@ -1199,7 +1200,7 @@ async function handleSubmit(e){
 
     <div id="as-chat-messages" class="as-chat-messages" aria-live="polite" aria-atomic="false">
       <div class="as-msg as-msg-ai">
-        <p>Hey! I&rsquo;m Promise. What&rsquo;s going on with your business?</p>
+        <p>Hi! I&rsquo;m Promise &mdash; Ashley&rsquo;s AI assistant. I can help you figure out why your site isn&rsquo;t ranking, why your ads aren&rsquo;t converting, or whether Ashley&rsquo;s services are a fit for your business. What&rsquo;s on your mind?</p>
       </div>
     </div>
 
