@@ -88,8 +88,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .nav-links-inline{display:flex;align-items:center;gap:1.8rem}
 .nav-links-inline a{text-decoration:none;color:var(--muted);font-size:12px;letter-spacing:.13em;text-transform:uppercase;transition:color .2s;white-space:nowrap}
 .nav-links-inline a:hover,.nav-links-inline a:focus{color:var(--parchment);outline:2px solid var(--rose);outline-offset:3px}
-.hire-btn-sm{background:transparent;color:var(--rose);border:1px solid var(--rose);padding:.42rem 1rem;font-family:var(--sans);font-size:11px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap}
-.hire-btn-sm:hover,.hire-btn-sm:focus{background:var(--rose);color:var(--ink)}
+.hire-btn-sm{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:.42rem 1rem;font-family:var(--sans);font-size:11px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap}
+.hire-btn-sm:hover,.hire-btn-sm:focus{background:var(--gold);color:var(--ink)}
 .hamburger{background:none;border:1px solid #3d2e22;cursor:pointer;padding:.5rem .6rem;color:var(--parchment);display:flex;flex-direction:column;gap:4px;border-radius:2px;transition:border-color .2s}
 .hamburger:hover,.hamburger:focus{border-color:var(--rose);outline:none}
 .hamburger span{display:block;width:20px;height:1.5px;background:currentColor;transition:all .3s}
@@ -129,7 +129,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .quote-box::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:-.8rem;left:1rem;line-height:1;pointer-events:none}
 .quote-text{font-family:var(--italic);font-size:1rem;font-style:italic;color:var(--dusty);line-height:1.65;margin-bottom:.5rem}
 .quote-src{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.ornament{text-align:center;color:var(--rose);letter-spacing:.4em;font-size:.65rem;margin:1rem 0}
+.ornament{text-align:center;color:var(--gold);letter-spacing:.4em;font-size:.65rem;margin:1rem 0}
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .stat{border-top:1px solid #2a1e16;padding-top:.8rem}
 .stat-n{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1}
@@ -152,7 +152,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .svc-card{border:1px solid #2a1e16;padding:1.6rem;background:rgba(255,255,255,.02);transition:border-color .2s}
-.svc-card:hover{border-color:var(--rose)}
+.svc-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
 .svc-problem{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:.4rem;opacity:.85}
 .svc-name{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--parchment);margin-bottom:.5rem}
 .svc-desc{font-size:13px;color:var(--muted);line-height:1.7}
@@ -195,7 +195,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 .pricing-panel.active{display:block}
 .packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
 .pkg-card{border:1px solid #2a1e16;padding:2rem;background:rgba(255,255,255,.02);position:relative;transition:border-color .3s}
-.pkg-card:hover{border-color:var(--rose)}
+.pkg-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
 .pkg-card.featured{border-color:var(--rose)}
 .pkg-featured-label{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .9rem;font-weight:500;white-space:nowrap}
 .pkg-name{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--parchment);margin-bottom:.3rem}
@@ -239,12 +239,12 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
 .blog-card{border:1px solid #2a1e16;background:rgba(255,255,255,.02);transition:border-color .2s;text-decoration:none;display:block}
-.blog-card:hover{border-color:var(--rose)}
+.blog-card:hover{border-color:var(--rose);border-top-color:var(--gold)}
 .blog-thumb{height:160px;display:flex;align-items:flex-end;padding:1rem;position:relative}
 .bt1{background:linear-gradient(160deg,#1a0c06,#4a2010)}
 .bt2{background:linear-gradient(160deg,#050d10,#0d2a30)}
 .bt3{background:linear-gradient(160deg,#0a0810,#1e1030)}
-.blog-cat{background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500}
+.blog-cat{background:transparent;color:var(--gold);border:1px solid var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;font-weight:500}
 .blog-body{padding:1.3rem}
 .blog-date{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
 .blog-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--parchment);line-height:1.4;margin-bottom:.5rem}
@@ -434,7 +434,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
     </div>
     <!-- Stats bar -->
     <div class="stat-grid" aria-label="Key results">
-      <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years in Digital</div></div>
+      <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Years in Digital</div></div>
       <div class="stat"><div class="stat-n">Top 1%</div><div class="stat-l">WCAG Global</div></div>
       <div class="stat"><div class="stat-n">150%</div><div class="stat-l">Visibility Boost</div></div>
       <div class="stat"><div class="stat-n">80%</div><div class="stat-l">Bookings Up</div></div>
@@ -488,7 +488,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
     <article class="svc-card" role="listitem">
       <p class="svc-problem">Your site excludes customers &amp; risks liability</p>
       <h3 class="svc-name">Accessibility &amp; UX (WCAG/ADA)</h3>
-      <p class="svc-desc">I make your digital experience work for everyone. My work contributed to SUU&rsquo;s top 1% global ranking for web accessibility.</p>
+      <p class="svc-desc">I make your digital experience work for everyone. My work at SUU Graduate &amp; Online Programs contributed to the university&rsquo;s top 1% global ranking for web accessibility.</p>
       <p class="svc-includes">Includes: WCAG audits &middot; ADA compliance &middot; UX redesign &middot; inclusive design systems</p>
     </article>
     <article class="svc-card" role="listitem">
@@ -525,17 +525,17 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
   <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a7a6c;margin-bottom:2rem">Hover or tap a card to see results</p>
   <div class="work-grid" role="list">
 
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU Graduate Programs SEO case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU Graduate and Online Programs SEO case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
       <div class="flip-inner">
         <div class="flip-front ff1" aria-hidden="true">
           <span class="flip-num">01</span>
           <span class="flip-hint">tap to flip</span>
-          <div><div class="flip-line"></div><div class="flip-badge">Higher Ed</div><div class="flip-title">SUU Graduate Programs SEO</div><div class="flip-sub">Organic Growth &middot; 2024&ndash;Present</div></div>
+          <div><div class="flip-line"></div><div class="flip-badge">Higher Ed</div><div class="flip-title">SUU Graduate &amp; Online SEO</div><div class="flip-sub">Organic Growth &middot; 2024&ndash;Present</div></div>
         </div>
         <div class="flip-back">
           <div>
             <div class="back-badge">Higher Ed</div>
-            <div class="back-title">SUU Graduate Programs SEO</div>
+            <div class="back-title">SUU Graduate &amp; Online SEO</div>
           </div>
           <div class="back-results">
             <div class="result-row"><svg class="icon-svg" aria-hidden="true"><use href="#icon-trending-up"/></svg><span>Significant increase in organic search traffic to graduate program pages</span></div>
@@ -613,7 +613,7 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
       </div>
     </div>
 
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU web accessibility case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="SUU Graduate and Online Programs web accessibility case study" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' ')this.classList.toggle('flipped')">
       <div class="flip-inner">
         <div class="flip-front ff5" aria-hidden="true">
           <span class="flip-num">05</span>
@@ -904,8 +904,8 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
       <div class="about-bio-row">
         <img src="about-photo.jpg" alt="Ashley Sara wearing a fringe jacket and cowboy boots, leaning on a wooden fence at sunset" class="about-photo" loading="lazy" decoding="async" width="480" height="720"/>
         <div class="about-bio-text">
-          <p class="about-p">I&rsquo;m Ashley Sara &mdash; a Digital Growth &amp; Search Experience Architect based in Elko, Nevada. With a degree in Strategic Communications from Southern Utah University and 6+ years building digital experiences that perform, I bridge the gap between data and creativity.</p>
-          <p class="about-p">At Southern Utah University, I lead SEO and Google Ads for Graduate &amp; Online programs. At Elevation Tech, I partner with small businesses on full-funnel digital strategy. Through Ashley Sara Marketing, I bring that same thinking to independent clients who want results, not fluff.</p>
+          <p class="about-p">I&rsquo;m Ashley Sara &mdash; a Digital Growth &amp; Search Experience Architect based in Elko, Nevada. With a degree in Strategic Communications from Southern Utah University and 10+ years building digital experiences that perform &mdash; including nonprofit marketing &mdash; I bridge the gap between data and creativity.</p>
+          <p class="about-p">At SUU Graduate and Online Programs, I lead web strategy, SEO, social media, and digital advertising &mdash; managing everything from UX and landing page optimization to cross-channel campaign execution and analytics reporting. As Owner of <a href="https://www.elevation.tech" target="_blank" rel="noopener noreferrer" style="color:var(--rose);border-bottom:1px solid rgba(201,122,130,.3)">Elevation Tech</a>, I lead AI automation strategy for small businesses. Through Ashley Sara Marketing, I bring that same full-funnel thinking to independent clients who want results, not fluff.</p>
           <p class="about-p">I&rsquo;m passionate about data-driven, user-first growth &mdash; leveraging analytics, AI tools, and cross-functional collaboration to help brands stand out in a crowded landscape.</p>
         </div>
       </div>
@@ -928,8 +928,8 @@ footer{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-item
     </div>
     <div>
       <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem">Current Roles</p>
-      <div class="cred-card"><div class="cred-role">Owner &middot; CMO</div><div class="cred-place">Elevation Tech</div><div class="cred-date">Mar 2025 &ndash; Present</div></div>
-      <div class="cred-card"><div class="cred-role">Digital Marketing Specialist</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Feb 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Owner &middot; CMO</div><div class="cred-place"><a href="https://www.elevation.tech" target="_blank" rel="noopener noreferrer" style="color:var(--rose);text-decoration:none;border-bottom:1px solid rgba(201,122,130,.3)">Elevation Tech</a></div><div class="cred-date">Mar 2025 &ndash; Present</div></div>
+      <div class="cred-card"><div class="cred-role">Digital Marketing Specialist</div><div class="cred-place">SUU Graduate &amp; Online Programs</div><div class="cred-date">Feb 2025 &ndash; Present</div></div>
       <div class="cred-card"><div class="cred-role">Owner &middot; Founder</div><div class="cred-place">Ashley Sara Marketing</div><div class="cred-date">Jan 2024 &ndash; Present</div></div>
       <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:.6rem 0">Education</p>
       <div class="cred-card"><div class="cred-role">B.S. Strategic Communications</div><div class="cred-place">Southern Utah University</div><div class="cred-date">Cedar City, Utah</div></div>
@@ -1189,7 +1189,7 @@ async function handleSubmit(e){
   <div id="as-chat-panel" role="dialog" aria-modal="false" aria-label="Ashley's Growth Assistant" aria-hidden="true">
     <div class="as-chat-header">
       <div>
-        <p class="as-chat-name">Ashley&rsquo;s Assistant</p>
+        <p class="as-chat-name">Promise</p>
         <p class="as-chat-status"><span class="as-status-dot"></span>Online now</p>
       </div>
       <button class="as-chat-close-btn" onclick="asChatClose()" aria-label="Close chat">
@@ -1199,7 +1199,7 @@ async function handleSubmit(e){
 
     <div id="as-chat-messages" class="as-chat-messages" aria-live="polite" aria-atomic="false">
       <div class="as-msg as-msg-ai">
-        <p>Hey there! I&rsquo;m Ashley&rsquo;s Growth Assistant. Whether you&rsquo;re trying to get found on Google, fix your ads, or just need a clearer picture of what&rsquo;s holding your site back &mdash; I&rsquo;m here to help. What&rsquo;s going on with your business?</p>
+        <p>Hey! I&rsquo;m Promise. What&rsquo;s going on with your business?</p>
       </div>
     </div>
 
@@ -1240,11 +1240,11 @@ async function handleSubmit(e){
   width:56px;height:56px;border-radius:50%;
   background:var(--c-rose);border:none;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(201,122,130,.4);
+  box-shadow:0 4px 24px rgba(201,122,130,.45),0 2px 8px rgba(0,0,0,.3);
   transition:transform .2s,box-shadow .2s;
   color:var(--c-ink);
 }
-#as-chat-toggle:hover{transform:scale(1.07);box-shadow:0 6px 24px rgba(201,122,130,.55)}
+#as-chat-toggle:hover{transform:scale(1.07);box-shadow:0 6px 28px rgba(201,122,130,.6),0 0 0 2px rgba(184,146,74,.4)}
 #as-chat-toggle:focus-visible{outline:2px solid var(--c-gold);outline-offset:3px}
 .as-btn-icon{width:22px;height:22px;pointer-events:none}
 
@@ -1252,23 +1252,27 @@ async function handleSubmit(e){
 #as-chat-panel{
   position:absolute;bottom:72px;right:0;
   width:340px;max-height:520px;
-  background:var(--c-ink);border:1px solid var(--c-rose);
+  background:rgba(18,14,11,.97);
+  border:1px solid rgba(201,122,130,.25);
+  border-radius:20px;
   display:none;flex-direction:column;
-  box-shadow:0 8px 40px rgba(0,0,0,.6);
+  box-shadow:0 16px 48px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04);
   overflow:hidden;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 }
 #as-chat-panel.as-open{display:flex}
 
 /* Header */
 .as-chat-header{
-  background:var(--c-bourbon);
-  padding:1rem 1.1rem;
+  background:linear-gradient(135deg,#3d1f0d,#2a1208);
+  padding:.9rem 1.1rem;
   display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid var(--c-border);flex-shrink:0;
+  border-bottom:1px solid rgba(201,122,130,.15);flex-shrink:0;
 }
 .as-chat-name{
-  font-family:var(--c-serif);font-size:.95rem;font-weight:700;
-  color:var(--c-parchment);margin:0 0 .15rem;
+  font-family:var(--c-serif);font-size:1rem;font-weight:700;
+  color:var(--c-parchment);margin:0 0 .2rem;letter-spacing:.01em;
 }
 .as-chat-status{
   font-size:10px;letter-spacing:.1em;text-transform:uppercase;
@@ -1277,66 +1281,76 @@ async function handleSubmit(e){
 .as-status-dot{
   width:6px;height:6px;border-radius:50%;
   background:#6dbf7e;display:inline-block;flex-shrink:0;
+  box-shadow:0 0 6px rgba(109,191,126,.6);
 }
 .as-chat-close-btn{
-  background:none;border:none;color:var(--c-muted);cursor:pointer;
+  background:rgba(255,255,255,.06);border:none;color:var(--c-muted);cursor:pointer;
   padding:.4rem;display:flex;align-items:center;justify-content:center;
-  min-width:32px;min-height:32px;transition:color .2s;
+  min-width:30px;min-height:30px;transition:all .2s;border-radius:50%;
 }
-.as-chat-close-btn:hover{color:var(--c-rose)}
-.as-chat-close-btn svg{width:16px;height:16px}
+.as-chat-close-btn:hover{color:var(--c-parchment);background:rgba(255,255,255,.12)}
+.as-chat-close-btn svg{width:14px;height:14px}
 
 /* Messages */
 .as-chat-messages{
-  flex:1;overflow-y:auto;padding:1.1rem;
-  display:flex;flex-direction:column;gap:.8rem;
+  flex:1;overflow-y:auto;padding:1.1rem 1rem;
+  display:flex;flex-direction:column;gap:.7rem;
   scrollbar-width:thin;scrollbar-color:var(--c-border) transparent;
 }
-.as-msg{max-width:88%;display:flex;flex-direction:column}
+.as-msg{max-width:85%;display:flex;flex-direction:column}
 .as-msg p{
   margin:0;font-size:13.5px;line-height:1.6;
-  padding:.7rem .9rem;
+  padding:.65rem .9rem;
 }
 .as-msg-ai{align-self:flex-start}
 .as-msg-ai p{
-  background:var(--c-dark);color:var(--c-parchment);
-  border:1px solid var(--c-border);border-radius:0 10px 10px 10px;
+  background:rgba(255,255,255,.06);
+  color:var(--c-parchment);
+  border-radius:4px 16px 16px 16px;
+  border:1px solid rgba(255,255,255,.07);
 }
 .as-msg-user{align-self:flex-end}
 .as-msg-user p{
-  background:var(--c-rose);color:var(--c-ink);
-  border-radius:10px 10px 0 10px;font-weight:500;
+  background:linear-gradient(135deg,var(--c-rose),#b86670);
+  color:#fff;
+  border-radius:16px 16px 4px 16px;
+  font-weight:400;
+  box-shadow:0 2px 12px rgba(201,122,130,.3);
 }
 .as-msg-typing p{
-  background:var(--c-dark);border:1px solid var(--c-border);
-  border-radius:0 10px 10px 10px;color:var(--c-muted);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:4px 16px 16px 16px;
+  color:var(--c-muted);
   font-style:italic;font-size:12px;
 }
 
 /* Input row */
 .as-chat-input-row{
-  display:flex;gap:.5rem;padding:.85rem 1rem;
-  border-top:1px solid var(--c-border);flex-shrink:0;
-  background:var(--c-ink);
+  display:flex;gap:.5rem;padding:.8rem 1rem;
+  border-top:1px solid rgba(255,255,255,.06);flex-shrink:0;
+  background:rgba(0,0,0,.2);
 }
 .as-chat-input{
-  flex:1;background:rgba(255,255,255,.04);border:none;
-  border-bottom:1px solid var(--c-border);
+  flex:1;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
   color:var(--c-parchment);font-family:var(--c-sans);font-size:14px;
-  padding:.55rem .3rem;outline:none;transition:border-color .2s;
+  padding:.55rem 1rem;outline:none;transition:border-color .2s,background .2s;
   min-width:0;
 }
-.as-chat-input:focus{border-bottom-color:var(--c-rose)}
+.as-chat-input:focus{border-color:rgba(201,122,130,.5);background:rgba(255,255,255,.09)}
 .as-chat-input::placeholder{color:#968471}
 .as-chat-send{
   background:var(--c-rose);border:none;cursor:pointer;
-  color:var(--c-ink);min-width:36px;height:36px;
+  color:#fff;min-width:36px;height:36px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;transition:opacity .2s;align-self:flex-end;
+  flex-shrink:0;transition:opacity .2s,transform .15s;align-self:center;
+  box-shadow:0 2px 8px rgba(201,122,130,.35);
 }
-.as-chat-send:hover{opacity:.85}
-.as-chat-send:disabled{opacity:.4;cursor:not-allowed}
-.as-chat-send svg{width:15px;height:15px}
+.as-chat-send:hover{opacity:.9;transform:scale(1.05)}
+.as-chat-send:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.as-chat-send svg{width:14px;height:14px;margin-left:1px}
 .as-chat-send:focus-visible{outline:2px solid var(--c-gold);outline-offset:2px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
@@ -1346,7 +1360,7 @@ async function handleSubmit(e){
   #as-chat-panel{width:calc(100vw - 32px);bottom:68px}
 }
 @media(prefers-reduced-motion:reduce){
-  #as-chat-toggle{transition:none}
+  #as-chat-toggle,#as-chat-send{transition:none}
 }
 </style>
 
