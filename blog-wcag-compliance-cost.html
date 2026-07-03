@@ -30,67 +30,31 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --ink:#0e0b09;--parchment:#f0ebe3;--bourbon:#3d1f0d;
-  --rose:#c97a82;--dusty:#e8c4c8;--gold:#b8924a;--muted:#b3a290;
-  --serif:'Playfair Display',Georgia,serif;
-  --italic:'Cormorant Garamond',Georgia,serif;
-  --sans:'DM Sans',sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--ink);color:var(--parchment);line-height:1.6;overflow-x:hidden}
-a{color:var(--rose);text-decoration:none}
-a:hover{opacity:.8}
-nav{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 2.5rem;border-bottom:1px solid #2a1e16;position:sticky;top:0;background:var(--ink);z-index:100}
-.logo{font-family:var(--serif);font-size:1.1rem;letter-spacing:.06em;color:var(--parchment)}
-.logo em{color:var(--rose);font-style:italic}
-.back-link{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);border:1px solid #3d2e22;padding:.42rem 1rem;transition:border-color .2s}
-.back-link:hover{border-color:var(--rose);color:var(--rose);opacity:1}
-.post-hero{padding:4rem 2.5rem 3rem;max-width:740px;margin:0 auto;border-bottom:1px solid #2a1e16}
-.post-cat{background:var(--rose);color:var(--ink);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:.3rem 1rem;font-weight:500;display:inline-block;margin-bottom:1.2rem}
-.post-title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);font-weight:900;line-height:1.1;color:var(--parchment);margin-bottom:1.2rem}
-.post-meta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.post-body{max-width:740px;margin:0 auto;padding:3rem 2.5rem 6rem}
-.post-body h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--parchment);margin:2.5rem 0 1.2rem;line-height:1.25}
-.post-body h2 em{color:var(--rose);font-style:italic}
-.post-body h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--parchment);margin:1.8rem 0 .8rem}
-.post-body p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:1.2rem}
-.post-body strong{color:var(--parchment);font-weight:500}
-.post-body ul,.post-body ol{margin:0 0 1.4rem 1.3rem;color:var(--muted)}
-.post-body li{font-size:15px;line-height:1.8;margin-bottom:.5rem}
-.post-body a{border-bottom:1px solid rgba(201,122,130,.3)}
-.lede{font-family:var(--italic);font-style:italic;font-size:1.15rem;color:var(--dusty);line-height:1.75;margin-bottom:1.5rem!important}
-.stat-callout{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a1e16;border:1px solid #2a1e16;margin:2.5rem 0}
-.stat-box{background:var(--ink);padding:1.6rem 1.2rem;text-align:center}
-.stat-box-n{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.3rem}
-.stat-box-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.callout-box{border-left:2px solid var(--rose);padding:1.3rem 1.6rem;margin:2rem 0;background:rgba(201,122,130,.04)}
-.callout-box p{margin-bottom:0;font-family:var(--italic);font-style:italic;color:var(--dusty);font-size:1.02rem}
-.checklist{border:1px solid #2a1e16;padding:1.6rem;background:rgba(255,255,255,.02);margin:2rem 0}
-.checklist-item{display:flex;gap:.7rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid #2a1e16;font-size:14px;color:var(--muted)}
-.checklist-item:last-child{border-bottom:none}
-.check-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);margin-top:6px;flex-shrink:0}
-.cta-box{border:1px solid #2a1e16;padding:2.2rem;background:rgba(255,255,255,.02);text-align:center;margin-top:3rem}
-.cta-box h3{margin-top:0}
-.cta-box p{max-width:480px;margin:0 auto 1.5rem}
-.btn-fill{background:var(--rose);color:var(--ink);border:none;padding:.75rem 2rem;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-weight:500;text-decoration:none;display:inline-block;transition:opacity .2s}
-.btn-fill:hover{opacity:.85;color:var(--ink)}
-footer{border-top:1px solid #2a1e16;padding:2rem 2.5rem;text-align:center;font-size:12px;color:var(--muted);letter-spacing:.08em}
-@media(max-width:700px){
-  .post-hero{padding:3rem 1.5rem 2.5rem}
-  .post-body{padding:2.5rem 1.5rem 4rem}
-  .stat-callout{grid-template-columns:1fr}
-  nav{padding:1rem 1.5rem}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+<meta name="color-scheme" content="light dark"/>
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TH5GTVZGSG"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-TH5GTVZGSG');
+</script>
+<link rel="stylesheet" href="interior.css"/>
 </head>
 <body>
 
 <nav>
   <a href="https://ashley-sara.com" class="logo">Ashley <em>Sara</em></a>
+  <div class="nav-right">
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch color theme">
+    <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="17" y1="7" x2="18.8" y2="5.2"/><line x1="5.2" y1="18.8" x2="7" y2="17"/></svg>
+  </button>
   <a href="https://ashley-sara.com/#blog" class="back-link">← Back to Blog</a>
+</div>
 </nav>
 
 <div class="post-hero">
@@ -164,7 +128,7 @@ footer{border-top:1px solid #2a1e16;padding:2rem 2.5rem;text-align:center;font-s
 
 <h2>The upside nobody <em>talks about.</em></h2>
 <p>Legal risk is the headline, but it&rsquo;s not the only reason this matters. About 26% of U.S. adults live with a disability of some kind. An inaccessible website isn&rsquo;t just a legal exposure &mdash; it&rsquo;s a closed door to a meaningful share of your potential customers. Accessible websites tend to be better websites across the board: cleaner structure, clearer navigation, faster load times, and stronger SEO, since many accessibility best practices overlap directly with what search engines reward.</p>
-<p>This is part of why accessibility work was central to the SUU Graduate Programs project I led, which contributed to the university&rsquo;s top 1% global ranking for web accessibility &mdash; the same principles apply whether you&rsquo;re a university or a five-person local business.</p>
+<p>This is part of why accessibility work was central to the SUU Graduate Programs work I contributed to as part of the university web team, which helped earn SUU a top 1% global ranking for web accessibility &mdash; the same principles apply whether you&rsquo;re a university or a five-person local business.</p>
 
 <h2>Frequently asked questions</h2>
 <h3>Does the ADA actually require website accessibility?</h3>
@@ -188,5 +152,13 @@ footer{border-top:1px solid #2a1e16;padding:2rem 2.5rem;text-align:center;font-s
   Ashley Sara &middot; Elko, Nevada &middot; <a href="https://ashley-sara.com" style="color:var(--muted)">ashley-sara.com</a>
 </footer>
 
+<script>
+function toggleTheme(){
+  var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';
+  var next=cur==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  try{localStorage.setItem('theme',next);}catch(e){}
+}
+</script>
 </body>
 </html>
