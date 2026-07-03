@@ -270,7 +270,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .hero-title .t1{display:block;font-size:clamp(3.4rem,8.2vw,7.6rem);color:var(--ink);letter-spacing:.04em}
 .hero-title .t2{display:block;font-size:clamp(4.2rem,10.5vw,9.8rem);color:var(--peach);letter-spacing:.02em;margin-top:.2rem}
 .hero-orn{margin:0 0 1.4rem}
-.hero-script{font-family:var(--script);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--peach);line-height:1.1;display:block}
+.hero-script{font-family:var(--script);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--peach);line-height:1.3;display:block;padding:.05em 0 .1em .3em}
 .hero-caps{font-size:clamp(.95rem,1.6vw,1.2rem);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);font-weight:400;display:block;margin:.5rem 0 1.7rem}
 .hero-body{max-width:420px;color:var(--taupe);font-size:1.02rem;line-height:1.85;margin-bottom:2.3rem}
 .hero-btns{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
@@ -428,7 +428,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .pkg.featured{border:1px solid var(--peach);background:linear-gradient(180deg,var(--card),var(--blush) 160%)}
 .pkg-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--terra);color:var(--btn-text);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;padding:.35rem 1.1rem;border-radius:2px;white-space:nowrap}
 .pkg-name{font-family:var(--display);font-size:1.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-.pkg-tagline{font-family:var(--script);font-size:1.35rem;color:var(--peach);margin:.3rem 0 1.4rem}
+.pkg-tagline{font-family:var(--script);font-size:1.35rem;color:var(--peach);margin:.3rem 0 1.4rem;line-height:1.35;padding-left:.2em}
 .pkg-price{font-family:var(--display);font-size:2.7rem;color:var(--ink);line-height:1}
 .pkg-period{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin:.6rem 0 1.6rem}
 .pkg-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;flex:1}
@@ -459,7 +459,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3.8rem;align-items:start}
 .about-arch{width:min(100%,340px);padding:1.9rem 1.9rem 0;background:linear-gradient(180deg,var(--card),var(--blush-deep));border-radius:999px 999px 0 0}
 .about-arch img{display:block;width:100%;border-radius:880px 880px 0 0;aspect-ratio:4/5;object-fit:cover;object-position:top center}
-.about-lede{font-family:var(--script);font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--peach);line-height:1.2;margin-bottom:1.4rem}
+.about-lede{font-family:var(--script);font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--peach);line-height:1.35;margin-bottom:1.4rem;padding-left:.25em}
 .about-p{color:var(--taupe);font-size:1rem;line-height:1.9;margin-bottom:1.15rem;max-width:580px}
 .about-p a{color:var(--terra)}
 .cred{margin-top:2rem;border-top:1px solid var(--blush-deep);max-width:560px}
@@ -492,7 +492,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 }
 .contact-band::before{content:'';position:absolute;right:-140px;top:-90px;width:460px;height:620px;background:var(--contact-glow);border-radius:999px 999px 0 0;transform:rotate(12deg);pointer-events:none}
 .contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:4rem;align-items:start;position:relative;z-index:1}
-.contact-script{font-family:var(--script);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--terra);line-height:1.35;margin:1.6rem 0 2rem;max-width:340px}
+.contact-script{font-family:var(--script);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--terra);line-height:1.4;margin:1.6rem 0 2rem;max-width:340px;padding-left:.25em}
 .contact-fact{display:flex;align-items:center;gap:.9rem;font-size:.95rem;color:var(--ink);padding:.55rem 0;letter-spacing:.04em}
 .contact-fact .icon-svg{color:var(--terra)}
 .contact-fact a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(33,28,25,.25);transition:color .2s,border-color .2s}
@@ -526,7 +526,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
 .lead-modal-close:hover,.lead-modal-close:focus{color:var(--terra)}
 .lead-modal-tag{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe);margin-bottom:.8rem}
 .lead-modal-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;color:var(--ink);margin-bottom:.4rem}
-.lead-modal-script{font-family:var(--script);font-size:1.6rem;color:var(--peach);margin-bottom:1rem;display:block}
+.lead-modal-script{font-family:var(--script);font-size:1.6rem;color:var(--peach);margin-bottom:1rem;display:block;line-height:1.35;padding-left:.2em}
 .lead-modal-body{font-size:.95rem;color:var(--taupe);line-height:1.75;margin-bottom:1.6rem}
 .lead-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
 .lead-field label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)}
@@ -725,7 +725,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
 <!-- ============ STATS ============ -->
 <div class="stats" aria-label="Key results">
   <div class="stat"><div class="stat-n"><span data-count="10">10</span><span class="accent">+</span></div><div class="stat-l">Years in Digital</div></div>
-  <div class="stat"><div class="stat-n">Top <span class="accent">1%</span></div><div class="stat-l">WCAG Global &middot; SUU Web Team</div></div>
+  <div class="stat"><div class="stat-n">Top <span class="accent">1%</span></div><div class="stat-l">WCAG Global &middot; SUU Team</div></div>
   <div class="stat"><div class="stat-n"><span class="accent">+</span><span data-count="150">150</span>%</div><div class="stat-l">Client Visibility Boost</div></div>
   <div class="stat"><div class="stat-n"><span class="accent">+</span><span data-count="80">80</span>%</div><div class="stat-l">Direct Bookings Growth</div></div>
 </div>
@@ -797,6 +797,10 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
           <div class="stack-title">AI &amp; Workflow Systems</div>
           <p>ChatGPT &bull; Claude &bull; Gemini &bull; Perplexity &bull; Google AI Studio &bull; GoHighLevel &bull; Notion &bull; Trello &bull; Airtable</p>
         </div>
+      </div>
+      <div class="tools-photo" style="margin-top:2rem">
+        <img src="about-photo.jpg" alt="Ashley Sara wearing a fringe jacket and cowboy boots, leaning on a wooden fence at sunset" loading="lazy" decoding="async" width="480" height="330"/>
+        <div class="tools-photo-cap"><span class="display">strategy,<br>systems &amp; style</span></div>
       </div>
     </div>
   </div>
