@@ -108,6 +108,7 @@
   --sparkle-1:rgba(156,116,52,.75);
   --sparkle-2:rgba(221,144,120,.45);
   --sparkle-opacity:.36;
+  --ff-max:.4;
   --gutter:max(2rem,calc((100vw - 1180px)/2));
   color-scheme:light;
 }
@@ -141,9 +142,10 @@ html[data-theme="dark"]{
   --wash-a:rgba(23,16,16,.42);
   --wash-b:rgba(23,16,16,.05);
   --img-opacity:.85;
-  --sparkle-1:rgba(211,164,94,.8);
+  --sparkle-1:rgba(220,176,106,.9);
   --sparkle-2:rgba(238,180,164,.5);
   --sparkle-opacity:.44;
+  --ff-max:.65;
   color-scheme:dark;
 }
 html{scroll-behavior:smooth}
@@ -249,19 +251,52 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
   position:absolute;
   inset:0;
   background-image:
-    radial-gradient(circle, var(--sparkle-1) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(238,206,150,.95) 0 1.1px, rgba(211,164,94,.4) 1.8px, transparent 3px),
+    radial-gradient(circle, var(--sparkle-1) 0 1.2px, transparent 2px),
+    radial-gradient(circle, rgba(184,135,63,.6) 0 .8px, transparent 1.4px),
     radial-gradient(circle, var(--sparkle-2) 0 1px, transparent 1.8px);
-  background-size:150px 150px, 230px 230px;
-  background-position:0 0, 70px 110px;
-  opacity:var(--sparkle-opacity);
-  animation:sparkleFloat 18s linear infinite;
+  background-size:290px 290px, 170px 170px, 130px 130px, 230px 230px;
+  background-position:40px 60px, 0 0, 90px 30px, 70px 110px;
+  opacity:calc(var(--sparkle-opacity)*.55);
+  animation:foilWander 26s linear infinite alternate;
   pointer-events:none;
   z-index:1;
 }
-@keyframes sparkleFloat{
-  0%{transform:translate3d(0,0,0);opacity:.2}
-  50%{opacity:var(--sparkle-opacity)}
-  100%{transform:translate3d(-40px,-60px,0);opacity:.2}
+@keyframes foilWander{
+  from{background-position:40px 60px, 0 0, 90px 30px, 70px 110px}
+  to{background-position:-40px -50px, -55px -85px, 60px -15px, 15px 30px}
+}
+
+/* Fireflies — sparse glowing motes that breathe in and out, out of sync */
+.fireflies{position:absolute;inset:0;pointer-events:none;z-index:1}
+.fireflies::before,.fireflies::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(circle, rgba(246,216,152,.95) 0 1.6px, rgba(211,164,94,.4) 3px, transparent 5.5px);
+  opacity:0;
+}
+.fireflies::before{
+  background-size:340px 340px;
+  background-position:60px 90px;
+  animation:fireflyPulse 7s ease-in-out infinite, fireflyWander 34s linear infinite alternate;
+}
+.fireflies::after{
+  background-size:470px 470px;
+  background-position:210px 30px;
+  animation:fireflyPulse 9.5s ease-in-out infinite, fireflyWander 42s linear infinite alternate-reverse;
+  animation-delay:-4.2s,0s;
+}
+@keyframes fireflyPulse{
+  0%,100%{opacity:.04}
+  45%,58%{opacity:var(--ff-max)}
+}
+@keyframes fireflyWander{
+  from{background-position:60px 90px}
+  to{background-position:-30px -40px}
+}
+@media(prefers-reduced-motion:reduce){
+  .fireflies::before,.fireflies::after{animation:none;opacity:.22}
 }
 .hero{position:relative;z-index:1;padding:4.5rem var(--gutter) 0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3rem;align-items:end;overflow:hidden}
 .hero-copy{padding-bottom:4.5rem;position:relative;z-index:2}
@@ -270,7 +305,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .hero-title .t1{display:block;font-size:clamp(3.4rem,8.2vw,7.6rem);color:var(--ink);letter-spacing:.04em}
 .hero-title .t2{display:block;font-size:clamp(4.2rem,10.5vw,9.8rem);color:var(--peach);letter-spacing:.02em;margin-top:.2rem}
 .hero-orn{margin:0 0 1.4rem}
-.hero-script{font-family:var(--script);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--peach);line-height:1.3;display:block;padding:.05em 0 .1em .3em}
+.hero-script{font-family:var(--script);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--peach);line-height:1.35;display:inline-block;padding:.08em .2em .12em .6em;overflow:visible}
 .hero-caps{font-size:clamp(.95rem,1.6vw,1.2rem);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);font-weight:400;display:block;margin:.5rem 0 1.7rem}
 .hero-body{max-width:420px;color:var(--taupe);font-size:1.02rem;line-height:1.85;margin-bottom:2.3rem}
 .hero-btns{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
@@ -428,7 +463,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .pkg.featured{border:1px solid var(--peach);background:linear-gradient(180deg,var(--card),var(--blush) 160%)}
 .pkg-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--terra);color:var(--btn-text);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;padding:.35rem 1.1rem;border-radius:2px;white-space:nowrap}
 .pkg-name{font-family:var(--display);font-size:1.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-.pkg-tagline{font-family:var(--script);font-size:1.35rem;color:var(--peach);margin:.3rem 0 1.4rem;line-height:1.35;padding-left:.2em}
+.pkg-tagline{font-family:var(--script);font-size:1.35rem;color:var(--peach);margin:.3rem 0 1.4rem;line-height:1.35;padding-left:.45em}
 .pkg-price{font-family:var(--display);font-size:2.7rem;color:var(--ink);line-height:1}
 .pkg-period{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin:.6rem 0 1.6rem}
 .pkg-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;flex:1}
@@ -459,7 +494,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 .about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3.8rem;align-items:start}
 .about-arch{width:min(100%,340px);padding:1.9rem 1.9rem 0;background:linear-gradient(180deg,var(--card),var(--blush-deep));border-radius:999px 999px 0 0}
 .about-arch img{display:block;width:100%;border-radius:880px 880px 0 0;aspect-ratio:4/5;object-fit:cover;object-position:top center}
-.about-lede{font-family:var(--script);font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--peach);line-height:1.35;margin-bottom:1.4rem;padding-left:.25em}
+.about-lede{font-family:var(--script);font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--peach);line-height:1.35;margin-bottom:1.4rem;padding-left:.5em}
 .about-p{color:var(--taupe);font-size:1rem;line-height:1.9;margin-bottom:1.15rem;max-width:580px}
 .about-p a{color:var(--terra)}
 .cred{margin-top:2rem;border-top:1px solid var(--blush-deep);max-width:560px}
@@ -492,7 +527,7 @@ header.site-nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backd
 }
 .contact-band::before{content:'';position:absolute;right:-140px;top:-90px;width:460px;height:620px;background:var(--contact-glow);border-radius:999px 999px 0 0;transform:rotate(12deg);pointer-events:none}
 .contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:4rem;align-items:start;position:relative;z-index:1}
-.contact-script{font-family:var(--script);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--terra);line-height:1.4;margin:1.6rem 0 2rem;max-width:340px;padding-left:.25em}
+.contact-script{font-family:var(--script);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--terra);line-height:1.4;margin:1.6rem 0 2rem;max-width:340px;padding-left:.5em}
 .contact-fact{display:flex;align-items:center;gap:.9rem;font-size:.95rem;color:var(--ink);padding:.55rem 0;letter-spacing:.04em}
 .contact-fact .icon-svg{color:var(--terra)}
 .contact-fact a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(33,28,25,.25);transition:color .2s,border-color .2s}
@@ -526,7 +561,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
 .lead-modal-close:hover,.lead-modal-close:focus{color:var(--terra)}
 .lead-modal-tag{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe);margin-bottom:.8rem}
 .lead-modal-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;color:var(--ink);margin-bottom:.4rem}
-.lead-modal-script{font-family:var(--script);font-size:1.6rem;color:var(--peach);margin-bottom:1rem;display:block;line-height:1.35;padding-left:.2em}
+.lead-modal-script{font-family:var(--script);font-size:1.6rem;color:var(--peach);margin-bottom:1rem;display:block;line-height:1.35;padding-left:.45em}
 .lead-modal-body{font-size:.95rem;color:var(--taupe);line-height:1.75;margin-bottom:1.6rem}
 .lead-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
 .lead-field label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)}
@@ -609,6 +644,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
       <a href="#work" class="btn ghost">View My Work</a>
     </div>
   </div>
+  <div class="fireflies" aria-hidden="true"></div>
   <div class="hero-visual">
     <div class="arch">
       <img src="headshot.jpg" alt="Ashley Sara, Digital Growth and Search Experience Architect based in Elko, Nevada" width="600" height="750"/>
@@ -998,6 +1034,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
 
 <!-- ============ CONTACT ============ -->
 <section class="band contact-band" id="contact" aria-labelledby="contact-heading">
+  <div class="fireflies" aria-hidden="true"></div>
   <div class="contact-grid">
     <div>
       <span class="kicker">Let&rsquo;s Create</span>
