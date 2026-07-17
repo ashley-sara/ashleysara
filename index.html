@@ -227,6 +227,10 @@ html[data-theme="dark"] .stack-card{box-shadow:0 2px 8px rgba(0,0,0,.35), 0 16px
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--cream);padding:.8rem 1.4rem;z-index:999;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
 .skip-link:focus{left:0}
 
+.hero-title.long span{font-size:clamp(2.15rem,5.4vw,4.1rem);line-height:1.06;letter-spacing:.015em}
+.hero-title.long{margin-bottom:.4rem}
+.hero-value{margin-top:1.6rem}
+
 /* Theme toggle */
 .theme-toggle{background:none;border:1px solid var(--line);border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);transition:border-color .2s,color .2s;flex-shrink:0}
 .theme-toggle:hover{border-color:var(--terra);color:var(--terra)}
@@ -698,17 +702,20 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-copy">
-    <span class="kicker">Search Experience Strategist &bull; Elko, Nevada</span>
-    <h1 id="hero-heading" class="hero-title">
-      <span class="t1">Found.</span>
-      <span class="t2">Chosen.</span>
+    <span class="kicker">Search Experience Architect</span>
+    <h1 id="hero-heading" class="hero-title long">
+      <span class="t1">Be the business</span>
+      <span class="t2">people&mdash;and AI&mdash;</span>
+      <span class="t1">choose first.</span>
     </h1>
     <p class="orn hero-orn" aria-hidden="true">&#10022;</p>
-    <span class="hero-script">pretty is nice</span>
-    <span class="hero-caps">but performance pays the bills</span>
     <p class="hero-body">
-      Search has changed. Your next customer might never see page one of Google &mdash; they might just ask ChatGPT or Gemini and trust the answer. I build websites and search strategies that make that answer you. No fluff, no vanity metrics.
+      Search has changed. Your customers aren&rsquo;t just Googling anymore &mdash; they&rsquo;re asking AI to recommend who to trust. I help businesses build websites, search strategies, and digital experiences that earn visibility, build credibility, and turn more visitors into customers.
     </p>
+    <div class="hero-value">
+      <span class="hero-script">beautiful websites get compliments</span>
+      <span class="hero-caps">strategic websites grow businesses</span>
+    </div>
     <div class="hero-btns">
       <a href="https://calendly.com/ashleysara/30min" target="_blank" rel="noopener noreferrer" class="btn">Book a Free Growth Audit</a>
       <a href="#work" class="btn ghost">View My Work</a>
@@ -759,7 +766,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
       <span class="kicker light">Featured Work</span>
       <h2 id="work-heading" class="band-title" style="margin-top:.7rem">Work</h2>
       <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-      <p class="band-note">Pretty websites are everywhere. Results are harder to find. Every project below started with a real business problem, and the goal was always the same: build something that performs.</p>
+      <p class="band-note">Every project below started with a real business problem. The goal was always the same: build something that performs.</p>
       <a href="#contact" class="btn" style="margin-top:1.8rem">Start Your Project</a>
     </div>
     <div class="projects">
@@ -844,7 +851,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
       <span class="kicker light">What I Do</span>
       <h2 id="services-heading" class="band-title" style="margin-top:.7rem">Search Is Changing</h2>
       <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-      <p class="band-note">Your website isn&rsquo;t just competing for clicks anymore. It&rsquo;s competing to become the answer. I build digital presence that both people and AI can understand, trust, and recommend.</p>
+      <p class="band-note">Three outcomes. Every capability I have lives under one of them.</p>
       <div style="margin-top:1.2rem">
 
         <div class="phase">
@@ -899,7 +906,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
       <span class="kicker light">My Approach</span>
       <h2 class="band-title" style="margin-top:.7rem">Not Louder. Easier to Find.</h2>
       <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-      <p class="band-note">The businesses that win make it ridiculously easy for customers to understand who they are and why they matter. I make every piece work together, from SEO and accessibility to ads, content, and AI search. Strategy outperforms noise. The toolkit:</p>
+      <p class="band-note">The businesses that win make it ridiculously easy for customers to understand who they are and why they matter. My job is making every piece work together. The toolkit:</p>
       <div class="eco-row" role="list">
         <div class="eco-chip" role="listitem"><div class="eco-name">Google Ecosystem</div><div class="eco-list">Ads &middot; Analytics &middot; Search Console &middot; Business Profile</div></div>
         <div class="eco-chip" role="listitem"><div class="eco-name">Meta Platforms</div><div class="eco-list">Ads &middot; Facebook &middot; Instagram</div></div>
@@ -938,7 +945,6 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
     <span class="kicker light">Testimonials</span>
     <h2 id="testi-heading" class="band-title" style="margin-top:.7rem">Like Adding a Teammate</h2>
     <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-    <p class="band-note">The best partnerships don&rsquo;t feel like hiring another vendor.</p>
   </div>
   <div class="quotes">
     <blockquote class="quote-card">
@@ -975,7 +981,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
     <span class="kicker light">Ask Me Anything</span>
     <h2 id="faq-heading" class="band-title" style="margin-top:.7rem">Questions I Answer Every Week</h2>
     <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-    <p class="band-note">Search is shifting from links to answers. Here&rsquo;s how AI finds a business, and what people ask me about it.</p>
+    <p class="band-note">How AI decides who to recommend, and what people ask me most.</p>
   </div>
   <div class="process-grid" style="margin-bottom:3rem" aria-label="How AI finds businesses">
     <div class="process-step"><div class="process-num">01</div><div class="process-title">It Reads</div><p class="process-desc">AI systems read your website, reviews, listings, and everything written about you online.</p></div>
@@ -1028,7 +1034,7 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
     <span class="kicker light">Free Advice</span>
     <h2 id="blog-heading" class="band-title" style="margin-top:.7rem">Things I Wish More Businesses Knew</h2>
     <p class="orn band-orn" aria-hidden="true">&#10022;</p>
-    <p class="band-note">No recycled advice, no buzzwords. Just practical insights you can use this week, minus the invoice.</p>
+    <p class="band-note">Practical advice you can use this week, minus the invoice.</p>
   </div>
   <div class="blog-list">
     <a class="blog-row" href="blog-wcag-compliance-cost.html">
@@ -1062,9 +1068,9 @@ footer{background:var(--band-contrast);padding:2.2rem var(--gutter);display:flex
       <h2 id="about-heading" class="band-title" style="margin-top:.7rem">Strategy With Soul</h2>
       <p class="orn band-orn" aria-hidden="true">&#10022;</p>
       <p class="about-lede" style="margin-top:1.4rem">hi, I&rsquo;m Ashley</p>
-      <p class="about-p">I&rsquo;m a Search Experience Strategist who believes good marketing should make businesses easier to find, not louder. Over the last decade I&rsquo;ve helped everyone from local businesses to universities improve search visibility, websites, advertising, accessibility, and customer experience.</p>
+      <p class="about-p">I&rsquo;m a Search Experience Strategist. Over the last decade I&rsquo;ve helped everyone from local businesses to universities improve search visibility, websites, advertising, accessibility, and customer experience.</p>
       <p class="about-p">Today I lead digital marketing for SUU Graduate &amp; Online Programs while partnering with businesses that want practical strategy without the agency runaround. I&rsquo;m endlessly curious about how people search, why they trust certain brands, and how AI is changing both.</p>
-      <p class="about-p">Marketing shouldn&rsquo;t require a translator. Through <a href="https://www.elevation.tech" target="_blank" rel="noopener noreferrer">Elevation Tech</a> and Ashley Sara Marketing, I tell clients what&rsquo;s working, what&rsquo;s not, and exactly why. No smoke. No mirrors. Just honest strategy.</p>
+      <p class="about-p">Marketing shouldn&rsquo;t require a translator. Through <a href="https://www.elevation.tech" target="_blank" rel="noopener noreferrer">Elevation Tech</a> and Ashley Sara Marketing, I tell clients what&rsquo;s working, what&rsquo;s not, and exactly why.</p>
       <p class="about-p">(And yes, cowboy boots occasionally make appearances in meetings.)</p>
       <div class="cred">
         <div class="cred-row"><div><div class="cred-role">Owner &middot; CMO</div><div class="cred-place"><a href="https://www.elevation.tech" target="_blank" rel="noopener noreferrer" style="color:var(--terra);text-decoration:none">Elevation Tech</a></div><div class="cred-award">&#10022; Best of Iron County Silver &rsquo;25</div></div><div class="cred-date">2025&ndash;Now</div></div>
