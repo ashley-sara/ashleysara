@@ -9,11 +9,9 @@
 <link rel="canonical" href="https://ashley-sara.com/privacy-policy.html"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet"/>
-<meta name="color-scheme" content="light dark"/>
-<script>
-(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;0,800;1,500&display=swap" rel="stylesheet"/>
+<meta name="color-scheme" content="dark"/>
+<meta name="theme-color" content="#0a1120"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH5GTVZGSG"></script>
 <script>
   window.dataLayer=window.dataLayer||[];
@@ -21,21 +19,21 @@
   gtag('js',new Date());
   gtag('config','G-TH5GTVZGSG');
 </script>
+<link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="stylesheet" href="interior.css"/>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
 <nav>
   <a href="https://ashley-sara.com" class="logo">Ashley <em>Sara</em></a>
   <div class="nav-right">
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch color theme">
-    <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-    <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="17" y1="7" x2="18.8" y2="5.2"/><line x1="5.2" y1="18.8" x2="7" y2="17"/></svg>
-  </button>
   <a href="https://ashley-sara.com" class="back-link">← Back to Site</a>
+  <a href="https://calendly.com/ashleysara/30min" class="nav-cta" target="_blank" rel="noopener">Free audit<span class="sr-only"> (opens in new tab)</span></a>
 </div>
 </nav>
 
+<main id="main">
 <div class="page-hero">
   <span class="page-cat">Legal</span>
   <h1 class="page-title">Privacy Policy</h1>
@@ -99,17 +97,12 @@
 
 </article>
 
+</main>
+
 <footer>
-  Ashley Sara Marketing &middot; Elko, Nevada &middot; <a href="https://ashley-sara.com" style="color:var(--muted)">ashley-sara.com</a>
+  <p style="margin:0 0 6px">© 2024–2026 Ashley Sara · Serving Nevada, Utah &amp; Idaho</p>
+  <a href="https://ashley-sara.com/#blog">Blog</a> · <a href="https://www.linkedin.com/in/ashley-fekay/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in new tab)</span></a> · <a href="mailto:connect@ashley-sara.com">Email</a> · <a href="privacy-policy.html">Privacy policy</a>
 </footer>
 
-<script>
-function toggleTheme(){
-  var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';
-  var next=cur==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',next);
-  try{localStorage.setItem('theme',next);}catch(e){}
-}
-</script>
 </body>
 </html>
