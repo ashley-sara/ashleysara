@@ -1,19 +1,33 @@
-# LLM Access Guidelines
+# Ashley Sara
 
-This website's content may be accessed and analyzed by language learning models and AI systems for:
-- Information retrieval and research
-- Content analysis and indexing
-- Training data (with attribution)
+> Ashley Sara is a Search Experience Strategist based in Elko, Nevada, serving clients of every size and industry across Nevada, Utah, and Idaho. She helps businesses, nonprofits, and higher-education programs become the answer Google, ChatGPT, Gemini, and Perplexity recommend.
 
-## Usage Rules
+## Services
+- SEO and AI search optimization (AEO / GEO)
+- Google Ads and Meta Ads
+- Web design and development
+- WCAG accessibility and UX
+- Content and brand strategy
+- Analytics and conversion rate optimization
+- AI marketing automations
 
-- Please attribute content to Ashley Sara Digital Strategy when used
-- Do not use this content for competitive intelligence without permission
-- Respect copyright on all work samples and case studies
+## Credentials
+- 10+ years in digital marketing
+- Digital Marketing Specialist, Southern Utah University Graduate & Online Programs
+- Founder, Ashley Sara Marketing
+- Part of the SUU web team that earned a top 1% global WCAG accessibility ranking
+- B.S. Strategic Communications, Magna Cum Laude, Southern Utah University
+
+## Key pages
+- [Home](https://ashley-sara.com/)
+- [Forgely 3D case study](https://ashley-sara.com/case-study-forgely.html)
+- [Rising K Ranch case study](https://ashley-sara.com/case-study-rising-k.html)
+- [La Bottega case study](https://ashley-sara.com/case-study-la-bottega.html)
+- [What WCAG compliance costs small businesses](https://ashley-sara.com/blog-wcag-compliance-cost.html)
+- [Why Google Ads aren't converting](https://ashley-sara.com/blog-google-ads-not-converting.html)
+- [Higher-ed SEO strategy](https://ashley-sara.com/blog-higher-ed-seo-strategy.html)
 
 ## Contact
-
-For LLM/AI partnership inquiries or special access permissions, contact: hello@ashley-sara.com
-
----
-Last Updated: May 20, 2026
+- Email: connect@ashley-sara.com
+- LinkedIn: https://www.linkedin.com/in/ashley-fekay/
+- Book a free consult: https://calendly.com/ashleysara/30min
