@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://ashley-sara.com/ashley-portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="ashley-portrait.jpg" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" imagesrcset="ashley-portrait-480.webp 480w, ashley-portrait-760.webp 760w, ashley-portrait-1000.webp 1000w" imagesizes="(min-width:960px) 440px, calc(100vw - 32px)" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -203,7 +203,9 @@ section{padding:88px 0}
 /* portrait */
 .portrait{position:relative;max-width:440px;margin:0 auto;width:100%}
 .arch{position:relative;border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);box-shadow:0 40px 120px -40px rgba(76,184,255,.45)}
-.arch img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}
+.arch{isolation:isolate}
+.arch picture{display:block;width:100%;height:100%}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,17,32,.55))}
 .badge{position:absolute;right:-6px;bottom:22px;width:128px;height:128px;border-radius:50%;background:var(--ink);border:1px solid var(--line);display:grid;place-items:center}
 .badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
@@ -467,9 +469,12 @@ footer a:hover{color:var(--rose)}
         </div>
       </div>
 
-      <div class="portrait reveal">
+      <div class="portrait">
         <div class="arch">
-          <img src="ashley-portrait.jpg" alt="Ashley Sara, Search Experience Strategist, smiling in a dark blazer with a turquoise pendant" width="1000" height="1249" fetchpriority="high" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="ashley-portrait-480.webp 480w, ashley-portrait-760.webp 760w, ashley-portrait-1000.webp 1000w" sizes="(min-width:960px) 440px, calc(100vw - 32px)">
+            <img src="ashley-portrait-760.jpg" srcset="ashley-portrait-480.jpg 480w, ashley-portrait-760.jpg 760w, ashley-portrait.jpg 1000w" sizes="(min-width:960px) 440px, calc(100vw - 32px)" alt="Ashley Sara, Search Experience Strategist, smiling in a dark blazer with a turquoise pendant" width="1000" height="1249" fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <div class="badge" aria-hidden="true">
           <svg viewBox="0 0 128 128"><defs><path id="c" d="M64,64 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#c">search · strategy · style · soul ·</textPath></text></svg>
