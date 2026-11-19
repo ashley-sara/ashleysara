@@ -9,9 +9,20 @@
 
 const ALLOWED_ORIGIN = 'https://ashley-sara.com';
 
+// Free questions per conversation before Promise hands off to a consultation.
+// Keep in sync with LIMIT in index.html.
+const QUESTION_LIMIT = 4;
+
+const LIMIT_MESSAGE = "That's your " + QUESTION_LIMIT + " free questions! Ashley can dig into your specific situation on a free 30-minute consult: https://calendly.com/ashleysara/30min";
+
+const FINAL_QUESTION_NOTE = `
+
+---
+THIS IS THE VISITOR'S FINAL FREE QUESTION. Answer it briefly and helpfully, then warmly let them know this was their last free question and invite them to book a free 30-minute consultation with Ashley at https://calendly.com/ashleysara/30min. Do not ask them a follow-up question.`;
+
 const SYSTEM_PROMPT = `You are Promise — Ashley Sara's AI assistant on ashley-sara.com.
 
-Ashley is a Digital Growth & Search Experience Architect with 10+ years of experience, including nonprofit marketing. She owns Elevation Tech (https://www.elevation.tech), an AI automation agency that won Best of Iron County Silver Award 2025, and runs Ashley Sara Marketing for independent clients.
+Ashley is a Search Experience Strategist serving clients of every size and industry across Nevada, Utah, and Idaho, with 10+ years of experience, including nonprofit marketing. She owns Elevation Tech (https://www.elevation.tech), an AI automation agency that won Best of Iron County Silver Award 2025, and runs Ashley Sara Marketing for independent clients.
 
 Her expertise: SEO, Google Ads, Meta Ads, WCAG/ADA accessibility, web design, analytics, CRO, content strategy, and AI automations.
 
@@ -42,6 +53,9 @@ Resources to link when genuinely relevant (don't force it):
 - ADA/accessibility questions → https://ashley-sara.com/blog-wcag-compliance-cost.html
 - Google Ads not converting → https://ashley-sara.com/blog-google-ads-not-converting.html
 - Higher ed / university SEO → https://ashley-sara.com/blog-higher-ed-seo-strategy.html
+- AI search, AEO, organic vs. paid → https://ashley-sara.com/blog-organic-vs-paid-aeo.html
+- AI agents, agentic search, booking/shopping by AI → https://ashley-sara.com/blog-agentic-search-2027.html
+- AI and jobs / teams / hiring → https://ashley-sara.com/blog-ai-job-market.html
 - Forgely case study (Meta Ads + SEO) → https://ashley-sara.com/case-study-forgely.html
 - Rising K Ranch case study → https://ashley-sara.com/case-study-rising-k.html
 - La Bottega case study (full-service) → https://ashley-sara.com/case-study-la-bottega.html
@@ -110,6 +124,16 @@ export default {
       .filter(m => m.role && m.content && typeof m.content === 'string')
       .map(m => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.content.slice(0, 2000) }));
 
+    // Enforce the free-question limit server-side (the browser limit can be bypassed)
+    const questionCount = sanitized.filter(m => m.role === 'user').length;
+    if (questionCount > QUESTION_LIMIT) {
+      return new Response(JSON.stringify({ text: LIMIT_MESSAGE, limit: true }), {
+        status: 200,
+        headers: { ...corsHeaders(request), 'Content-Type': 'application/json' },
+      });
+    }
+    const system = questionCount === QUESTION_LIMIT ? SYSTEM_PROMPT + FINAL_QUESTION_NOTE : SYSTEM_PROMPT;
+
     try {
       const response = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
@@ -121,7 +145,7 @@ export default {
         body: JSON.stringify({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 400,
-          system: SYSTEM_PROMPT,
+          system,
           messages: sanitized,
         }),
       });

@@ -375,20 +375,29 @@ footer a:hover{color:var(--rose)}
 .lm-close:hover{border-color:var(--rose);color:var(--rose)}
 
 /* Promise chat */
+.pm{width:1em;height:1em;flex:none;fill:currentColor}
+.p-avatar{position:relative;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;color:var(--ink);background:conic-gradient(from 210deg,var(--rose),var(--terra),var(--bourbon),var(--rose))}
+.p-avatar .pm{width:20px;height:20px}
 .as-chat{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 @media(min-width:768px){.as-chat{right:24px;bottom:24px}}
-.as-toggle{width:58px;height:58px;border-radius:50%;border:0;cursor:pointer;color:var(--ink);background:linear-gradient(135deg,var(--rose),var(--terra));box-shadow:0 12px 40px -8px rgba(76,184,255,.7);display:grid;place-items:center;transition:transform .2s}
-.as-toggle:hover{transform:scale(1.06)}
-.as-toggle svg{width:24px;height:24px;grid-area:1/1}
-.as-toggle .i-close,.as-toggle.on .i-open{display:none}
-.as-toggle.on .i-close{display:block}
-.as-panel{width:min(370px,calc(100vw - 32px));height:min(540px,calc(100dvh - 120px));display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--ink-2);box-shadow:0 30px 80px -20px #000;animation:fade .3s ease both}
+.as-toggle{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:8px 18px 8px 8px;border-radius:999px;border:1px solid rgba(62,224,200,.45);cursor:pointer;color:var(--cream);background:rgba(16,26,44,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 14px 44px -10px rgba(62,224,200,.55);font:600 .98rem/1.1 var(--sans);text-align:left;transition:transform .2s,border-color .2s}
+.as-toggle:hover{transform:translateY(-2px);border-color:var(--rose)}
+.as-toggle .t-sub{display:block;font:500 .68rem/1.2 var(--mono);color:var(--rose);letter-spacing:.06em;margin-top:3px}
+.as-toggle .p-avatar::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--rose);opacity:0;animation:ping 2.6s ease-out 1.5s infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:.9}70%,100%{transform:scale(1.35);opacity:0}}
+.as-toggle .i-close{display:none;width:20px;height:20px}
+.as-toggle.on{padding:8px;border-color:var(--line)}
+.as-toggle.on .t-text,.as-toggle.on .p-avatar{display:none}
+.as-toggle.on .i-close{display:block;width:40px;height:40px;padding:10px}
+@media(max-width:599px){.as-toggle{padding:8px;gap:0}.as-toggle .t-text{display:none}.as-toggle .p-avatar{width:44px;height:44px}.as-toggle .p-avatar .pm{width:22px;height:22px}}
+.as-panel{width:min(380px,calc(100vw - 32px));height:min(560px,calc(100dvh - 120px));display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--ink-2);box-shadow:0 30px 80px -20px #000;animation:fade .3s ease both}
 .as-panel[hidden]{display:none}
-.as-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(62,224,200,.12),transparent)}
+.as-head{display:flex;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(62,224,200,.14),transparent)}
+.as-head > div:nth-child(2){flex:1;min-width:0}
 .as-name{margin:0;font:800 1.25rem/1.1 var(--serif)}
-.as-status{margin:2px 0 0;font:500 .7rem/1.3 var(--mono);color:var(--mute);letter-spacing:.06em;display:flex;align-items:center;gap:6px}
-.as-dot{width:7px;height:7px;border-radius:50%;background:#7fd19b;box-shadow:0 0 8px #7fd19b}
-.as-x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--cream);cursor:pointer;display:grid;place-items:center}
+.as-status{margin:3px 0 0;font:500 .7rem/1.35 var(--mono);color:var(--mute);letter-spacing:.04em;display:flex;align-items:center;gap:6px}
+.as-dot{width:7px;height:7px;border-radius:50%;background:#7fd19b;box-shadow:0 0 8px #7fd19b;flex:none}
+.as-x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--cream);cursor:pointer;display:grid;place-items:center;flex:none}
 .as-x svg{width:16px;height:16px}
 .as-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;scrollbar-color:var(--line) transparent}
 .as-msg{max-width:88%;padding:10px 14px;font-size:.92rem;line-height:1.6;border-radius:4px 16px 16px 16px;background:var(--ink-3);border:1px solid var(--line);align-self:flex-start}
@@ -397,11 +406,33 @@ footer a:hover{color:var(--rose)}
 .as-msg code{background:rgba(255,255,255,.07);padding:.1em .3em;border-radius:4px}
 .as-msg.user{align-self:flex-end;border-radius:16px 16px 4px 16px;background:var(--rose);color:var(--ink);border-color:transparent}
 .as-msg.typing{font-style:italic;color:var(--mute)}
+.as-chips{display:flex;flex-wrap:wrap;gap:8px}
+.as-chips button,.ask-chip{min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid rgba(62,224,200,.4);background:rgba(62,224,200,.06);color:var(--cream);font:500 .86rem/1.3 var(--sans);cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
+.as-chips button:hover,.ask-chip:hover{background:rgba(62,224,200,.14);border-color:var(--rose)}
+.as-limit{align-self:stretch;max-width:none;border-color:var(--bourbon);background:linear-gradient(160deg,rgba(255,184,107,.1),transparent 70%),var(--ink-3)}
+.as-limit .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.as-limit a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;font-weight:600;text-decoration:none}
+.as-limit a.go{background:linear-gradient(135deg,var(--rose),var(--terra));color:var(--ink)}
+.as-limit a.alt{border:1px solid var(--line);color:var(--cream)}
 .as-row{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);grid-template-columns:none}
 .as-row input{flex:1;min-height:44px;border-radius:999px;min-width:0}
+.as-row input:disabled{opacity:.6}
 .as-row button{width:44px;height:44px;flex:none;border-radius:50%;border:0;cursor:pointer;background:var(--rose);color:var(--ink);display:grid;place-items:center}
 .as-row button:disabled{opacity:.4;cursor:not-allowed}
 .as-row svg{width:16px;height:16px}
+
+/* in-page Promise entry points */
+.ask-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;margin-top:14px;padding:10px 14px;border-radius:16px;border:1px solid rgba(62,224,200,.45);background:linear-gradient(135deg,rgba(62,224,200,.12),rgba(76,184,255,.06));color:var(--cream);font:600 1rem/1.25 var(--sans);text-align:left;cursor:pointer;transition:border-color .2s,transform .2s}
+.ask-cta:hover{border-color:var(--rose);transform:translateY(-1px)}
+.ask-cta small{display:block;font:500 .72rem/1.3 var(--mono);color:var(--mute);margin-top:3px;letter-spacing:.03em}
+.ask-cta .arrow{margin-left:auto;color:var(--rose);font-size:1.2rem}
+.promise-card{display:grid;gap:18px;margin-top:28px;padding:24px;border-radius:var(--r);border:1px solid rgba(62,224,200,.45);background:radial-gradient(500px circle at 0% 0%,rgba(62,224,200,.14),transparent 60%),var(--ink)}
+@media(min-width:768px){.promise-card{grid-template-columns:auto 1fr;align-items:center;padding:28px 32px;gap:24px}}
+.promise-card .p-avatar{width:72px;height:72px;box-shadow:0 0 50px -6px rgba(62,224,200,.7)}
+.promise-card .p-avatar .pm{width:36px;height:36px}
+.promise-card h3{font-size:1.6rem;margin:0 0 6px}
+.promise-card p{margin:0 0 14px;color:var(--mute)}
+.promise-card .chips{display:flex;flex-wrap:wrap;gap:8px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -416,6 +447,7 @@ footer a:hover{color:var(--rose)}
 </style>
 </head>
 <body class="no-js">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="promise-mark" viewBox="0 0 32 32"><path d="M15 5c.9 6.4 3.6 9.1 10 10-6.4.9-9.1 3.6-10 10-.9-6.4-3.6-9.1-10-10 6.4-.9 9.1-3.6 10-10Z"/><path d="M25.5 2.5c.4 2.3 1.3 3.2 3.5 3.5-2.2.4-3.1 1.3-3.5 3.5-.4-2.2-1.3-3.1-3.5-3.5 2.2-.3 3.1-1.2 3.5-3.5Z"/><circle cx="26" cy="26" r="2.2"/></symbol></svg>
 <a class="skip" href="#main">Skip to main content</a>
 <div class="spot" aria-hidden="true"></div>
 
@@ -466,6 +498,7 @@ footer a:hover{color:var(--rose)}
             <div class="engine-out" id="a"></div>
           </div>
           <p class="engine-note" aria-hidden="true">// simulated AI answer · this is the goal for every client</p>
+          <button class="ask-cta" type="button" data-ask=""><span class="p-avatar"><svg class="pm" viewBox="0 0 32 32" aria-hidden="true"><use href="#promise-mark"/></svg></span><span>Ask Promise a real question<small>The AI assistant I built &amp; trained · 4 free questions</small></span><span class="arrow" aria-hidden="true">→</span></button>
         </div>
       </div>
 
@@ -639,6 +672,18 @@ footer a:hover{color:var(--rose)}
         <details class="reveal"><summary>What is schema markup?</summary><p>Code that labels your content so search engines and AI know exactly what it means: your services, hours, reviews, and location. Most small business sites don’t have it.</p></details>
         <details class="reveal"><summary>Can AI replace SEO?</summary><p>AI changes where answers appear, not how they’re earned. Being clear, trusted, and well-structured is still the work. The businesses that do it show up in both.</p></details>
       </div>
+      <div class="promise-card reveal">
+        <span class="p-avatar"><svg class="pm" viewBox="0 0 32 32" aria-hidden="true"><use href="#promise-mark"/></svg></span>
+        <div>
+          <h3>Didn’t see your question? <em>Ask Promise.</em></h3>
+          <p>Promise is the AI assistant I built and trained on how search, AI, and marketing actually work. Ask up to 4 questions, free.</p>
+          <div class="chips">
+            <button class="ask-chip" type="button" data-ask="How do I get my business recommended by ChatGPT?">How do I get recommended by ChatGPT?</button>
+            <button class="ask-chip" type="button" data-ask="Should I start with Google Ads or SEO?">Ads or SEO first?</button>
+            <button class="ask-chip" type="button" data-ask="Is my website at risk for an ADA lawsuit?">Is my site ADA compliant?</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -750,24 +795,32 @@ footer a:hover{color:var(--rose)}
 </dialog>
 
 <!-- Promise AI chat -->
-<aside class="as-chat" aria-label="Chat assistant">
+<aside class="as-chat" aria-label="Promise, AI assistant">
   <div id="as-chat-panel" class="as-panel" role="dialog" aria-modal="false" aria-labelledby="as-name" hidden>
     <div class="as-head">
-      <div><p class="as-name" id="as-name">Promise</p><p class="as-status"><span class="as-dot" aria-hidden="true"></span>Ashley’s AI assistant · online</p></div>
+      <span class="p-avatar"><svg class="pm" viewBox="0 0 32 32" aria-hidden="true"><use href="#promise-mark"/></svg></span>
+      <div><p class="as-name" id="as-name">Promise</p><p class="as-status"><span class="as-dot" aria-hidden="true"></span><span id="as-left">AI assistant by Ashley · 4 free questions</span></p></div>
       <button class="as-x" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     </div>
     <div id="as-chat-messages" class="as-log" role="log" aria-live="polite">
-      <div class="as-msg ai"><p>Hi! I’m Promise, Ashley’s AI assistant. Wondering why your site isn’t ranking, or why your ads aren’t converting? Ask me anything. I can also help you see if Ashley is the right fit.</p></div>
+      <div class="as-msg ai"><p>Hi! I’m Promise, the AI assistant Ashley built and trained. Wondering why your site isn’t ranking, or why your ads aren’t converting? Ask me anything. You get 4 free questions, then Ashley can take it from there.</p></div>
+      <div class="as-chips" id="as-starters">
+        <button type="button" data-ask="Why isn't my website showing up in ChatGPT or Google's AI answers?">Why am I not in AI answers?</button>
+        <button type="button" data-ask="Why are my Google Ads not converting?">Why aren’t my ads converting?</button>
+        <button type="button" data-ask="What would working with Ashley look like?">What’s working with Ashley like?</button>
+      </div>
     </div>
     <form id="as-chat-form" class="as-row">
-      <label for="as-chat-input" class="sr-only">Type your message</label>
+      <label for="as-chat-input" class="sr-only">Type your question</label>
       <input id="as-chat-input" placeholder="Ask me anything…" autocomplete="off" maxlength="500">
-      <button id="as-chat-send" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+      <button id="as-chat-send" type="submit" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
     </form>
   </div>
-  <button id="as-chat-toggle" class="as-toggle" type="button" aria-expanded="false" aria-controls="as-chat-panel" aria-label="Chat with Promise, Ashley’s AI assistant">
-    <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <button id="as-chat-toggle" class="as-toggle" type="button" aria-expanded="false" aria-controls="as-chat-panel">
+    <span class="p-avatar"><svg class="pm" viewBox="0 0 32 32" aria-hidden="true"><use href="#promise-mark"/></svg></span>
+    <span class="t-text">Ask Promise<span class="t-sub">AI assistant · 4 free Qs</span></span>
     <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <span class="sr-only" id="as-tgl-label">Open chat with Promise, Ashley’s AI assistant</span>
   </button>
 </aside>
 
@@ -885,13 +938,32 @@ footer a:hover{color:var(--rose)}
 
   // Promise AI chat (Cloudflare Worker)
   const WORKER_URL = 'https://weathered-darkness-4552.ashleysmustangs.workers.dev';
+  const LIMIT = 4;                       // free questions before a consult is offered (keep in sync with the worker)
+  const WINDOW_MS = 24 * 60 * 60 * 1000; // limit resets after 24 hours
+  const CAL = 'https://calendly.com/ashleysara/30min';
   const msgs = [], panel = document.getElementById('as-chat-panel'), tgl = document.getElementById('as-chat-toggle'),
-        input = document.getElementById('as-chat-input'), send = document.getElementById('as-chat-send'), log = document.getElementById('as-chat-messages');
-  const setChat = open => {
+        input = document.getElementById('as-chat-input'), send = document.getElementById('as-chat-send'),
+        log = document.getElementById('as-chat-messages'), left = document.getElementById('as-left'), tglLabel = document.getElementById('as-tgl-label');
+  const load = () => { try { const v = JSON.parse(localStorage.getItem('promiseUsage') || 'null'); if (v && Date.now() - v.t < WINDOW_MS) return v; } catch {} return {n:0, t:Date.now()}; };
+  let usage = load();
+  const save = () => { try { localStorage.setItem('promiseUsage', JSON.stringify(usage)); } catch {} };
+  const remaining = () => Math.max(0, LIMIT - usage.n);
+  const updateLeft = () => { const r = remaining(); left.textContent = r ? `AI assistant by Ashley · ${r} free question${r === 1 ? '' : 's'} left` : 'AI assistant by Ashley · free questions used'; };
+  let limitShown = false;
+  const lockChat = () => {
+    input.disabled = true; send.disabled = true; input.placeholder = 'Book a free consult to keep going';
+    document.getElementById('as-starters')?.remove();
+    if (limitShown) return; limitShown = true;
+    const d = document.createElement('div'); d.className = 'as-msg ai as-limit';
+    d.innerHTML = `<p><strong>That’s your ${LIMIT} free questions!</strong> Ashley can dig into your specific situation on a free 30-minute consult, with real answers and no pressure.</p><div class="btns"><a class="go" href="${CAL}" target="_blank" rel="noopener">Book a free consult<span class="sr-only"> (opens in new tab)</span></a><a class="alt" href="mailto:connect@ashley-sara.com">Email Ashley</a></div>`;
+    log.appendChild(d); log.scrollTop = log.scrollHeight;
+    gtag?.('event','promise_limit_reached');
+  };
+  const setChat = (open, focusInput = true) => {
     panel.hidden = !open; tgl.setAttribute('aria-expanded', open);
-    tgl.setAttribute('aria-label', open ? 'Close chat with Promise' : 'Chat with Promise, Ashley’s AI assistant');
+    tglLabel.textContent = open ? 'Close chat with Promise' : 'Open chat with Promise, Ashley’s AI assistant';
     tgl.classList.toggle('on', open);
-    if (open) setTimeout(() => input.focus(), 50); else tgl.focus();
+    if (open) { gtag?.('event','promise_open'); if (focusInput && !input.disabled) setTimeout(() => input.focus(), 50); } else tgl.focus();
   };
   tgl.addEventListener('click', () => setChat(panel.hidden));
   panel.querySelector('.as-x').addEventListener('click', () => setChat(false));
@@ -900,16 +972,34 @@ footer a:hover{color:var(--rose)}
   const inline = t => t.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>').replace(/`(.+?)`/g,'<code>$1</code>').replace(/(https?:\/\/[^\s<&]+)/g,'<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
   const md = t => esc(t).split(/\n\n+/).map(b => { const ls = b.trim().split('\n'); return ls.every(l => /^[\-\*\d]/.test(l.trim())) ? '<ul>' + ls.map(l => '<li>' + inline(l.replace(/^[\-\*]\s+/,'').replace(/^\d+\.\s+/,'')) + '</li>').join('') + '</ul>' : '<p>' + inline(b.trim().replace(/\n/g,'<br>')) + '</p>'; }).join('');
   const add = (role, text, typing) => { const d = document.createElement('div'); d.className = 'as-msg ' + role + (typing ? ' typing' : ''); if (role === 'ai' && !typing) d.innerHTML = md(text); else d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; };
-  const chat = async () => {
-    const text = input.value.trim(); if (!text || send.disabled) return;
+  const ask = async text => {
+    text = (text || '').trim(); if (!text || send.disabled) return;
+    if (remaining() <= 0) { lockChat(); return; }
+    document.getElementById('as-starters')?.remove();
     add('user', text); msgs.push({role:'user', content:text}); input.value = ''; send.disabled = true;
     const t = add('ai', 'Thinking…', true);
-    try { const r = await fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:msgs})}); const d = await r.json(); t.remove();
-      if (d.text) { add('ai', d.text); msgs.push({role:'assistant', content:d.text}); } else add('ai', d.error || 'Something went wrong. Please try again.'); }
-    catch { t.remove(); add('ai', 'Having trouble connecting right now. Reach Ashley directly at connect@ashley-sara.com.'); }
-    send.disabled = false; input.focus();
+    try {
+      const r = await fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:msgs})});
+      const d = await r.json(); t.remove();
+      if (d.text) {
+        add('ai', d.text); msgs.push({role:'assistant', content:d.text});
+        usage.n += 1; if (usage.n === 1) usage.t = Date.now(); save(); updateLeft();
+        gtag?.('event','promise_question',{number:usage.n});
+      } else add('ai', d.error || 'Something went wrong. Please try again.');
+      if (d.limit) { usage.n = LIMIT; save(); updateLeft(); }
+    } catch { t.remove(); add('ai', 'Having trouble connecting right now. Reach Ashley directly at connect@ashley-sara.com.'); }
+    send.disabled = false;
+    if (remaining() <= 0) lockChat(); else input.focus();
   };
-  document.getElementById('as-chat-form').addEventListener('submit', e => { e.preventDefault(); chat(); });
+  document.getElementById('as-chat-form').addEventListener('submit', e => { e.preventDefault(); ask(input.value); });
+  // Any element with data-ask opens Promise; a non-empty value is sent as the question
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-ask]'); if (!b) return;
+    const q = b.dataset.ask;
+    if (panel.hidden) setChat(true, !q);
+    if (q) ask(q); else if (!input.disabled) input.focus();
+  });
+  updateLeft(); if (remaining() <= 0) lockChat();
 })();
 </script>
 </body>
